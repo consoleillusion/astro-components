@@ -1,0 +1,59 @@
+---
+import Link from "@components/Link.astro"
+const linksExample =
+  [ { text: "Services"
+    , href: "#services"
+    }
+  , { text: "About"
+    , href:"#about"
+    }
+  , { text: "Contact"
+    , href:"#contact"
+    }
+  ]
+const links = Astro.props.link || linksExample
+const listless = Astro.props.listless || true
+//const Outer = listless ? 'div' : 'ul';
+//const Inner = listless ? 'span' : 'li';
+---
+
+<nav>
+  { listless ? (
+    links.map(link => (
+      <Link {...link} />
+    ))
+  ) : (
+    links.map(link => (
+      <ul><li>
+        <Link {...link} />
+      </li></ul>
+    ))
+  )}
+  <!--
+  <Outer>
+    {links.map(link => (
+      <Inner><Link {...link} /></Inner>
+    ))}
+  </Outer>
+  -->
+</nav>
+
+<style>
+  nav {
+    --color-background: var(--color-secondary);
+    display: flex;
+    justify-content: end;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    position: sticky;
+    > ul, li {
+      display: contents;
+    }
+    a {
+      padding: 1rem;
+      text-decoration: none;
+    }
+  }
+</style>

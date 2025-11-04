@@ -1,0 +1,18 @@
+---
+const {text} = Astro.props
+---
+
+<button>{text}<slot /></button>
+
+<style>
+  button {
+    --background: var(--color-secondary);
+    padding: 1rem 2rem;
+    background: var(--background);
+    border-style: solid;
+    border-width: .1rem;
+    border-color: color(from var(--background) srgb r g b / .8 );
+    border-radius: .1rem;
+  }
+</style>
+

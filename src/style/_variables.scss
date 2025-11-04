@@ -1,0 +1,17 @@
+:root {
+  --color-text-light: rgba(250,250,250,.95);
+  --color-text-dark: rgba(5,5,5,.95);
+  --color-text: var(--color-text-dark);
+
+  --color-background: #F8FAFC;
+  --color-surface: #E2E8F0;
+  --color-primary: #3B82F6; //primary button
+  --color-secondary: #64748B; //secondary button
+  --color-accent: #10B981; //additional highlight
+
+  --color-success: #3D9970;
+  --color-failure: #FF4136;
+  --color-warning: #FFDC00;
+
+  --color-background: transparent;
+}

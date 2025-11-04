@@ -1,11 +1,37 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout       from "@layouts/Layout.astro"
+import Map 	        from "@components/Map.svelte"
+import Button 	    from "@components/Button.astro"
+import OpeningHours from "@components/OpeningHours.astro"
+import Navigation   from "@components/Navigation.astro"
+import Hero         from "@blocks/Hero.astro"
+import FindUs       from "@blocks/FindUs.astro"
+import Footer       from "@blocks/Footer.astro"
+import Gallery      from "@blocks/Gallery.astro"
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const meta={}
+const hero={}
+const map={}
+const openingHours=[]
+const links=[]
+const images = [{src:"",caption:"",background:""}]
 ---
 
-<Layout>
-	<Welcome />
+<Layout {...meta}>
+  <Navigation {links}/>
+  <main>
+    <Hero {...hero}/>
+    <Gallery itemWidth="40ch" itemHeight="20ch" {images} />
+    <!--
+    <Menu />
+    <Testimonial />
+    <AboutUs />
+    -->
+    <FindUs {...openingHours} {...map}/>
+
+  </main>
+  <Footer/>
 </Layout>
+
+<style>
+</style>

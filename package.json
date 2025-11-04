@@ -9,6 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.15.3"
+    "@astrojs/svelte": "^7.2.1",
+    "@vercel/speed-insights": "^1.2.0",
+    "astro": "^5.15.3",
+    "astro-icon": "^1.1.5",
+    "leaflet": "^1.9.4",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.93.3",
+    "svelte": "^5.43.2",
+    "typescript": "^5.9.3"
   }
 }

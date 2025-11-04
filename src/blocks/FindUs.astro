@@ -1,0 +1,31 @@
+---
+import OpeningHours from "@components/OpeningHours.astro"
+import Map from "@components/Map.svelte"
+const {headline="Find Us"} = Astro.props
+
+const openingHours = Astro.props.openingHours ||
+  [ { dayOfWeek: "Monday", opens: "09:00", closes: "17:00" }
+  , { dayOfWeek: "Tuesday", opens: "09:00", closes: "17:00" }
+  , { dayOfWeek: "Wednesday", opens: "09:00", closes: "17:00" }
+  , { dayOfWeek: "Thursday", opens: "09:00", closes: "17:00" }
+  , { dayOfWeek: "Friday", opens: "09:00", closes: "17:00" }
+  , { dayOfWeek: "Saturday", opens: "09:00", closes: "14:00" }
+  ]
+
+const map = 
+  { latitude: "-37.0553171"
+  , longitude: "174.9534592"
+  , zoom: 10
+  , ...Astro.props.map
+  }
+---
+<section class="block find-us">
+  <header><h2>{headline}</h2></header>
+  <div class="grid">
+    <Map client:only="svelte" height="40rem" {...map} />
+    <OpeningHours {openingHours} />
+  </div>
+</section>
+
+<style>
+</style>

@@ -1,0 +1,14 @@
+
+:root {
+  --golden-ratio: 1.61803398874989484;
+  --gr: var(--golden-ratio);
+  --ratio: calc(pow(2, 1 / 12));
+
+  @for $i from 1 through 10 {
+    --s#{$i}: calc(1rem * pow(var(--ratio),#{$i}));
+  }
+  @for $i from 1 through 10 {
+    --s-#{$i}: calc(1rem / pow(var(--ratio),#{$i}));
+  }
+}
+
