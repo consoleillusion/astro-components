@@ -1,6 +1,7 @@
 @use "./scale.scss";
 @use "./color.scss";
 @use "./variables.scss";
+@use "./link.scss";
 @import "normalize.css";
 
 * {
@@ -33,7 +34,7 @@ body {
 .center {
   --s1: 1rem;
   box-sizing: content-box;
-  max-inline-size: 60ch;
+  //max-inline-size: 60ch;
   margin-inline: auto;
   padding-inline-start: var(--s1);
   padding-inline-end: var(--s1);
@@ -41,7 +42,7 @@ body {
 
 .box {
   --padding: var(--s1);
-  --border-width: var(--s1-1);
+  --border-width: var(--s1-4);
   padding: var(--padding);
   border: var(--border-width) solid;
   outline: var(--border-width) transparent;
@@ -59,3 +60,4 @@ body {
     margin-block-start: var(--space, 1.5rem);
   }
 }
+

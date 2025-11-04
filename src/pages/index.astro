@@ -4,10 +4,13 @@ import Map 	        from "@components/Map.svelte"
 import Button 	    from "@components/Button.astro"
 import OpeningHours from "@components/OpeningHours.astro"
 import Navigation   from "@components/Navigation.astro"
+import Field        from "@components/Field.astro"
 import Hero         from "@blocks/Hero.astro"
 import FindUs       from "@blocks/FindUs.astro"
 import Footer       from "@blocks/Footer.astro"
 import Gallery      from "@blocks/Gallery.astro"
+import MediaText    from "@blocks/MediaText.astro"
+import Columns      from "@blocks/Columns.astro"
 
 const meta={}
 const hero={}
@@ -20,8 +23,11 @@ const images = [{src:"",caption:"",background:""}]
 <Layout {...meta}>
   <Navigation {links}/>
   <main>
+    <Field/>
     <Hero {...hero}/>
     <Gallery itemWidth="40ch" itemHeight="20ch" {images} />
+    <MediaText id="about-us"/>
+    <Columns id="menu">
     <!--
     <Menu />
     <Testimonial />

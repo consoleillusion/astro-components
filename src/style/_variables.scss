@@ -14,4 +14,13 @@
   --color-warning: #FFDC00;
 
   --color-background: transparent;
+
+  --border-width: var(--s-4);
+  --border-color: #111111;
+  --border-style: solid;
+
+  --invert-color: oklch(from var(--color-background) calc((l - .5) * -9999) c h / .9);
+
+  --transition-time: 150ms;
+  transition: var(--transition-time) all ease-in-out;
 }

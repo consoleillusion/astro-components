@@ -1,11 +1,13 @@
 @use "sass:map";
 
 html {
-}
-* {
+  --color-background: rgba(255,255,255,0);
+  --color-text: oklch(from var(--color-background) calc((l - .5) * -9999) c h / .9);
   color: var(--color-text);
-  --color-text: oklch(from var(--color-background) calc((l - .5) * -9999) c h / 1);
   background: var(--color-background);
+}
+
+* {
 }
 
 $werner-colors: (
