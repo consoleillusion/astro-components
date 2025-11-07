@@ -33,11 +33,9 @@
 
   --line-height: var(--golden-ratio);
 
-  --border-radius-xs: 0%;
-  --border-radius-sm: 5%;
-  --border-radius-md: 10%;
-  --border-radius-lg: 15%;
-  --border-radius-xl: 20%;
+  @for $i from 1 through 12 {
+    --border-radius-#{$i}: #{$i * .1ch};
+  }
   /*
   */
 }

@@ -1,6 +1,6 @@
 :root {
-  --color-text-light: rgba(250,250,250,.95);
-  --color-text-dark: rgba(5,5,5,.95);
+  --color-text-light: rgba(245,245,245,.9);
+  --color-text-dark: rgba(10,10,10,.9);
   --color-text: var(--color-text-dark);
 
   --color-background: #F8FAFC;
@@ -24,5 +24,5 @@
   --transition-time: 150ms;
   transition: var(--transition-time) all ease-in-out;
   --measure: 60ch;
-  --border-radius: var(--border-radius-xs);
+  --border-radius: var(--border-radius-6);
 }

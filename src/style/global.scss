@@ -1,65 +1,26 @@
+@use "./normalize.scss";
 @use "./scale.scss";
 @use "./color.scss";
-@use "./variables.scss";
+@use "./typography.scss";
 @use "./link.scss";
-@import "normalize.css";
+@use "./layout.scss";
+@use "./variables.scss";
 
 * {
   margin: 0;
   border: 0;
   padding: 0;
 }
-p {
-  max-width: var(--measure);
-}
+
 html {
   height: 100%;
 }
 body {
   min-height: 100%;
 }
-
-.grid {
-  --gap: 1rem;
-  --item-width: 40ch;
-  display: grid;
-  grid-gap: var(--gap);
-  padding: var(--gap);
+section.block {
+  padding:5rem;
 }
-
-@supports (width: min(var(--item-width), 100%)) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(var(--item-width), 100%), 1fr));
-  }
+section.block.full-width {
+  padding:0;
 }
-
-.center {
-  --s1: 1rem;
-  box-sizing: content-box;
-  //max-inline-size: 60ch;
-  margin-inline: auto;
-  padding-inline-start: var(--s1);
-  padding-inline-end: var(--s1);
-}
-
-.box {
-  --padding: var(--s1);
-  --border-width: var(--s1-4);
-  padding: var(--padding);
-  border: var(--border-width) solid;
-  outline: var(--border-width) transparent;
-}
-
-.stack {
-  --space: var(--s2);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  > * {
-    margin-block: 0;
-  }
-  > * + * {
-    margin-block-start: var(--space, 1.5rem);
-  }
-}
-
