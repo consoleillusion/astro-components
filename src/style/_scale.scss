@@ -32,7 +32,14 @@
   --s-12: calc(1rem / pow(var(--ratio),36));
 
   --line-height: var(--golden-ratio);
+
+  --border-radius-xs: 0%;
+  --border-radius-sm: 5%;
+  --border-radius-md: 10%;
+  --border-radius-lg: 15%;
+  --border-radius-xl: 20%;
   /*
   */
 }
+
 

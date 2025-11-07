@@ -12,7 +12,7 @@ const {text} = Astro.props
     border-style: solid;
     border-width: .1rem;
     border-color: color(from var(--color-background) srgb r g b / .8 );
-    border-radius: .1rem;
+    border-radius: var(--border-radius);
     color: var(--invert-color);
     background: var(--color-background);
     &:hover {

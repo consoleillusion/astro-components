@@ -23,4 +23,6 @@
 
   --transition-time: 150ms;
   transition: var(--transition-time) all ease-in-out;
+  --measure: 60ch;
+  --border-radius: var(--border-radius-xs);
 }

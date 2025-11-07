@@ -9,7 +9,9 @@
   border: 0;
   padding: 0;
 }
-
+p {
+  max-width: var(--measure);
+}
 html {
   height: 100%;
 }

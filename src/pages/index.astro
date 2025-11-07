@@ -11,6 +11,7 @@ import Footer       from "@blocks/Footer.astro"
 import Gallery      from "@blocks/Gallery.astro"
 import MediaText    from "@blocks/MediaText.astro"
 import Columns      from "@blocks/Columns.astro"
+import Column       from "@blocks/Column.astro"
 
 const meta={}
 const hero={}
@@ -27,6 +28,11 @@ const images = [{src:"",caption:"",background:""}]
     <Hero {...hero}/>
     <Gallery itemWidth="40ch" itemHeight="20ch" {images} />
     <MediaText id="about-us"/>
+      <Column>
+        <p>
+        article here
+        </p>
+    </Column>
     <Columns id="menu">
     <!--
     <Menu />
