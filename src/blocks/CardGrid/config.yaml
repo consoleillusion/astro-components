@@ -2,5 +2,15 @@ name: CardGrid
 description: ""
 props:
   cards:
-    type: string
-    default: ""
+    type: array
+    default: '[]'
+    items:
+      type: object
+      props: 
+        headline:
+          type: string
+        text:
+          type: string
+        icon:
+          type: string
+
