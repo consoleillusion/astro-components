@@ -1,0 +1,12 @@
+name: Column
+description: ""
+props:
+  background:
+    type: string
+    default: ""
+  text:
+    type: string
+    default: ""
+  heading:
+    type: string
+    default: ""

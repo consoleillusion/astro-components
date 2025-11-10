@@ -10,7 +10,7 @@ import "./index.scss"
 const {${props.join(',')}} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
-${type === 'block' ? '<section class="block ' + kebabCase(name) + '">' : ''}
+${type === 'block' ? '<section class="block ' + kebabCase(name) + '">\n</section>' : ''}
 `
 const configTemplate = (name,props) => stringify(
   { name: name
@@ -18,7 +18,7 @@ const configTemplate = (name,props) => stringify(
   , props: props.reduce((acc,propName)=>{acc[propName]={type:'string',default:''};return acc},{})
   })
 
-const scssTemplate = (name) => kebabCase(name) + '{\n}'
+const scssTemplate = (name) => '.' + kebabCase(name) + '{\n}'
 
 export const createComponent = 
   async (name,props,type) => {
@@ -52,4 +52,5 @@ export const createComponent =
     return ''
   }
 
-createComponent('Column',["background","text"],'block')
+//createComponent('Hero',["headline","subheadline","ctaPrimaryText","ctaPrimaryAction","ctaSecondaryText","ctaSecondaryAction","googleReviewLink","imageSrc","style","imageOpacity","backgroundColor","height"],'block')
+createComponent('Footer',[""],'block')

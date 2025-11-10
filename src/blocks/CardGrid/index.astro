@@ -1,0 +1,8 @@
+---
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import "./index.scss"
+const {cards} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+---
+
+<section class="block card-grid">
+</section>

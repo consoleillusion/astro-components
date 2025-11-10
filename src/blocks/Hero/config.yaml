@@ -1,0 +1,62 @@
+name: Hero
+description: >
+  Hero component with headline, subheadline, call-to-actions, image, and styling options.
+
+props:
+  headline:
+    type: string
+    default: "<What do you do?>"
+    description: "Primary headline text"
+  subheadline:
+    type: string
+    default: "<Why Does that matter?>"
+    description: "Secondary headline text"
+
+  ctaPrimaryText:
+    type: string
+    default: "<Get Now>"
+    description: "Primary call to action text"
+  ctaPrimaryAction:
+    type: string
+    default: "tel:123"
+    description: "Primary call to action"
+
+  ctaSecondaryText:
+    type: string
+    default: "<Convince me first>"
+    description: "Secondary call to action text"
+  ctaSecondaryAction:
+    type: string
+    default: "#about"
+    description: "Secondary call to action"
+
+  googleReviewLink:
+    type: string
+    default: ""
+    description: "Link to Google review"
+
+  imageSrc:
+    type: string
+    default: "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg"
+    description: "Image source URL"
+
+  style:
+    type: string
+    default: ""
+    description: "Additional styles"
+
+  imageOpacity:
+    type: string
+    default: ".4"
+    description: "Opacity for the image"
+
+  backgroundColor:
+    type: string
+    default: "black"
+    description: "Background color"
+
+  height:
+    type: string
+    default: "60vh"
+    description: "Height of the component"
+

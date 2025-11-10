@@ -1,0 +1,6 @@
+name: Footer
+description: ""
+props:
+  "":
+    type: string
+    default: ""

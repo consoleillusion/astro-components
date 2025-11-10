@@ -12,30 +12,23 @@ const linksExample =
     }
   ]
 const links = Astro.props.link || linksExample
-const listless = Astro.props.listless || true
+//const listless = Astro.props.listless || true
 //const Outer = listless ? 'div' : 'ul';
 //const Inner = listless ? 'span' : 'li';
 ---
 
 <nav>
-  { listless ? (
-    links.map(link => (
-      <Link {...link} />
-    ))
-  ) : (
-    links.map(link => (
-      <ul><li>
+
+  <div class="start"></div>
+
+  <div class="center"></div>
+
+  <div class="end">
+    { links.map(link => (
         <Link {...link} />
-      </li></ul>
-    ))
-  )}
-  <!--
-  <Outer>
-    {links.map(link => (
-      <Inner><Link {...link} /></Inner>
     ))}
-  </Outer>
-  -->
+  </div>
+
 </nav>
 
 <style>
@@ -43,7 +36,7 @@ const listless = Astro.props.listless || true
     --color-background: var(--color-secondary);
     background: var(--color-background);
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     top: 0;
     left: 0;
     z-index: 2;

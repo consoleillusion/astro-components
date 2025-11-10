@@ -1,0 +1,25 @@
+.hero {
+  height: var(--height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color);
+  
+  .hero-content{
+    z-index: 1;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: var(--image-opacity);
+  }
+}
+

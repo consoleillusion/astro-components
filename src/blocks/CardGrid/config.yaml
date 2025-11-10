@@ -1,0 +1,6 @@
+name: CardGrid
+description: ""
+props:
+  cards:
+    type: string
+    default: ""
