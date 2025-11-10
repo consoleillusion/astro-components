@@ -8,13 +8,13 @@ const {text} = Astro.props
   button {
     padding: 2ch 4ch;
     cursor: pointer;
-    --color-background: var(--color-secondary);
+    --background: var(--color-secondary);
     border-style: solid;
     border-width: .1rem;
     border-color: color(from var(--color-background) srgb r g b / .8 );
     border-radius: var(--border-radius);
     color: var(--invert-color);
-    background: var(--color-background);
+    background: var(--background);
     &:hover {
       background: oklch(from var(--color-background) calc( l * 1.4) calc( c * 1.4 ) h / 1);
     }

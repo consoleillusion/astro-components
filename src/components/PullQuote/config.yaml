@@ -1,0 +1,9 @@
+name: PullQuote
+description: "A Pullquote is for an internal source, a blockquote for external, see https://heydonworks.com/article/the-blockquote-element"
+props:
+  cite:
+    type: string
+    default: "Fern Willow"
+  text:
+    type: string
+    default: "Grow wild, stay grounded, and keep branching out."

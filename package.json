@@ -13,14 +13,17 @@
     "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.15.3",
     "astro-icon": "^1.1.5",
+    "change-case": "^5.4.4",
     "leaflet": "^1.9.4",
     "lightningcss": "^1.30.2",
     "normalize.css": "^8.0.1",
     "sass": "^1.93.3",
     "svelte": "^5.43.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "yaml": "^2.8.1"
   },
   "devDependencies": {
-    "@consoleillusion/zamda": "^0.0.971912"
+    "@consoleillusion/zamda": "^0.0.971912",
+    "@iconify-json/bxs": "^1.2.2"
   }
 }

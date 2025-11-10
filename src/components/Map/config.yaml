@@ -1,0 +1,21 @@
+name: Map
+description: A Svelte Map component made with Leaflet
+props:
+  latitude:
+    type: number
+    default: 40.730610
+  longitude:
+    type: number
+    default: -73.935242
+  zoom:
+    type: integer
+    default: 12
+  height: 
+    type: number
+    default: "20rem"
+  width:
+    type: string
+    default: "100%"
+  sensitivity: 
+    type: integer
+    default: 500

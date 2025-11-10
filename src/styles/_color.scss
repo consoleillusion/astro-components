@@ -5,6 +5,12 @@ html {
   --color-text: oklch(from var(--color-background) calc((l - .5) * -9999) c h / .9);
   color: var(--color-text);
   background: var(--color-background);
+
+  --color-base: "";
+  --color-surface: "";
+  --color-accent: "";
+  --color-accent-2: "";
+  --color-accent-3: "";
 }
 
 * {

@@ -1,0 +1,32 @@
+name: ButtonLink
+description: A Link with Button styling, the purpose is for elements which require an <a>, but users expect to be a button, such as an "href=tel:". This is functional like a button, so should be styled that way, but must have <a> to use "tel:". It breaks the HTML standard to have nested interactive elements, such as <a> and <button>.
+example: |
+  <ButtonLink href="tel:123123123">Call Now!</ButtonLink>
+props:
+  variant:
+    type: string
+    description: The href of the <a> tag
+    enum: ["filled", "ghost", "dashed", "flat", "default"]
+    default: "filled"
+  href:
+    type: string
+    description: The href of the <a> tag. If it is a link to another website, use <Link> component instead.
+    default: "#"
+  text:
+    type: string
+    description: The link text.
+    default: ""
+  backgroundColor:
+    type: string
+    description: Any CSS Color or variable.
+    default: "var(--color-background)"
+  color:
+    type: string
+    description: Any CSS Color or variable.
+    default: "var(--color-text)"
+
+#    conditionalDefaults:
+#    - if: { prop: "type", equals: "primary" }
+#      default: "#1677ff"
+#    - if: { prop: "type", equals: "ghost" }
+#      default: "#ffffff"

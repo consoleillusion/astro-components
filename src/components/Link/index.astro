@@ -1,0 +1,11 @@
+---
+const {text="", href="#"} = Astro.props
+---
+<a {href}>{text}</a>
+
+<style>
+  nav a {
+    text-decoration: none;
+    color: var(--invert-color);
+  }
+</style>

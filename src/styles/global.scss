@@ -2,7 +2,6 @@
 @use "./scale.scss";
 @use "./color.scss";
 @use "./typography.scss";
-@use "./link.scss";
 @use "./layout.scss";
 @use "./variables.scss";
 
@@ -10,6 +9,7 @@
   margin: 0;
   border: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {

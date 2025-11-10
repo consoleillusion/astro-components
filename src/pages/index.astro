@@ -1,17 +1,20 @@
 ---
+import path from 'node:path'
 import Layout       from "@layouts/Layout.astro"
-import Map 	        from "@components/Map.svelte"
-import Button 	    from "@components/Button.astro"
-import OpeningHours from "@components/OpeningHours.astro"
-import Navigation   from "@components/Navigation.astro"
-import Field        from "@components/Field.astro"
-import Hero         from "@blocks/Hero.astro"
-import FindUs       from "@blocks/FindUs.astro"
-import Footer       from "@blocks/Footer.astro"
-import Gallery      from "@blocks/Gallery.astro"
-import MediaText    from "@blocks/MediaText.astro"
-import Columns      from "@blocks/Columns.astro"
-import Column       from "@blocks/Column.astro"
+
+const imports =
+  { ...(import.meta.glob('@components/**/*.astro', { eager: true }))
+  , ...(import.meta.glob('@blocks/**/*.astro', { eager: true }))
+  }
+const components = Object.entries(imports)
+                   .reduce
+                   ( (acc,cur) => {
+                       const name = (cur[0].split('/').slice(-2,-1))
+                       acc[name] = cur[1].default 
+                       return acc
+                     }
+                   , {}
+                   )
 
 const meta={}
 const hero={}
@@ -19,30 +22,35 @@ const map={}
 const openingHours=[]
 const links=[]
 const images = [{src:"",caption:"",background:""}]
+console.log(components)
 ---
 
 <Layout {...meta}>
-  <Navigation {links}/>
+  <components.Navigation {links}/>
   <main>
-    <Field/>
-    <Hero {...hero}/>
-    <Gallery itemWidth="40ch" itemHeight="20ch" {images} />
-    <MediaText id="about-us"/>
-      <Column>
-        <div class="max-w-3xl mx-auto prose prose-lg"><blockquote class="text-2xl font-medium text-center my-12 text-balance border-l-4 border-primary pl-6 italic">"I know how it feels to be written off — and I know how it feels to fight for your family and win."</blockquote><p class="text-lg leading-relaxed">I didn't come into this work from a textbook. My journey began in the system itself — as a pregnant woman navigating addiction, recovery, and the scrutiny that comes with it.</p><p class="text-lg leading-relaxed">When I fell pregnant with my first child, I was in active heroin and crack addiction. I faced judgement, fear, and constant battles to be heard by the very services meant to help me. Through recovery, sheer determination, and self-advocacy, I fought to keep my baby and rebuild my life.</p><p class="text-lg leading-relaxed">That experience changed everything. It showed me how broken our systems can be — but also how powerful it is when a woman finds her voice.</p><p class="text-lg leading-relaxed">Today, I use both my lived experience and my professional expertise to support other women standing where I once stood. I know how to navigate complex safeguarding situations, how to challenge unfair drug testing, and how to hold professionals accountable — with respect, confidence, and courage.</p><p class="text-lg leading-relaxed">Over the years, I've worked with women and families facing some of the hardest moments of their lives — from the maternity ward to the family court. I've also served as Perinatal Safeguarding Lead for When Push Comes to Shove and Family Advocate for The Autonomy Hotline, specialising in high-risk maternity cases, substance misuse, and recovery advocacy.</p><p class="text-lg leading-relaxed font-medium">But most of all, I'm here because I believe women deserve better. Better treatment. Better information. Better chances.</p><p class="text-lg leading-relaxed">I believe no woman should lose her voice — or her baby — because of stigma or misunderstanding.</p></div>
-        </p>
-    </Column>
-    <Columns id="menu">
+    <components.Hero {...hero}/>
+    <components.CardGrid />
+    <components.Window>
+      <components.Quote/>
+    </components.Window>
+    <components.CardGrid />
+    <components.Column />
+  </main>
+  <components.Footer/>
+</Layout>
+
+
     <!--
+    <components.Map height="23rem" />
+    <components.Gallery itemWidth="40ch" itemHeight="20ch" {images} />
+    <components.MediaText id="about-us"/>
+
+    <Column></Column>
+    <Columns id="menu">
+    <Field/>
+    <components.Button text="hi"/>
     <Menu />
     <Testimonial />
     <AboutUs />
-    -->
     <FindUs {...openingHours} {...map}/>
-
-  </main>
-  <Footer/>
-</Layout>
-
-<style>
-</style>
+    -->

@@ -1,0 +1,12 @@
+---
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import { Icon } from 'astro-icon/components'
+const {cite,text} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+//import "./index.scss"
+---
+
+<figure>
+  <Icon name="bxs:quote-alt-left" />
+  <blockquote {cite}><p>{text}</p></blockquote> 
+  <figcaption><cite>{cite}</cite></figcaption>
+</figure>
