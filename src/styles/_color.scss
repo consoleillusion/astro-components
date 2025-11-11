@@ -1,19 +1,21 @@
 @use "sass:map";
-
+@mixin background-and-contrast($background) {
+  --color-background: #{$background};
+  --color-text: oklch(from var(--color-background) calc((l - .5) * -9999) c h / .9);
+  background: var(--color-background);
+  color: var(--color-text);
+}
 html {
   --color-background: rgba(255,255,255,0);
   --color-text: oklch(from var(--color-background) calc((l - .5) * -9999) c h / .9);
-  color: var(--color-text);
   background: var(--color-background);
+  color: var(--color-text);
 
   --color-base: "";
   --color-surface: "";
   --color-accent: "";
   --color-accent-2: "";
   --color-accent-3: "";
-}
-
-* {
 }
 
 $werner-colors: (

@@ -1,0 +1,7 @@
+@use '../../styles/layout';
+
+.card-grid{
+  .content {
+    @include layout.switcher();
+  }
+}

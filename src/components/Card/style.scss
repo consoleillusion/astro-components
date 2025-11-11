@@ -1,0 +1,14 @@
+@use '../../styles/layout';
+
+.card{
+  @include layout.stack();
+  figure {
+    order: 1;
+  }
+  h3 {
+    order: 2;
+  }
+  p {
+    order: 3;
+  }
+}

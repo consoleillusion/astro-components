@@ -14,10 +14,15 @@ html {
   line-height: var(--golden-ratio);
   //font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
   color: var(--color-text);
+  font-size: calc(.8rem + .6vw);
 }
 body {
   font-family: var(--font-body);
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+  //text-align: center;
+}
+.block {
+  padding: 1rem;
 }

@@ -1,0 +1,19 @@
+name: Card
+description: ""
+block: false
+props:
+  id:
+    type: string
+    default: ""
+  headline:
+    type: string
+    default: ""
+  text:
+    type: string
+    default: ""
+  imgSrc:
+    type: string
+    default: ""
+  iconify:
+    type: string
+    default: ""

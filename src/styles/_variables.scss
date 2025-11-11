@@ -1,7 +1,9 @@
 :root {
+  --color-contrast: oklch(from var(--color-background) calc((.5 - l) * 9999 + l) 0 h / .9);
+
   --color-text-light: rgba(245,245,245,.9);
   --color-text-dark: rgba(10,10,10,.9);
-  --color-text: var(--color-text-dark);
+  --color-text: var(--color-contrast);
 
   --color-background: #F8FAFC;
   --color-surface: #E2E8F0;
@@ -13,13 +15,12 @@
   --color-failure: #FF4136;
   --color-warning: #FFDC00;
 
-  --color-background: transparent;
+  --color-background: rgba(255,255,255,0);
 
   --border-width: var(--s-4);
   --border-color: #111111;
   --border-style: solid;
 
-  --invert-color: oklch(from var(--color-background) calc((l - .5) * -9999) c h / .9);
 
   --transition-time: 150ms;
   transition: var(--transition-time) all ease-in-out;

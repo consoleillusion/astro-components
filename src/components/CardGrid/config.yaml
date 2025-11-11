@@ -2,6 +2,9 @@ name: CardGrid
 description: ""
 block: true
 props:
+  headline:
+    type: string
+    default: ""
   cards:
     type: array
     default: '[]'

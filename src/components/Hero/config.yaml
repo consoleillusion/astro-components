@@ -67,6 +67,6 @@ props:
 
   height:
     type: string
-    default: "60vh"
+    default: "70vh"
     description: "Height of the component"
 

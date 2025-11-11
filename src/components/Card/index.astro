@@ -1,0 +1,11 @@
+---
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import "./style.scss"
+const {headline,text,imgSrc,iconify} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+---
+
+<div class="card">
+  <h3>{headline}</h3>
+  <p>{text}</p>
+  <figure>{imgSrc}</figure>
+</div>

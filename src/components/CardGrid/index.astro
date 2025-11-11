@@ -1,9 +1,18 @@
 ---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
-import "./index.scss"
-const {cards} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+import "./style.scss"
+import Card from "../Card/index.astro"
+const {headline,component,block,page,cards} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
 <section class="block card-grid">
-
+  <h2>{headline}</h2>
+  <div class="content">
+  { cards.map( card =>
+    <Card headline={card.headline}
+          text={card.text}
+          imgSrc={card.icon}
+    />
+  )}
+  </div>
 </section>

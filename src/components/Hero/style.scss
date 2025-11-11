@@ -1,11 +1,20 @@
+@use '../../styles/color';
+
 .hero {
+  /* These are the minimal styles needed to get an overlay and contrast*/
+  @include color.background-and-contrast(var(--color-background));
+  img {
+    opacity: var(--image-opacity);
+  }
+  /**/
+  
   height: var(--height);
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--background-color);
-  
+  --measure: 20rem;
+
   .hero-content{
     z-index: 1;
   }
@@ -19,7 +28,6 @@
     object-fit: cover;
     object-position: center;
     z-index: 0;
-    opacity: var(--image-opacity);
   }
 }
 
