@@ -1,5 +1,6 @@
 name: CardGrid
 description: ""
+block: true
 props:
   cards:
     type: array

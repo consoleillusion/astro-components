@@ -1,5 +1,6 @@
 name: Column
 description: ""
+block: true
 props:
   background:
     type: string
@@ -10,3 +11,5 @@ props:
   heading:
     type: string
     default: ""
+  children:
+    description: Child components for the slot

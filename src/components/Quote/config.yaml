@@ -7,3 +7,9 @@ props:
   cite:
     type: string
     default: Ralph Waldo Emerson
+  iconOpen:
+    type: string
+    description: Iconify icon identifier for opening quote
+  iconClose:
+    type: string
+    description: Iconify icon identifier for closing quote

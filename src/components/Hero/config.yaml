@@ -1,4 +1,5 @@
 name: Hero
+block: true
 description: >
   Hero component with headline, subheadline, call-to-actions, image, and styling options.
 
@@ -39,6 +40,11 @@ props:
     type: string
     default: "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg"
     description: "Image source URL"
+
+  icon:
+    type: string
+    default: ""
+    description: "Iconify icon identifier"
 
   style:
     type: string

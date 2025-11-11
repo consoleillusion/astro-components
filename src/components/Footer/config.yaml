@@ -1,6 +1,9 @@
 name: Footer
 description: ""
+block: true
 props:
-  "":
+  headline:
     type: string
     default: ""
+children:
+  type: array

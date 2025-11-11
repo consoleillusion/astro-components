@@ -2,11 +2,7 @@
 import path from 'node:path'
 import Layout       from "@layouts/Layout.astro"
 
-const imports =
-  { ...(import.meta.glob('@components/**/*.astro', { eager: true }))
-  , ...(import.meta.glob('@blocks/**/*.astro', { eager: true }))
-  }
-const components = Object.entries(imports)
+const components = Object.entries(import.meta.glob('@components/**/*.astro', { eager: true }))
                    .reduce
                    ( (acc,cur) => {
                        const name = (cur[0].split('/').slice(-2,-1))

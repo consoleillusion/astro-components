@@ -3,25 +3,26 @@ import {writeFileSync} from 'node:fs'
 import {access,mkdir} from 'node:fs/promises'
 import {kebabCase} from 'change-case'
 
-const astroTemplate = (name,props,type) =>
+const astroTemplate = (name,props) =>
 `---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
 import "./index.scss"
 const {${props.join(',')}} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
-${type === 'block' ? '<section class="block ' + kebabCase(name) + '">\n</section>' : ''}
+${props.includes('block') ? '<section class="block ' + kebabCase(name) + '">\n\t<slot/>\n</section>' : ''}
 `
 const configTemplate = (name,props) => stringify(
   { name: name
   , description: ""
+  , block: props.block === true ? true : false
   , props: props.reduce((acc,propName)=>{acc[propName]={type:'string',default:''};return acc},{})
   })
 
 const scssTemplate = (name) => '.' + kebabCase(name) + '{\n}'
 
 export const createComponent = 
-  async (name,props,type) => {
+  async (name,props) => {
     const componentPath = import.meta.dirname + '/src/' + type + 's/' + name
     await mkdir(componentPath,{recursive: true})
 
@@ -38,7 +39,7 @@ export const createComponent =
       await access(astroPath)
     } catch {
       console.log("Writing " + astroPath)
-      writeFileSync(componentPath + "/index.astro", astroTemplate(name,props,type))
+      writeFileSync(componentPath + "/index.astro", astroTemplate(name,props))
     }
 
     const scssPath = componentPath + '/index.scss'
@@ -53,4 +54,4 @@ export const createComponent =
   }
 
 //createComponent('Hero',["headline","subheadline","ctaPrimaryText","ctaPrimaryAction","ctaSecondaryText","ctaSecondaryAction","googleReviewLink","imageSrc","style","imageOpacity","backgroundColor","height"],'block')
-createComponent('Footer',[""],'block')
+createComponent('Footer',["block","headline","text"])

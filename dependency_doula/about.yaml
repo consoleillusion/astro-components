@@ -1,0 +1,17 @@
+- component: "Hero"
+  headline: "The Dependency Doula"
+- component: "Column"
+  children:
+  - component: "PullQuote"
+    text: "I know how it feels to be written off — and I know how it feels to fight for your family and win."
+    author: "Charlotte"
+  - component: "Article"
+    headline: 
+    text: |
+      I didn't come into this work from a textbook. My journey began in the system itself — as a pregnant woman navigating addiction, recovery, and the scrutiny that comes with it.
+      When I fell pregnant with my first child, I was in active heroin and crack addiction. I faced judgement, fear, and constant battles to be heard by the very services meant to help me. Through recovery, sheer determination, and self-advocacy, I fought to keep my baby and rebuild my life.
+      That experience changed everything. It showed me how broken our systems can be — but also how powerful it is when a woman finds her voice.
+      Today, I use both my lived experience and my professional expertise to support other women standing where I once stood. I know how to navigate complex safeguarding situations, how to challenge unfair drug testing, and how to hold professionals accountable — with respect, confidence, and courage.
+      Over the years, I've worked with women and families facing some of the hardest moments of their lives — from the maternity ward to the family court. I've also served as Perinatal Safeguarding Lead for When Push Comes to Shove and Family Advocate for The Autonomy Hotline, specialising in high-risk maternity cases, substance misuse, and recovery advocacy.
+      But most of all, I'm here because I believe women deserve better. Better treatment. Better information. Better chances.
+      I believe no woman should lose her voice — or her baby — because of stigma or misunderstanding.
