@@ -11,10 +11,10 @@ html {
   background: var(--color-background);
   color: var(--color-text);
 
-  --color-base: "";
-  --color-surface: "";
-  --color-accent: "";
-  --color-accent-2: "";
+  --color-base: var(--snow-white);
+  --color-surface: var(--greenish-white);
+  --color-accent: var(--apple-green);
+  --color-accent-2: var(--pistachio-green);
   --color-accent-3: "";
 }
 
