@@ -8,7 +8,8 @@ import { Font } from 'astro:assets'
 import SEO from "../components/SEO"
 import "@styles/global.scss"
 import { kebabCase } from 'change-case'
-const meta =
+const {meta} = Astro.props
+/*
   { language: "en"
   , fonts:
     { heading: "Raleway"
@@ -16,13 +17,17 @@ const meta =
     }
   , ...Astro.props
   }
+  console.log('u')
+  console.log(meta)
+  console.log('u')
+  */
 
 const toVars =
   fonts => Object.entries(fonts).map( f => "--font-"+kebabCase(f[0]) + ": var(--font-" + kebabCase(f[1]) + ");").join('')
 ---
 
 <!doctype html>
-<html lang={meta.language}>
+<html lang={meta.locale}>
 
   <head>
 		<meta charset="UTF-8" />

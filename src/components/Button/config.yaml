@@ -1,0 +1,10 @@
+name: Button
+description: ""
+block: false
+props:
+  text:
+    type: string
+    default: ""
+  action:
+    type: string
+    default: ""

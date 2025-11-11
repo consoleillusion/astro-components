@@ -1,0 +1,13 @@
+name: Markdown
+description: ""
+block: false
+props:
+  id:
+    type: string
+    default: ""
+  text:
+    type: string
+    default: ""
+  variables:
+    type: string
+    default: ""

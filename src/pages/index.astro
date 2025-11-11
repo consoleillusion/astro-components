@@ -1,6 +1,14 @@
 ---
+import $RefParser from "@apidevtools/json-schema-ref-parser"
 import path from 'node:path'
 import Layout       from "@layouts/Layout.astro"
+import { glob } from 'astro/loaders';
+import site from "@base/site/site.yaml" //glob({ pattern: "**/*.yaml", base: "./site/" })
+import {loadSiteData} from '../loadSiteData.js'
+
+const {meta,pages,header,footer} = loadSiteData(path.join("./site"))
+const data = await $RefParser.dereference('./site/site.yaml')
+
 
 const components = Object.entries(import.meta.glob('@components/**/*.astro', { eager: true }))
                    .reduce
@@ -12,33 +20,45 @@ const components = Object.entries(import.meta.glob('@components/**/*.astro', { e
                    , {}
                    )
 
-const meta={}
-const hero={}
-const map={}
-const openingHours=[]
-const links=[]
-const images = [{src:"",caption:"",background:""}]
-console.log(components)
+const page = pages[0]
 ---
 
-<Layout {...meta}>
-  <components.Navigation {links}/>
+<Layout meta={site.meta}>
   <main>
+
+    { page.blocks.filter(x=>x.include !== false).map( block => {
+      const Component = components[block.component]
+      return <Component {page} component={block} />
+    })}
+
+    <!--
+      <p>
+      </p>
+
+    { s2.meta.map( x => JSON.stringify(x))
+    }
+  { data.main.filter(x=>x.include !== false).map( (block) => {
+      const Component = components[block.component]
+      return <Component {data} component={block} />
+    })
+  }
+
+  <components.Navigation {links}/>
     <components.Hero {...hero}/>
     <components.CardGrid />
-    <!--
     <components.Column>
       <components.Quote/>
     </components.Column>
     <components.CardGrid />
     <components.Column />
-  </main>
-  <components.Footer/>
     -->
+  </main>
 </Layout>
 
 
     <!--
+  <components.Footer/>
+
     <components.Map height="23rem" />
     <components.Gallery itemWidth="40ch" itemHeight="20ch" {images} />
     <components.MediaText id="about-us"/>

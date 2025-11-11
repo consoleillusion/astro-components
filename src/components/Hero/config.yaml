@@ -40,6 +40,10 @@ props:
     type: string
     default: "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg"
     description: "Image source URL"
+  imageAlt:
+    type: string
+    default: ""
+    description: "Image alt text for screenreaders."
 
   icon:
     type: string

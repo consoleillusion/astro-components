@@ -1,0 +1,5 @@
+name: Navbar
+description: A Navigation Bar for a website
+props:
+  links:
+    type: array

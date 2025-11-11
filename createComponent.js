@@ -16,14 +16,17 @@ const configTemplate = (name,props) => stringify(
   { name: name
   , description: ""
   , block: props.block === true ? true : false
-  , props: props.reduce((acc,propName)=>{acc[propName]={type:'string',default:''};return acc},{})
+  , props:
+    {  id: {type: "string", default: ""}
+    , ...props.reduce((acc,propName)=>{acc[propName]={type:'string',default:''};return acc},{})
+    }
   })
 
 const scssTemplate = (name) => '.' + kebabCase(name) + '{\n}'
 
 export const createComponent = 
   async (name,props) => {
-    const componentPath = import.meta.dirname + '/src/' + type + 's/' + name
+    const componentPath = import.meta.dirname + '/src/components/' + name
     await mkdir(componentPath,{recursive: true})
 
     const configPath = componentPath + '/config.yaml'
@@ -54,4 +57,4 @@ export const createComponent =
   }
 
 //createComponent('Hero',["headline","subheadline","ctaPrimaryText","ctaPrimaryAction","ctaSecondaryText","ctaSecondaryAction","googleReviewLink","imageSrc","style","imageOpacity","backgroundColor","height"],'block')
-createComponent('Footer',["block","headline","text"])
+createComponent('Markdown',["text","variables"])

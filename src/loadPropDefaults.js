@@ -10,5 +10,5 @@ export const loadPropDefaults =
       acc[propName] = ((typeof propConfig.default) != undefined) ? propConfig.default : ""
       return acc
     }, {})
-    return {...propDefaults,...passedProps}
+    return {...propDefaults,...passedProps, block: (typeof passedProps.block) === "boolean" ? passedProps.block : (openui.block || false)}
   }

@@ -1,0 +1,10 @@
+---
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import {render} from '@astro:content'
+import "./index.scss"
+const {text,variables} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+---
+
+<!--
+<Content entry={text} />
+-->
