@@ -61,12 +61,12 @@
 }
 
 @mixin switcher(){
-  --threshold: 30rem;
+  --threshold: 50rem;
   --gutter: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: var(--gutter, var(--s1));
-   > * {
+  > * {
     flex-grow: 1;
     flex-basis: calc((var(--threshold) - 100%) * 999);
   }

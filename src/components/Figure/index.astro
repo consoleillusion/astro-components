@@ -17,7 +17,6 @@ const figureType = cond(conditions)(props)
 ---
 
 <figure>
-  <p>Figure: {JSON.stringify(props)}</p>
   { figureType === "image" ? <img src={props.imgSrc}/> : ""}
   { figureType === "icon" ? <Icon name={props.icon} /> : ""}
 </figure>

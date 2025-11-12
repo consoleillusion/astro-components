@@ -48,20 +48,9 @@ properties:
       themeDark:
         type: string
         default: "oklch(1% 2% 30deg)"
-  icon:
-    type: object
-    description: Icon and favicon configuration.
-    default: {}
-    properties:
-      main:
-        type: string
-        default: "/favicon.svg"
-      legacy:
-        type: string
-        default: "/favicon.ico"
-      small:
-        type: string
-        default: "/favicon.svg"
-      large:
-        type: string
-        default: "/favicon.svg"
+
+  revenge:
+    type: boolean
+    description: Include What Revenge css warnings.
+    default: false
+

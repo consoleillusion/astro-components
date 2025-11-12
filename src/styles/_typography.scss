@@ -4,6 +4,7 @@
 
 p {
   max-width: var(--measure);
+  text-wrap: balance;
 }
 p + p {
   margin-top: var(--s0); 

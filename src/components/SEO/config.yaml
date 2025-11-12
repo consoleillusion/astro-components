@@ -87,7 +87,20 @@ properties:
     description: Optional longitude for geotagging.
     default: ""
 
-  revenge:
-    type: boolean
-    description: Include What Revenge css warnings.
-    default: false
+  icon:
+    type: object
+    description: Icon and favicon configuration.
+    default: {}
+    properties:
+      main:
+        type: string
+        default: "/favicon.svg"
+      legacy:
+        type: string
+        default: "/favicon.ico"
+      small:
+        type: string
+        default: "/favicon.svg"
+      large:
+        type: string
+        default: "/favicon.svg"

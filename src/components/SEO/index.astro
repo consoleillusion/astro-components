@@ -9,8 +9,8 @@ const {
   description,
   keywords,
   image,
-  iso_country,
   iso_language,
+  iso_country,
   fonts,
   color,
   icon,
@@ -48,7 +48,7 @@ const {
 <meta property="og:type"              content={type} />
 <meta property="og:image"             content={image} />
 <meta property="og:url"               content={url}>
-<meta property="og:locale"            content={locale} />
+<meta property="og:locale"            content={iso_language + '_' + iso_country} />
 
 <!-- Twitter -->
 <meta property="twitter:title"        content={title} / >
