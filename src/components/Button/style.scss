@@ -1,2 +1,13 @@
-.button{
+@use '../../styles/color';
+
+a[role="button"], button {
+  --background: var(--color-accent-2);
+  @include color.background-and-contrast(var(--background));
+  padding: var(--s1) var(--s2);
+  border-radius: var(--border-radius);
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    @include color.lighten-background(var(--background));
+  }
 }

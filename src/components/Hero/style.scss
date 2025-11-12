@@ -1,4 +1,5 @@
 @use '../../styles/color';
+@use '../../styles/layout';
 
 .hero {
   /* These are the minimal styles needed to get an overlay and contrast*/
@@ -16,6 +17,7 @@
   --measure: 20rem;
 
   .hero-content{
+    @include layout.stack();
     z-index: 1;
   }
 

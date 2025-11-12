@@ -1,6 +1,6 @@
 ---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
-import ButtonLink from "@components/ButtonLink/index.astro"
+import Button from "@components/Button/index.astro"
 import "./style.scss"
 //const {headline,subheadline,ctaPrimaryText,ctaPrimaryAction,ctaSecondaryText,ctaSecondaryAction,googleReviewLink,imgSrc,imgAlt,style,imageOpacity,backgroundColor,height} = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
@@ -11,8 +11,10 @@ const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.
   <div class="hero-content">
     <h1>{props.headline}</h1>
     <p>{props.subheadline}</p>
-    <ButtonLink text={props.ctaPrimaryText}/>
-    <ButtonLink text={props.ctaSecondaryText}/>
+    <div class="action-row">
+      <Button text={props.ctaPrimaryText}/>
+      <Button text={props.ctaSecondaryText}/>
+    </div>
   </div>
 
   <img src={props.imgSrc}/>

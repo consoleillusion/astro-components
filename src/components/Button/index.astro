@@ -1,7 +1,11 @@
 ---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
 import "./style.scss"
-const {text,action} = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const actionType = "ahref"
 ---
 
-<button {action}>{text}</button>
+{ (actionType === "ahref")
+? (<a href={props.action} role="button">{props.text}</a>)
+: (<button {props.action} >{props.text}</button>)
+}

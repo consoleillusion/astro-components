@@ -10,6 +10,7 @@
   border: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: var(--transition-time) all ease-in-out;
 }
 
 html {
@@ -24,3 +25,4 @@ section.block {
 section.block.full-width {
   padding:0;
 }
+
