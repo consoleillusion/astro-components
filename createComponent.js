@@ -7,17 +7,18 @@ const astroTemplate = (name,props) =>
 `---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
 import "./style.scss"
-const {${props.join(',')},...props} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const props = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
 ${props.includes('block') ? '<section class="block ' + kebabCase(name) + '">\n\t<slot/>\n</section>' : ''}
 `
 const configTemplate = (name,props) => stringify(
   { name: name
+  , type: "object"
   , description: ""
-  , block: props.block === true ? true : false
-  , props:
-    {  id: {type: "string", default: ""}
+  , properties:
+    { id: {type: "string", description: "Specify an id attribute for the component", default: ""}
+    , block: { type: "boolean", description: "Whether this is a block component or not", default: props.block=== true ? true : false} 
     , ...props.reduce((acc,propName)=>{acc[propName]={type:'string',default:''};return acc},{})
     }
   })
@@ -57,4 +58,4 @@ export const createComponent =
   }
 
 //createComponent('Hero',["headline","subheadline","ctaPrimaryText","ctaPrimaryAction","ctaSecondaryText","ctaSecondaryAction","googleReviewLink","imageSrc","style","imageOpacity","backgroundColor","height"],'block')
-createComponent('Figure',["code","imgSrc","iconify"])
+createComponent('Accordion',["summary","details"])

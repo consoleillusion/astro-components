@@ -1,9 +1,11 @@
 name: Hero
-block: true
+type: object
 description: >
   Hero component with headline, subheadline, call-to-actions, image, and styling options.
-
-props:
+properties:
+  block:
+    description: Whether this is a block component or not
+    default: true
   headline:
     type: string
     default: "<What do you do?>"

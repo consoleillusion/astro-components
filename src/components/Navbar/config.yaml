@@ -1,5 +1,9 @@
 name: Navbar
+type: object
 description: A Navigation Bar for a website
-props:
+properties:
+  block:
+    description: Whether this is a block component or not
+    default: true
   links:
     type: array

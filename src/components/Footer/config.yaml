@@ -1,9 +1,12 @@
 name: Footer
+type: object
 description: ""
-block: true
-props:
+properties:
+  block:
+    description: Whether this is a block component or not
+    default: true
   headline:
     type: string
     default: ""
-children:
-  type: array
+#children:
+#  type: array

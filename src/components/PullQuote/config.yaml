@@ -1,6 +1,10 @@
 name: PullQuote
+type: object
 description: "A Pullquote is for an internal source, a blockquote for external, see https://heydonworks.com/article/the-blockquote-element"
-props:
+properties:
+  block:
+    description: Whether this is a block component or not
+    default: false
   cite:
     type: string
     default: "Fern Willow"

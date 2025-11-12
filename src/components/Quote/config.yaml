@@ -1,6 +1,10 @@
 name: Quote
+type: object
 description: A <blockquote>, using text and cite, with large quote icons
-props:
+properties:
+  block:
+    description: Whether this is a block component or not
+    default: false
   text:
     type: string
     default: The creation of a thousand forests is in one acorn.

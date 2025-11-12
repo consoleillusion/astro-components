@@ -1,7 +1,10 @@
 name: Figure
+type: object
 description: ""
-block: false
-props:
+properties:
+  block:
+    description: Whether this is a block component or not
+    default: false
   id:
     type: string
     default: null

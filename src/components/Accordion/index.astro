@@ -1,0 +1,10 @@
+---
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import "./style.scss"
+const props = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+---
+
+<details>
+  <summary>{props.summary}</summary>
+  <p>{props.details}</p>
+</details>

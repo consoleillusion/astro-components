@@ -1,7 +1,10 @@
 name: Column
+type: object
 description: ""
-block: true
-props:
+properties:
+  block:
+    description: Whether this is a block component or not
+    default: true
   background:
     type: string
     default: ""
@@ -11,5 +14,5 @@ props:
   heading:
     type: string
     default: ""
-  children:
-    description: Child components for the slot
+#  children:
+#    description: Child components for the slot

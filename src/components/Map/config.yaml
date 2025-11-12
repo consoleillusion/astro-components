@@ -1,6 +1,10 @@
 name: Map
+type: object
 description: A Svelte Map component made with Leaflet
-props:
+properties:
+  block:
+    description: Whether this is a block component or not
+    default: false
   latitude:
     type: number
     default: 40.730610
