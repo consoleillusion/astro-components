@@ -1,0 +1,147 @@
+name: SEO
+description: "A head management component that dynamically injects SEO meta tags, Open Graph, and Twitter card data based on the provided `meta` properties."
+block: false
+version: 0.0.1
+props:
+  title:
+    type: string
+    description: The page or site title.
+    default: "The Dependency Doula"
+
+  author:
+    type: string
+    description: The author name for meta tags.
+    default: ""
+
+  keywords:
+    type: string
+    description: Meta keywords
+    default: ""
+
+  description:
+    type: string
+    description: Short description for SEO and social previews.
+    default: >
+      A backpacker’s journal of slow travel, mountain trails, and offbeat adventures around the world.
+      Tips, stories, and inspiration for life on the move.
+
+  image:
+    type: string
+    format: uri
+    description: URL of the preview image used in Open Graph and Twitter cards.
+    default: "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg"
+
+  locale:
+    type: string
+    description: Locale code for Open Graph metadata.
+    default: "en_US"
+
+  fonts:
+    type: object
+    description: Font configuration for heading and body text.
+    properties:
+      heading:
+        type: string
+        default: "Poppins"
+      body:
+        type: string
+        default: "Montserrat"
+
+  color:
+    type: object
+    description: Core color system for the site's theme.
+    default: {}
+    properties:
+      base:
+        type: string
+        default: "var(--color-white-snow)"
+      surface:
+        type: string
+        default: "var(--color-white-greenish)"
+      brand:
+        type: string
+        default: "var(--color-green-apple)"
+      accent:
+        type: string
+        default: "var(--color-green-pistachio)"
+      support:
+        type: string
+        default: "var(--color-)"
+      theme:
+        type: string
+        default: "oklch(99% 1% 230deg)"
+      themeLight:
+        type: string
+        default: "oklch(99% 1% 230deg)"
+      themeDark:
+        type: string
+        default: "oklch(1% 2% 30deg)"
+
+  icon:
+    type: object
+    description: Icon and favicon configuration.
+    default: {}
+    properties:
+      main:
+        type: string
+        default: "/favicon.svg"
+      legacy:
+        type: string
+        default: "/favicon.ico"
+      small:
+        type: string
+        default: "/favicon.svg"
+      large:
+        type: string
+        default: "/favicon.svg"
+
+  card:
+    type: string
+    enum: [summary, summary_large_image, app, player]
+    description: The Twitter card type.
+    default: "summary_large_image"
+
+  url:
+    type: string
+    format: uri
+    description: The canonical URL of the page.
+    default: "https://example.com"
+
+  type:
+    type: string
+    description: Open Graph type (e.g., website, article, profile).
+    default: "website"
+
+  social:
+    type: object
+    default: {}
+    properties:
+      twitter:
+        type: string
+        description: Twitter handle (with @) for attribution.
+        default: ""
+
+  robots:
+    type: string
+    description: Robots meta tag content.
+    default: "index, follow"
+
+  fbAppId:
+    type: string
+    description: Facebook App ID for Open Graph integration.
+    default: ""
+
+  latitude:
+    type: string
+    description: Optional latitude for geotagging.
+    default: ""
+
+  longitude:
+    type: string
+    description: Optional longitude for geotagging.
+    default: ""
+
+  revenge:
+    type: boolean
+    description: Include What Revenge css warnings.
+    default: false

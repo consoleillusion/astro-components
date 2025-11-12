@@ -4,10 +4,11 @@ import path from 'node:path'
 import Layout       from "@layouts/Layout.astro"
 import { glob } from 'astro/loaders';
 import site from "@base/site/site.yaml" //glob({ pattern: "**/*.yaml", base: "./site/" })
-import {loadSiteData} from '../loadSiteData.js'
+//import {loadSiteData} from '../loadSiteData.js'
 
-const {meta,pages,header,footer} = loadSiteData(path.join("./site"))
-const data = await $RefParser.dereference('./site/site.yaml')
+//const {meta,pages,header,footer} = loadSiteData(path.join("./site"))
+//const data = await $RefParser.dereference('./site/site.yaml')
+const {meta,pages,header,footer} = await $RefParser.dereference('./site/site.yaml')
 
 
 const components = Object.entries(import.meta.glob('@components/**/*.astro', { eager: true }))
@@ -21,54 +22,19 @@ const components = Object.entries(import.meta.glob('@components/**/*.astro', { e
                    )
 
 const page = pages[0]
+console.log('--------PAGES')
+console.log(pages)
 ---
 
+
+    <!--
 <Layout meta={site.meta}>
   <main>
-
     { page.blocks.filter(x=>x.include !== false).map( block => {
       const Component = components[block.component]
       return <Component {page} {...block} />
     })}
 
-    <!--
-      <p>
-      </p>
-
-    { s2.meta.map( x => JSON.stringify(x))
-    }
-  { data.main.filter(x=>x.include !== false).map( (block) => {
-      const Component = components[block.component]
-      return <Component {data} component={block} />
-    })
-  }
-
-  <components.Navigation {links}/>
-    <components.Hero {...hero}/>
-    <components.CardGrid />
-    <components.Column>
-      <components.Quote/>
-    </components.Column>
-    <components.CardGrid />
-    <components.Column />
-    -->
   </main>
 </Layout>
-
-
-    <!--
-  <components.Footer/>
-
-    <components.Map height="23rem" />
-    <components.Gallery itemWidth="40ch" itemHeight="20ch" {images} />
-    <components.MediaText id="about-us"/>
-
-    <Column></Column>
-    <Columns id="menu">
-    <Field/>
-    <components.Button text="hi"/>
-    <Menu />
-    <Testimonial />
-    <AboutUs />
-    <FindUs {...openingHours} {...map}/>
     -->

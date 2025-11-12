@@ -1,28 +1,19 @@
-name: Card
+name: Figure
 description: ""
 block: false
 props:
   id:
     type: string
     default: null
-  headline:
-    type: string
-    default: null
-  text:
+  code:
     type: string
     default: null
   imgSrc:
     type: string
     default: null
-  imgAlt:
-    type: string
-    default: null
   icon:
     type: string
     default: null
-  chart:
+  figcaption:
     type: string
-    default: null
-  code:
-    type: string
-    default: null
+    text: ""

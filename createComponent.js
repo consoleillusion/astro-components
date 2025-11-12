@@ -7,7 +7,7 @@ const astroTemplate = (name,props) =>
 `---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
 import "./style.scss"
-const {${props.join(',')}} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const {${props.join(',')},...props} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
 ${props.includes('block') ? '<section class="block ' + kebabCase(name) + '">\n\t<slot/>\n</section>' : ''}
@@ -57,4 +57,4 @@ export const createComponent =
   }
 
 //createComponent('Hero',["headline","subheadline","ctaPrimaryText","ctaPrimaryAction","ctaSecondaryText","ctaSecondaryAction","googleReviewLink","imageSrc","style","imageOpacity","backgroundColor","height"],'block')
-createComponent('Card',["headline","text","imgSrc"])
+createComponent('Figure',["code","imgSrc","iconify"])

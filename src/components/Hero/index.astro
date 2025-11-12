@@ -2,9 +2,23 @@
 import {loadPropDefaults} from "../../loadPropDefaults.js"
 import ButtonLink from "@components/ButtonLink/index.astro"
 import "./style.scss"
-const {headline,subheadline,ctaPrimaryText,ctaPrimaryAction,ctaSecondaryText,ctaSecondaryAction,googleReviewLink,imageSrc,imageAlt,style,imageOpacity,backgroundColor,height} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+//const {headline,subheadline,ctaPrimaryText,ctaPrimaryAction,ctaSecondaryText,ctaSecondaryAction,googleReviewLink,imgSrc,imgAlt,style,imageOpacity,backgroundColor,height} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const props = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
+<section class="block hero" style={"--height: " + props.height + "; --color-background: " + props.backgroundColor + "; --image-opacity: " + props.imgOpacity + ';'}>
+
+  <div class="hero-content">
+    <h1>{props.headline}</h1>
+    <p>{props.subheadline}</p>
+    <ButtonLink text={props.ctaPrimaryText}/>
+    <ButtonLink text={props.ctaSecondaryText}/>
+  </div>
+
+  <img src={props.imgSrc}/>
+
+</section>
+<!--
 <section class="block hero" style={"--height: " + height + "; --color-background: " + backgroundColor + "; --image-opacity: " + imageOpacity + ';'}>
 
   <div class="hero-content">
@@ -14,6 +28,7 @@ const {headline,subheadline,ctaPrimaryText,ctaPrimaryAction,ctaSecondaryText,cta
     <ButtonLink text={ctaSecondaryText}/>
   </div>
 
-  <img src={imageSrc}/>
+  <img src={imgSrc}/>
 
 </section>
+-->

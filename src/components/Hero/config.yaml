@@ -36,12 +36,14 @@ props:
     default: ""
     description: "Link to Google review"
 
-  imageSrc:
+  imgSrc:
     type: string
+    name: "Image src"
     default: "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg"
     description: "Image source URL"
-  imageAlt:
+  imgAlt:
     type: string
+    name: "Image Alt"
     default: ""
     description: "Image alt text for screenreaders."
 
@@ -55,8 +57,9 @@ props:
     default: ""
     description: "Additional styles"
 
-  imageOpacity:
+  imgOpacity:
     type: string
+    name: Image Opacity
     default: ".4"
     description: "Opacity for the image"
 

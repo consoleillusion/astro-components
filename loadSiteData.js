@@ -1,13 +1,16 @@
-import { parse } from 'yaml'
-import {readFileSync} from 'fs'
+//import { parse } from 'yaml'
+//import {readFileSync} from 'fs'
 import path from 'node:path'
 
-const readYaml = p => parse(readFileSync(p,'utf8'))
+import $RefParser from "@apidevtools/json-schema-ref-parser";
+
+const readYaml = p => $RefParser.dereference(p,x=>x) //p => parse(readFileSync(p,'utf8'))
 
 export const loadSiteData = 
-  siteDataPath => {
-    const site = readYaml(path.join(siteDataPath,"site.yaml"))
-    site.pages = Object.entries(site.pages).map( ([page,filePath]) => readYaml(path.join(siteDataPath,filePath)))
+  async siteDataPath => {
+    const site = await readYaml(path.join(siteDataPath,"site.yaml"))
+    console.log(site)
+    site.pages = Object.entries(site.pages).map( async ([page,filePath]) => await readYaml(path.join(siteDataPath,filePath)))
     /*
     console.log(siteDataPath)
     const siteData= parse(readFileSync(dataPath, 'utf8'))

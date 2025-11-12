@@ -11,8 +11,13 @@ const {headline,component,block,page,cards} = loadPropDefaults(import.meta.dirna
   { cards.map( card =>
     <Card headline={card.headline}
           text={card.text}
-          imgSrc={card.icon}
+          imgSrc={card.imgSrc}
+          icon={card.icon}
     />
   )}
   </div>
 </section>
+          <!--
+          code={card.code}
+          code={card.chart}
+          -->
