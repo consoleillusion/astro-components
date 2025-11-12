@@ -1,19 +1,22 @@
-name: Quote
+title: Quote
 type: object
 description: A <blockquote>, using text and cite, with large quote icons
 properties:
   block:
+    type: boolean
     description: Whether this is a block component or not
     default: false
   text:
     type: string
-    default: The creation of a thousand forests is in one acorn.
+    default: ""
   cite:
     type: string
-    default: Ralph Waldo Emerson
+    default: ""
   iconOpen:
     type: string
     description: Iconify icon identifier for opening quote
   iconClose:
     type: string
     description: Iconify icon identifier for closing quote
+
+examples: [{cite: "Ralph Waldo Emerson", text: "The creation of a thousand forests is in one acorn."}]

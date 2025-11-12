@@ -6,6 +6,6 @@ const actionType = "ahref"
 ---
 
 { (actionType === "ahref")
-? (<a href={props.action} role="button">{props.text}</a>)
-: (<button {props.action} >{props.text}</button>)
+? (<a href={props.action} role="button" class={props.class}>{props.text}</a>)
+: (<button {props.action} class={props.class} >{props.text}</button>)
 }

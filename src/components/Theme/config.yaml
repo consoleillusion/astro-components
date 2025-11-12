@@ -1,4 +1,4 @@
-name: Theme
+title: Theme
 type: object
 description: ""
 properties:
@@ -26,18 +26,23 @@ properties:
     properties:
       base:
         type: string
-        default: ""
+        description: "The Base color is used as the primary background of the page"
+        default: "rgba(250,250,250,.99)"
       surface:
         type: string
+        description: "The Surface color is used for background colors of large sections which are above the base"
         default: ""
       accent:
         type: string
+        description: "The Accent color is used for less important buttons and UI"
         default: ""
       accent-2:
         type: string
+        description: "This is used for more important, primary buttons, like a cta"
         default: ""
       accent-3:
         type: string
+        description: "This is used for... idk"
         default: ""
       theme:
         type: string

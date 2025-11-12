@@ -1,13 +1,16 @@
-name: PullQuote
+title: PullQuote
 type: object
 description: "A Pullquote is for an internal source, a blockquote for external, see https://heydonworks.com/article/the-blockquote-element"
 properties:
   block:
     description: Whether this is a block component or not
     default: false
+    type: boolean
   cite:
     type: string
-    default: "Fern Willow"
+    default: ""
   text:
     type: string
-    default: "Grow wild, stay grounded, and keep branching out."
+    default: ""
+
+examples: [{ cite: "Fern Willow", "text": "Grow wild, stay grounded, and keep branching out."}]

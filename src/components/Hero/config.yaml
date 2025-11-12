@@ -1,9 +1,10 @@
-name: Hero
+title: Hero
 type: object
 description: >
   Hero component with headline, subheadline, call-to-actions, image, and styling options.
 properties:
   block:
+    type: boolean
     description: Whether this is a block component or not
     default: true
   headline:
@@ -27,7 +28,7 @@ properties:
   ctaSecondaryText:
     type: string
     default: "<Convince me first>"
-    description: "Secondary call to action text"
+    description: "Secondary call to action text. \"Convince Me First\""
   ctaSecondaryAction:
     type: string
     default: "#about"
@@ -40,12 +41,10 @@ properties:
 
   imgSrc:
     type: string
-    name: "Image src"
-    default: "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg"
+    default: ""
     description: "Image source URL"
   imgAlt:
     type: string
-    name: "Image Alt"
     default: ""
     description: "Image alt text for screenreaders."
 
@@ -61,7 +60,6 @@ properties:
 
   imgOpacity:
     type: string
-    name: Image Opacity
     default: ".4"
     description: "Opacity for the image"
 

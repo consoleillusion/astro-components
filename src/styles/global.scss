@@ -26,3 +26,9 @@ section.block.full-width {
   padding:0;
 }
 
+body {
+  background: var(--color-base);
+}
+.card {
+  background: var(--color-surface);
+}

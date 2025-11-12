@@ -1,8 +1,9 @@
-name: Footer
+title: Footer
 type: object
 description: ""
 properties:
   block:
+    type: boolean
     description: Whether this is a block component or not
     default: true
   headline:

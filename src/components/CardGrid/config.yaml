@@ -1,8 +1,9 @@
-name: CardGrid
+title: CardGrid
 type: object
 description: ""
 properties:
   block:
+    type: boolean
     description: Whether this is a block component or not
     default: true
   headline:
@@ -13,7 +14,7 @@ properties:
     default: '[]'
     items:
       type: object
-      props: 
+      properties: 
         headline:
           type: string
         text:

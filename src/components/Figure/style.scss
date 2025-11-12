@@ -1,2 +1,11 @@
-.figure{
+figure {
+  .icon-background{
+    --background-color: var(--color-accent);
+    --color: var(--color-accent-2);
+    background-color: var(--background-color);
+    color: var(--color);
+
+    padding: var(--s1);
+    border-radius: 100%;
+  }
 }

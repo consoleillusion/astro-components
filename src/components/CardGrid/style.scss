@@ -1,6 +1,8 @@
 @use '../../styles/layout';
 
 .card-grid{
+  text-wrap: balance;
+  text-align: center;
   .content {
     @include layout.switcher();
   }

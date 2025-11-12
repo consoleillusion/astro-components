@@ -5,11 +5,13 @@
   --color-text-dark: rgba(10,10,10,.9);
   --color-text: var(--color-contrast);
 
-  --color-base: #F8FAFC;
-  --color-surface: #E2E8F0;
-  --color-accent-1: #3B82F6; //primary button
+  /*
+  --color-base: #E2E8F0;
+  --color-surface: #F8FAFC;
+  --color-accent: #3B82F6; //primary button
   --color-accent-2: #64748B; //secondary button
   --color-accent-3: #10B981; //additional highlight
+  */
 
   --color-success: #3D9970;
   --color-failure: #FF4136;
@@ -25,4 +27,5 @@
   --transition-time: 120ms;
   --measure: 60ch;
   --border-radius: var(--border-radius-6);
+
 }

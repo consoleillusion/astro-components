@@ -1,15 +1,15 @@
-name: SEO
+title: SEO
 type: object
 description: "A head management component that dynamically injects SEO meta tags, Open Graph, and Twitter card data based on the provided `meta` properties."
-version: 0.0.1
 properties:
   block:
+    type: boolean
     description: Whether this is a block component or not
     default: false
   title:
     type: string
     description: The page or site title.
-    default: "The Dependency Doula"
+    default: ""
 
   author:
     type: string
@@ -32,7 +32,7 @@ properties:
     type: string
     format: uri
     description: URL of the preview image used in Open Graph and Twitter cards.
-    default: "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg"
+    default:  ""
 
   iso_language:
     type: string
@@ -51,7 +51,7 @@ properties:
     type: string
     format: uri
     description: The canonical URL of the page.
-    default: "https://example.com"
+    default: ""
 
   type:
     type: string

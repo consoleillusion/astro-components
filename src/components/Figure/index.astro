@@ -18,5 +18,5 @@ const figureType = cond(conditions)(props)
 
 <figure>
   { figureType === "image" ? <img src={props.imgSrc}/> : ""}
-  { figureType === "icon" ? <Icon name={props.icon} /> : ""}
+  { figureType === "icon" ? <span class="icon-background"><Icon name={props.icon} /></span> : ""}
 </figure>

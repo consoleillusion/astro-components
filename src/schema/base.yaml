@@ -1,6 +1,7 @@
-$schema: "https://json-schema.org/draft/2020-12/schema"
+#$schema: "https://json-schema.org/draft/2020-12/schema"
 title: "Website Serialization Schema Validation"
 type: object
+additionalProperties: false
 
 properties:
   meta:
@@ -9,15 +10,12 @@ properties:
       - title
       - description
       - image
-      - iso_country
-      - iso_language
       - keywords
       - card
       - url
       - type
       - robots
       - revenge
-      - fonts
       - color
       - icon
     properties:
@@ -32,10 +30,8 @@ properties:
         format: uri
       iso_country:
         type: string
-        pattern: "^[a-z]{2}$"
       iso_language:
         type: string
-        pattern: "^[A-Z]{2}$"
       keywords:
         type: string
       card:

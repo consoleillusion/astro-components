@@ -1,9 +1,11 @@
-name: Navbar
+title: Navbar
 type: object
 description: A Navigation Bar for a website
 properties:
   block:
+    type: boolean
     description: Whether this is a block component or not
     default: true
   links:
     type: array
+    default: []

@@ -60,8 +60,8 @@
   }
 }
 
-@mixin switcher(){
-  --threshold: 50rem;
+@mixin switcher($threshold:30rem){
+  --threshold: #{$threshold};
   --gutter: 1rem;
   display: flex;
   flex-wrap: wrap;

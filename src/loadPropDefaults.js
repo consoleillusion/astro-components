@@ -1,7 +1,10 @@
 import {mergeDeepRight} from 'ramda'
-import $RefParser from "@apidevtools/json-schema-ref-parser";
+import $RefParser from "@apidevtools/json-schema-ref-parser"
+
 import Ajv from 'ajv'
+import addFormats from "ajv-formats"
 const ajv = new Ajv()
+addFormats(ajv)
 
 const schema = {
   type: "object",

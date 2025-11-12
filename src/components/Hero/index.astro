@@ -12,8 +12,8 @@ const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.
     <h1>{props.headline}</h1>
     <p>{props.subheadline}</p>
     <div class="action-row">
-      <Button text={props.ctaPrimaryText}/>
-      <Button text={props.ctaSecondaryText}/>
+      <Button text={props.ctaPrimaryText} class="primary"/>
+      <Button text={props.ctaSecondaryText} class="secondary"/>
     </div>
   </div>
 

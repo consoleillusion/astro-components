@@ -9,6 +9,12 @@
   --color-background: #{$background};
   background: oklch(from var(--color-background) calc(l * (1 + $percent / 100)) calc(c * (1 + $percent / 100)) h / 1);
 }
+@mixin lighten-background-2($background1,$background2,$percent: 90) {
+  --color-background-1: #{$background1};
+  --color-background-2: #{$background2};
+  --mix: #{$percent};
+  background: color-mix(in oklch, var(--color-background-1), var(--color-background-2) calc(var(--mix) * 1%) );
+}
 /*
 */
 html {
@@ -17,11 +23,13 @@ html {
   background: var(--color-background);
   color: var(--color-text);
 
+  /*
   --color-base: var(--snow-white);
   --color-surface: var(--greenish-white);
   --color-accent: var(--apple-green);
   --color-accent-2: var(--pistachio-green);
   --color-accent-3: "";
+  */
 }
 
 $werner-colors: (
@@ -137,6 +145,6 @@ $werner-colors: (
 
 :root {
   @each $color-map in $werner-colors {
-//    --color-#{map.get($color-map,name)}: #{map.get($color-map, color)};
+    --color-#{map.get($color-map,name)}: #{map.get($color-map, color)};
   }
 }
