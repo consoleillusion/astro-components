@@ -58,4 +58,4 @@ export const createComponent =
   }
 
 //createComponent('Hero',["headline","subheadline","ctaPrimaryText","ctaPrimaryAction","ctaSecondaryText","ctaSecondaryAction","googleReviewLink","imageSrc","style","imageOpacity","backgroundColor","height"],'block')
-createComponent('Accordion',["summary","details"])
+createComponent('Theme',["color","font"])

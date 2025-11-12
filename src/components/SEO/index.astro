@@ -33,9 +33,6 @@ const {
 <meta name="description" content={description} />
 <meta name="keywords"    content={keywords} />
 <meta name="robots" content={robots}>
-<meta name="theme-color" content={color.theme}" >
-<meta name="theme-color" content={color.themeLight} media="(prefers-color-scheme: light)" >
-<meta name="theme-color" content={color.themeDark} media="(prefers-color-scheme: dark)" >
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 { fbAppId && 
@@ -71,4 +68,3 @@ const {
 <link href={icon.small || icon.main}     rel="shortcut icon" type="image/svg+xml">
 {icon.legacy ? <link href={icon.legacy}    rel="icon"          sizes="32x32"> : ""}
 <link href={icon.large || icon.main}     rel="apple-touch-icon">
-

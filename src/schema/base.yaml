@@ -1,0 +1,92 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Website Serialization Schema Validation"
+type: object
+
+properties:
+  meta:
+    type: object
+    required:
+      - title
+      - description
+      - image
+      - iso_country
+      - iso_language
+      - keywords
+      - card
+      - url
+      - type
+      - robots
+      - revenge
+      - fonts
+      - color
+      - icon
+    properties:
+      title:
+        type: string
+      author:
+        type: string
+      description:
+        type: string
+      image:
+        type: string
+        format: uri
+      iso_country:
+        type: string
+        pattern: "^[a-z]{2}$"
+      iso_language:
+        type: string
+        pattern: "^[A-Z]{2}$"
+      keywords:
+        type: string
+      card:
+        type: string
+      url:
+        type: string
+        format: uri
+      type:
+        type: string
+      robots:
+        type: string
+      fbAppId:
+        type: string
+      latitude:
+        type: string
+      longitude:
+        type: string
+      revenge:
+        type: boolean
+      fonts:
+        type: object
+        required: [heading, body]
+        properties:
+          heading: { type: string }
+          body: { type: string }
+      color:
+        type: object
+        properties:
+          base: { type: string }
+          surface: { type: string }
+          brand: { type: string }
+          accent: { type: string }
+          support: { type: string }
+          theme: { type: string }
+          themeLight: { type: string }
+          themeDark: { type: string }
+      icon:
+        type: object
+        properties:
+          main: { type: string }
+          legacy: { type: string }
+          small: { type: string }
+          large: { type: string }
+      social:
+        type: object
+        properties:
+          twitter: { type: string }
+
+  pages:
+    type: object
+
+  global:
+    type: array
+    description: A List of Global Components

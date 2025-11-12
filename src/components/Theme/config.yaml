@@ -1,0 +1,66 @@
+name: Theme
+type: object
+description: ""
+properties:
+  id:
+    type: string
+    description: Specify an id attribute for the component
+    default: ""
+  block:
+    type: boolean
+    description: Whether this is a block component or not
+    default: false
+  font:
+    type: object
+    description: The Fonts for the site's theme
+    properties:
+      heading:
+        type: string
+      body:
+        type: string
+  color:
+    type: object
+    description: Core color system for the site's theme.
+    default: {}
+    properties:
+      base:
+        type: string
+        default: ""
+      surface:
+        type: string
+        default: ""
+      accent:
+        type: string
+        default: ""
+      accent-2:
+        type: string
+        default: ""
+      accent-3:
+        type: string
+        default: ""
+      theme:
+        type: string
+        default: "oklch(99% 1% 230deg)"
+      themeLight:
+        type: string
+        default: "oklch(99% 1% 230deg)"
+      themeDark:
+        type: string
+        default: "oklch(1% 2% 30deg)"
+  icon:
+    type: object
+    description: Icon and favicon configuration.
+    default: {}
+    properties:
+      main:
+        type: string
+        default: "/favicon.svg"
+      legacy:
+        type: string
+        default: "/favicon.ico"
+      small:
+        type: string
+        default: "/favicon.svg"
+      large:
+        type: string
+        default: "/favicon.svg"

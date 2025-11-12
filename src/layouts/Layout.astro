@@ -1,27 +1,10 @@
 ---
-/*
-import Navigation from '../components/Navigation.astro'
-import Footer from '../components/Footer.astro'
-*/
 import SpeedInsights  from "@vercel/speed-insights/astro"
-import { Font } from 'astro:assets'
-import SEO from "../components/SEO"
+import SEO from "../components/SEO/index.astro"
+import Theme from "../components/Theme/index.astro"
 import "@styles/global.scss"
 import { kebabCase } from 'change-case'
 const {meta} = Astro.props
-/*
-  { language: "en"
-  , fonts:
-    { heading: "Raleway"
-    , body: "Open Sans"
-    }
-  , ...Astro.props
-  }
-  console.log('u')
-  console.log(meta)
-  console.log('u')
-  */
-
 const toVars =
   fonts => Object.entries(fonts).map( f => "--font-"+kebabCase(f[0]) + ": var(--font-" + kebabCase(f[1]) + ");").join('')
 ---
@@ -34,13 +17,12 @@ const toVars =
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content="Astro">
     <SEO {meta} />
-    { Object.entries(meta.fonts).map( font => 
-      <Font cssVariable={'--font-' + kebabCase(font[1])} preload />
-    )}
+    <Theme {meta} />
     { meta.vercelSpeedInsights && <SpeedInsights/> }
   </head>
   
-  <body style={toVars(meta.fonts)}>
+  <!--<body style={toVars(meta.fonts)}>-->
+  <body>
     <slot />
   </body>
 </html>

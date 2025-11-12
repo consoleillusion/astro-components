@@ -1,0 +1,19 @@
+---
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import { Font } from 'astro:assets'
+import "./style.scss"
+const props = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const toVars =
+  fonts => Object.entries(fonts).map( f => "--font-"+kebabCase(f[0]) + ": var(--font-" + kebabCase(f[1]) + ");").join('')
+---
+
+<meta name="theme-color" content={props.color.theme}" >
+<meta name="theme-color" content={props.color.themeLight} media="(prefers-color-scheme: light)" >
+<meta name="theme-color" content={props.color.themeDark} media="(prefers-color-scheme: dark)" >
+{ Object.entries(props.font).map( font => 
+  <Font cssVariable={'--font-' + kebabCase(font[1])} preload />
+)}
+
+<!--
+<style>{toVars(meta.fonts)}</style>
+  -->
