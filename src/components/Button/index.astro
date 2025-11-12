@@ -1,7 +1,7 @@
 ---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
 import "./style.scss"
-const {text,action} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const {text,action} = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
 <button {action}>{text}</button>

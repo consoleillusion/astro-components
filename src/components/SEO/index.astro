@@ -23,7 +23,7 @@ const {
   longitude,
   social,
   revenge
-} = loadPropDefaults(import.meta.dirname + '/config.yaml', Astro.props);
+} = await loadPropDefaults(import.meta.dirname + '/config.yaml', Astro.props);
 
 ---
 

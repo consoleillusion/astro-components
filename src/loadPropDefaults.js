@@ -1,14 +1,9 @@
-//import { parse } from 'yaml'
-//import fs from 'fs'
 import {mergeDeepRight} from 'ramda'
 import $RefParser from "@apidevtools/json-schema-ref-parser";
 
 export const loadPropDefaults = 
   async (configPath,passedProps) => {
-//    const openui = parse(fs.readFileSync(configPath, 'utf8'))
     const openui = await $RefParser.dereference(configPath)
-    console.log('openui')
-    console.log(Object.keys(openui))
     const propDefaults = Object.entries(openui.props).reduce( (acc,prop) => {
       const propName = prop[0]
       const propConfig = prop[1]
@@ -22,4 +17,4 @@ export const loadPropDefaults =
            }
   }
 
-loadPropDefaults('./site/site.yaml',{})
+//loadPropDefaults('./site/site.yaml',{})

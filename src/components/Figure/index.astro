@@ -4,7 +4,7 @@ import {Icon} from 'astro-icon/components'
 import {cond,isNotNil,prop,propSatisfies} from 'ramda'
 import "./style.scss"
 
-const props = loadPropDefaults(import.meta.dirname + "/config.yaml",Astro.props);
+const props = await loadPropDefaults(import.meta.dirname + "/config.yaml",Astro.props);
 
 const conditions = 
   [ [propSatisfies(isNotNil, "imgSrc") , _ => "image"]

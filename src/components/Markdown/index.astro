@@ -2,7 +2,7 @@
 import {loadPropDefaults} from "../../loadPropDefaults.js"
 import {render} from '@astro:content'
 import "./style.scss"
-const {text,variables} = loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const {text,variables} = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
 <!--

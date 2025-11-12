@@ -24,8 +24,7 @@
     "ramda": "^0.32.0",
     "sass": "^1.93.3",
     "svelte": "^5.43.2",
-    "typescript": "^5.9.3",
-    "yaml": "^2.8.1"
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.73",
