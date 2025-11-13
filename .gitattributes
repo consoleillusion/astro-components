@@ -1,2 +1,2 @@
 src/schema/*.yaml linguist-detectable
-src/componentsn/*/*yaml linguist-detectable
+src/components/**/*yaml linguist-detectable
