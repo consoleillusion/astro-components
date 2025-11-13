@@ -3,7 +3,7 @@ import {loadPropDefaults} from "../../loadPropDefaults.js"
 import { Font } from 'astro:assets'
 import {kebabCase} from 'change-case'
 import "./style.scss"
-const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const props = Astro.props //await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 const toFontVars =
 fonts => Object.entries(fonts).map( f => "--font-"+kebabCase(f[0]) + ": var(--font-" + kebabCase(f[1]) + ");").join('')
 
@@ -20,10 +20,6 @@ console.log(props)
 )}
 <!--
 {JSON.stringify(props)}
-
 -->
 
 <style set:html={ ":root{" + toFontVars(props.font) + toColorVars(props.color) +"}"}></style>
-<!--
-<comp name="BLCACUHRHR" content="aoeuoeuEHOUEOUSTEHOUOEUTHEOUHNETOUHETOHUHEUETO">
-  -->

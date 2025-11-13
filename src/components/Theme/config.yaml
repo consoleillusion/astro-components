@@ -42,7 +42,7 @@ properties:
         default: ""
       accent-3:
         type: string
-        description: "This is used for... idk"
+        description: "Additional Highlights and blends"
         default: ""
       theme:
         type: string

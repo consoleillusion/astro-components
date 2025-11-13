@@ -11,6 +11,7 @@
   "dependencies": {
     "@apidevtools/json-schema-ref-parser": "^14.2.1",
     "@astrojs/svelte": "^7.2.1",
+    "@consoleillusion/what-revenge": "^0.0.3",
     "@consoleillusion/zamda": "^0.0.971912",
     "@rollup/plugin-yaml": "^4.1.2",
     "@vercel/speed-insights": "^1.2.0",

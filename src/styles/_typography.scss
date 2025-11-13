@@ -1,11 +1,16 @@
+@use "node_modules/@consoleillusion/what-revenge/src/html_element_categories" as element_categories;
+
 * + * {
   margin-top: var(--s0);
 }
-
-p {
+:is(#{element_categories.$text}) {
   max-width: var(--measure);
-  text-wrap: balance;
 }
+
+/*
+header, p {
+}
+*/
 p + p {
   margin-top: var(--s0); 
 }

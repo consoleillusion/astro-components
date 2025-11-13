@@ -1,3 +1,5 @@
+@use '../../styles/color';
+
 figure {
   .icon-background{
     --background-color: var(--color-accent);

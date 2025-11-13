@@ -1,6 +1,10 @@
 ---
 import Map from "./Map.svelte"
 import {loadPropDefaults} from "../../loadPropDefaults.js"
+const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
+<Map client:only="svelte" {...props} />
+<!--
 <Map client:only="svelte" {...loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)} />
+-->

@@ -6,14 +6,17 @@
   color: var(--color-text);
 }
 @mixin lighten-background($background,$percent: 20) {
-  --color-background: #{$background};
-  background: oklch(from var(--color-background) calc(l * (1 + $percent / 100)) calc(c * (1 + $percent / 100)) h / 1);
+  --background-color: #{$background};
+  background: oklch(from var(--background-color) calc(l * (1 + $percent / 100)) calc(c * (1 + $percent / 100)) h / 1);
+  background: oklch(from var(--background-color) calc(l + sign(.6 - l) / 5) c h / 1)
 }
 @mixin lighten-background-2($background1,$background2,$percent: 90) {
   --color-background-1: #{$background1};
   --color-background-2: #{$background2};
+  --background-color: #{$background1};
   --mix: #{$percent};
   background: color-mix(in oklch, var(--color-background-1), var(--color-background-2) calc(var(--mix) * 1%) );
+  background: oklch(from var(--background-color) calc(l + sign(.6 - l) / 10) c h / 1)
 }
 /*
 */

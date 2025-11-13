@@ -20,6 +20,8 @@ const configTemplate = (name,props) => stringify(
     { id: {type: "string", description: "Specify an id attribute for the component", default: null}
     , block: { type: "boolean", description: "Whether this is a block component or not", default: props.block=== true ? true : false} 
     , ...props.reduce((acc,propName)=>{acc[propName]={type:'string',default:""};return acc},{})
+    , headline: {type: "string",description:"A header for this component"}
+    , subheadline: {type: "string",description:"A subheadline for this component"}
     }
   })
 

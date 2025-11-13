@@ -1,30 +1,23 @@
 import {mergeDeepRight} from 'ramda'
 import $RefParser from "@apidevtools/json-schema-ref-parser"
 
+import {validate} from './schema/validate.js'
+/*
 import Ajv from 'ajv'
 import addFormats from "ajv-formats"
 const ajv = new Ajv()
 addFormats(ajv)
-
-const schema = {
-  type: "object",
-  properties: {
-    foo: {type: "integer"},
-    bar: {type: "string"}
-  },
-  required: ["foo"],
-  additionalProperties: false
-}
-
+*/
 
 export const loadPropDefaults = 
   async (configPath,passedProps) => {
+    console.log(configPath)
     const openui = await $RefParser.dereference(configPath)
-    const validate = ajv.compile(openui)
+    //const validate = ajv.compile(openui)
     const propDefaults = Object.entries(openui.properties).reduce( (acc,prop) => {
       const propName = prop[0]
       const propConfig = prop[1]
-      acc[propName] = ((typeof propConfig.default) != undefined) ? propConfig.default : ""
+      acc[propName] = ((propConfig.default) != undefined) ? propConfig.default : ""
       return acc
     }, {})
     return { ...mergeDeepRight(propDefaults, passedProps)

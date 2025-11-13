@@ -7,6 +7,6 @@ export const validate =
   schema => data => {
     const validate = ajv.compile(schema)
     const valid = validate(data)
-    if (!valid) console.log(validate.errors)
-    return valid
+    //if (!valid) console.log(validate.errors)
+    return {res: valid,err: validate.errors || null}
   }

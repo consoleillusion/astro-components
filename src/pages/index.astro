@@ -3,7 +3,7 @@ import $RefParser from "@apidevtools/json-schema-ref-parser"
 import path from 'node:path'
 import Layout       from "@layouts/Layout.astro"
 import { glob } from 'astro/loaders';
-import site from "@base/site/site.yaml" //glob({ pattern: "**/*.yaml", base: "./site/" })
+//import site from "@base/site/site.yaml" //glob({ pattern: "**/*.yaml", base: "./site/" })
 
 const {meta,pages,header,footer, ...data} = await $RefParser.dereference('./site/site.yaml')
 const components = Object.entries(import.meta.glob('@components/**/*.astro', { eager: true }))
@@ -19,13 +19,13 @@ const components = Object.entries(import.meta.glob('@components/**/*.astro', { e
 const page = pages['/']
 ---
 
-<Layout meta={site.meta}>
+<Layout meta={meta}>
   <main>
     { page.blocks.filter(x=>x.include !== false).map( block => {
       const Component = components[block.component]
       return <Component {page} {...block} />
     })}
-  </main>
-</Layout>
     <!--
     -->
+  </main>
+</Layout>
