@@ -34,3 +34,7 @@ meta:
     large: /favicon.svg
   social:
     twitter: ''
+pages:
+  "/":
+    blocks:
+      - component: Hero
