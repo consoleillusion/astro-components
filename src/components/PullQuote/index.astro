@@ -4,7 +4,7 @@ import { Icon } from 'astro-icon/components'
 import "./style.scss"
 const { randomBytes } = await import('node:crypto')
 
-const {cite,text} = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const {cite,text} = Astro.props // await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 const randomBase64 = crypto.randomBytes(8).toString('base64');
 ---
 

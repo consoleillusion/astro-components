@@ -1,7 +1,7 @@
 ---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
 import "./style.scss"
-const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const props = Astro.props // await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 const actionType = "ahref"
 ---
 

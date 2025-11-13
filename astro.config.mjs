@@ -16,6 +16,8 @@ export default defineConfig(
   , vite: {
         plugins: [yaml()]
     }
+  , site: "https://consoleillusion.github.io"
+  , base: "/"
   , experimental:
     { fonts:
       [ ...fontsourceFonts.map( f => (
