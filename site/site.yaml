@@ -1,0 +1,36 @@
+meta:
+  title: The Depedency Doula
+  author: ''
+  description: A backpacker’s journal of slow travel, mountain trails, and offbeat adventures
+    around the world. Tips, stories, and inspiration for life on the move.
+  image: https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg
+  iso_country: US
+  iso_language: en
+  keywords: The Dependency Doula
+  card: summary_large_image
+  url: https://example.com
+  type: website
+  robots: index, follow
+  fbAppId: ''
+  latitude: ''
+  longitude: ''
+  revenge: false
+  font:
+    heading: Poppins
+    body: Montserrat
+  color:
+    theme: oklch(99% 2% 230deg)
+    themeLight: oklch(99% 2% 230deg)
+    themeDark: oklch(1% 2% 30deg)
+    base: rgba(245, 250, 240, 0.98)
+    surface: rgba(230, 240, 220, 0.5)
+    accent: rgba(120, 160, 110, 1)
+    accent-2: rgba(220, 240, 230, 1)
+    accent-3: rgba(200, 220, 190, 0.7)
+  icon:
+    main: /favicon.svg
+    legacy: /favicon.ico
+    small: /favicon.svg
+    large: /favicon.svg
+  social:
+    twitter: ''
