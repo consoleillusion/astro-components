@@ -17,7 +17,7 @@ export default defineConfig(
         plugins: [yaml()]
     }
   , site: "https://consoleillusion.github.io"
-  , base: "/"
+  , base: "/astro-components"
   , experimental:
     { fonts:
       [ ...fontsourceFonts.map( f => (
