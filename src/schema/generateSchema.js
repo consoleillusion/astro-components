@@ -36,7 +36,7 @@ schema["properties"]["meta"]["properties"]["iso_country"]["enum"] = Object.keys(
 schema["properties"]["global"]["items"] = { anyOf: Object.keys(components).map(componentName=>({$ref: "#/$defs/" + componentName })) }
 schema["properties"]["meta"]["properties"]["color"] =
   { type: "object"
-  , required: ["base","surface","brand","accent","accent-2","accent-3"]
+  , required: ["base","surface","brand","accent","support"]
   , properties:
     { "base": { "$ref": "#/$defs/Colors" }
     , "surface": { "$ref": "#/$defs/Colors" }
