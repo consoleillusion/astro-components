@@ -5,46 +5,13 @@ required: ["meta","pages","globals"]
 
 properties:
   meta:
-    type: object
-    required: ["title","description","image","keywords","card","url","type","robots","revenge","color","icon","latitude","longitude"]
-    properties:
-      title: { type: "string" }
-      author: { type: "string" }
-      description: { type: "string" }
-      image: { type: "string", format: "uri" }
-      iso_country: { type: "string" }
-      iso_language: { type: "string" }
-      keywords: { type: "string" }
-      card: { type: "string" }
-      url: { type: "string", format: "uri" }
-      type: { type: "string" }
-      robots: { type: "string" }
-      fbAppId: { type: "string" }
-      latitude: { type: "number", minimum: -90, maximum: 90}
-      longitude: { type: "number", minimum: -180, maximum: 180}
-      revenge: { type: "boolean", default: false, examples: [false] }
-      fonts:
-        type: object
-        required: [heading, body]
-        properties:
-          heading: { type: string }
-          body: { type: string }
-      color:
-      icon:
-        type: object
-        properties:
-          main: { type: string }
-          legacy: { type: string }
-          small: { type: string }
-          large: { type: string }
-      social:
-        type: object
-        properties:
-          twitter: { type: string }
+    $ref: './meta.yaml'
 
   pages:
     type: object
     additionalProperties: false
+    examples:
+      - { "/": {title: "home", blocks: []}, "/about": {title: "about", blocks: []}, "/services": {title: "services", blocks: []}, "/contact": {title: "contact", blocks: []}}
     patternProperties:
       "^/(?:[a-z0-9\\-_.~]+(?:/[a-z0-9\\-_.~]+)*)?$":
         type: object
@@ -61,3 +28,4 @@ properties:
   global:
     type: array
     description: A List of Global Components
+    default: [{title: NavBar},{title: Footer}]

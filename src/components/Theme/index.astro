@@ -9,17 +9,15 @@ fonts => Object.entries(fonts).map( f => "--font-"+kebabCase(f[0]) + ": var(--fo
 
 const toColorVars =
 colors => Object.entries(colors).map( f => "--color-"+kebabCase(f[0]) + ": " + f[1] + ";").join('')
-console.log(props)
 ---
 
+<!--
 <meta name="theme-color" content={props.color.theme} >
 <meta name="theme-color" content={props.color.themeLight} media="(prefers-color-scheme: light)" >
 <meta name="theme-color" content={props.color.themeDark} media="(prefers-color-scheme: dark)" >
-{ Object.entries(props.font).map( font => 
+-->
+{ Object.entries(props.theme.fonts).map( font => 
   <Font cssVariable={'--font-' + kebabCase(font[1])} preload />
 )}
-<!--
-{JSON.stringify(props)}
--->
 
-<style set:html={ ":root{" + toFontVars(props.font) + toColorVars(props.color) +"}"}></style>
+<style set:html={ ":root{" + toFontVars(props.theme.fonts) + toColorVars(props.theme.palette) +"}"}></style>

@@ -72,4 +72,3 @@ properties:
     type: string
     default: "70vh"
     description: "Height of the component"
-

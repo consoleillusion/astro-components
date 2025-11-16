@@ -32,27 +32,27 @@ properties:
         type: string
         description: "The Surface color is used for background colors of large sections which are above the base"
         default: ""
-      accent:
+      brand:
         type: string
-        description: "The Accent color is used for less important buttons and UI"
+        description: "The Accent color is used for brand items, secondary buttons, and UI"
         default: ""
-      accent-2:
+      accent:
         type: string
         description: "This is used for more important, primary buttons, like a cta"
         default: ""
-      accent-3:
+      support:
         type: string
         description: "Additional Highlights and blends"
         default: ""
-      theme:
-        type: string
-        default: "oklch(99% 1% 230deg)"
-      themeLight:
-        type: string
-        default: "oklch(99% 1% 230deg)"
-      themeDark:
-        type: string
-        default: "oklch(1% 2% 30deg)"
+#      theme:
+#        type: string
+#        default: "oklch(99% 1% 230deg)"
+#      themeLight:
+#        type: string
+#        default: "oklch(99% 1% 230deg)"
+#      themeDark:
+#        type: string
+#        default: "oklch(1% 2% 30deg)"
 
   revenge:
     type: boolean

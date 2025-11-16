@@ -26,6 +26,7 @@ const {
   revenge
 } = Astro.props // await loadPropDefaults(import.meta.dirname + '/config.yaml', Astro.props);
 
+const base = import.meta.env.BASE_URL
 ---
 
 <!-- General -->
@@ -65,6 +66,6 @@ const {
 }
 
 <!-- Icons --> 
-<link href={icon.small || icon.main}     rel="shortcut icon" type="image/svg+xml">
-{icon.legacy ? <link href={icon.legacy}    rel="icon"          sizes="32x32"> : ""}
-<link href={icon.large || icon.main}     rel="apple-touch-icon">
+<link href={base + (icon.small || icon.main)}     rel="shortcut icon" type="image/svg+xml">
+{icon.legacy ? <link href={base + icon.legacy}    rel="icon"          sizes="32x32"> : ""}
+<link href={base + (icon.large || icon.main)}     rel="apple-touch-icon">

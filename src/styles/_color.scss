@@ -1,9 +1,9 @@
 @use "sass:map";
 @mixin background-and-contrast($background) {
-  --color-background: #{$background};
-  --color-text: oklch(from var(--color-background) calc((l - .6) * -9999) 0 h / .9);
-  background: var(--color-background);
-  color: var(--color-text);
+  --background-color: #{$background};
+  --color: oklch(from var(--background-color) calc((l - .6) * -9999) 0 h / .9);
+  background: var(--background-color);
+  color: var(--color);
 }
 @mixin lighten-background($background,$percent: 20) {
   --background-color: #{$background};

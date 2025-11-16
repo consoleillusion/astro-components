@@ -1,6 +1,7 @@
 title: Button
 type: object
 description: ""
+required: ["text"]
 properties:
   block:
     type: boolean
@@ -8,10 +9,10 @@ properties:
     default: false
   text:
     type: string
-    default: ""
+    default: null
   action:
     type: string
-    default: ""
+    default: null
   class:
     type: string
-    default: ""
+    default: null

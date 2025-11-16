@@ -2,8 +2,7 @@
 
 figure {
   .icon-background{
-    --background-color: var(--color-accent);
-    --color: var(--color-accent-2);
+    @include color.background-and-contrast(var(--color-brand));
     background-color: var(--background-color);
     color: var(--color);
 

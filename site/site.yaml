@@ -1,40 +1,60 @@
 meta:
-  title: The Depedency Doula
-  author: ''
-  description: A backpacker’s journal of slow travel, mountain trails, and offbeat adventures around the world. Tips, stories, and inspiration for life on the move.
-  image: https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg
+  title: The Local Restaurant
+  author: John Doe
+  description: A delicious local restaurant serving up fresh and tasty food.
+  image: https://example.com/local_restaurant.jpg
   iso_country: US
   iso_language: en
-  keywords: The Dependency Doula
+  keywords: local, restaurant, food, delicious
   card: summary_large_image
-  url: https://example.com
+  url: https://example.com/local-restaurant
   type: website
   robots: index, follow
-  fbAppId: ''
-  latitude: ''
-  longitude: ''
+  fbAppId: null
+  latitude: 37.421955
+  longitude: -122.084058
   revenge: false
-  font:
-    heading: Poppins
-    body: Montserrat
-  color:
-    theme: oklch(99% 2% 230deg)
-    themeLight: oklch(99% 2% 230deg)
-    themeDark: oklch(1% 2% 30deg)
-    base: rgba(245, 250, 240, 0.98)
-    surface: rgba(230, 240, 220, 0.5)
-    accent: rgba(120, 160, 110, 1)
-    accent-2: rgba(220, 240, 230, 1)
-    accent-3: rgba(200, 220, 190, 0.7)
+  theme:
+    palette:
+      id: local-restaurant
+      title: Local Restaurant
+      author: John Doe
+      colors:
+        base: '#000000'
+        surface: '#ffffff'
+        brand: '#f28b31'
+        accent: '#95c4ce'
+        support: '#6d756e'
+    fonts:
+      heading: Roboto
+      body: Open Sans
   icon:
     main: /favicon.svg
     legacy: /favicon.ico
     small: /favicon.svg
     large: /favicon.svg
   social:
-    twitter: ''
+    twitter: null
+    facebook: null
+    telegram: null
+    mastodon: null
+    bluesky: null
 pages:
   "/":
+    title: "home"
     blocks:
-      - component: Hero
-globals:
+    - component: Hero
+      headline: Our Restaurant
+      subheadline: Delicious Food for All Seasons
+      ctaPrimaryText: Order Now
+      ctaPrimaryAction: tel:1234567890
+      ctaSecondaryText: Get Reviews
+      ctaSecondaryAction: '#reviews'
+      googleReviewLink: ''
+      imgSrc: https://example.com/images/restaurant-food.jpg
+      imgAlt: Restaurant Food
+      icon: fas fa-utensils
+      style: 'background-color: #FFC800; color: #222222; font-size: 36px;'
+      imgOpacity: '.4'
+      backgroundColor: '#FFFFFF'
+      height: 100vh

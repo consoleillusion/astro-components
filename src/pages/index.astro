@@ -5,7 +5,7 @@ import Layout       from "@layouts/Layout.astro"
 import { glob } from 'astro/loaders';
 //import site from "@base/site/site.yaml" //glob({ pattern: "**/*.yaml", base: "./site/" })
 
-const {meta,pages,header,footer, ...data} = await $RefParser.dereference('./site/site.yaml')
+const site = await $RefParser.dereference('./site/site.yaml')
 const components = Object.entries(import.meta.glob('@components/**/*.astro', { eager: true }))
                    .reduce
                    ( (acc,cur) => {
@@ -16,10 +16,10 @@ const components = Object.entries(import.meta.glob('@components/**/*.astro', { e
                    , {}
                    )
 
-const page = pages['/']
+const page = site.pages['/']
 ---
 
-<Layout meta={meta}>
+<Layout meta={site.meta}>
   <main>
     { page.blocks.filter(x=>x.include !== false).map( block => {
       const Component = components[block.component]
