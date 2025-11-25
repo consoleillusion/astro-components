@@ -18,7 +18,7 @@ properties:
     x-generator: "llm"
   author:
     description: "The name of the individual, business, or organization responsible for creating or managing the website’s content."
-    type: ["string",null]
+    type: "string"
     default: null
     x-generator: "none"
   image:
@@ -71,7 +71,7 @@ properties:
     x-generator: "default"
 
   fbAppId:
-    description:
+    description: "Facebook AppId if this is a Facebook App."
     type: "string"
     default: null
     x-generator: "default"
@@ -98,76 +98,26 @@ properties:
     x-generator: "default"
 
   theme:
-    description: "The theme of the website, including palette and fonts."
-    type: object
-    required: [palette,fonts]
-    default: 
-    x-generator: "vector"
-    properties:
-      palette:
-        $ref: './theme.yaml'
-      fonts:
-        type: object
-        required: [heading, body]
-        properties:
-          heading: { type: string }
-          body: { type: string }
+    $ref: "./theme.yaml"
   icon:
-    type: object
+    description: "The icons for the website."
+    type: "object"
     properties:
-      main: { type: string, default: "/favicon.svg" }
-      legacy: { type: string, default: "/favicon.ico" }
-      small: { type: string, default: "/favicon.svg" }
-      large: { type: string, default: "/favicon.svg" }
+      main: 
+        description: "The icons for the website."
+        type: string
+        default: "/favicon.svg"
+      legacy:
+        description: "The icons for the website."
+        type: string
+        default: "/favicon.ico"
+      small:
+        description: "The icons for the website."
+        type: string
+        default: "/favicon.svg"
+      large:
+        description: "The icons for the website."
+        type: string
+        default: "/favicon.svg"
   social:
-    type: object
-    x-generator: "none"
-    properties:
-      twitter:
-        type: [object,null]
-        default: null
-        properties:
-          icon:
-          handle:
-      facebook:
-        type: [object,null]
-        default: null
-        properties:
-          icon:
-          handle:
-      telegram:
-        type: [object,null]
-        default: null
-        properties:
-          icon:
-          handle:
-      mastodon:
-        type: [object,null]
-        default: null
-        properties:
-          icon:
-          handle:
-      bluesky:
-        type: [object,null]
-        default: null
-        properties:
-          icon:
-          handle:
-      instagram:
-        type: [object,null]
-        default: null
-        properties:
-          icon:
-          handle:
-      tiktok:
-        type: [object,null]
-        default: null
-        properties:
-          icon:
-          handle:
-      pintrest:
-        type: [object,null]
-        default: null
-        properties:
-          icon:
-          handle:
+    $ref: "./social.yaml"

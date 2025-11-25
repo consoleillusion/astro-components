@@ -2,6 +2,9 @@ import Ajv from 'ajv'
 import addFormats from "ajv-formats"
 const ajv = new Ajv()
 addFormats(ajv)
+ajv.addKeyword({keyword: "x-generator"})
+ajv.addKeyword({keyword: "x-faker"})
+ajv.addKeyword({keyword: "faker"})
 
 export const validate =
   schema => data => {

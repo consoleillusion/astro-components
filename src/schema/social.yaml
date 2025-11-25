@@ -1,0 +1,26 @@
+title: "social"
+type: "object"
+x-generator: "none"
+properties:
+  twitter:
+    type: "object"
+    default: null
+    properties:
+      icon:
+        description: "The Twitter Icon to Use"
+        type: "string"
+        default: "ri:twitter-x"
+      handle:
+        description: "The Handle to Use"
+        type: "string"
+  facebook:
+    type: "object"
+    default: null
+    properties:
+      icon:
+        description: "The Facebook Icon to Use"
+        type: "string"
+        default: "ri:facebook-fill"
+      handle:
+        description: "The Facebook to Use"
+        type: "string"

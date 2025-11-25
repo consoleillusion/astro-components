@@ -24,6 +24,10 @@ properties:
     type: string
     default: "tel:123"
     description: "Primary call to action"
+  ctaPrimaryIcon:
+    type: string
+    default: ""
+    description: "Iconify icon identifier"
 
   ctaSecondaryText:
     type: string
@@ -33,6 +37,11 @@ properties:
     type: string
     default: "#about"
     description: "Secondary call to action"
+  ctaSecondaryIcon:
+    type: string
+    default: ""
+    description: "Iconify icon identifier"
+
 
   googleReviewLink:
     type: string
@@ -47,11 +56,6 @@ properties:
     type: string
     default: ""
     description: "Image alt text for screenreaders."
-
-  icon:
-    type: string
-    default: ""
-    description: "Iconify icon identifier"
 
   style:
     type: string

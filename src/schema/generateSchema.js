@@ -34,8 +34,8 @@ schema["properties"]["pages"]["patternProperties"]["^/(?:[a-z0-9\\-_.~]+(?:/[a-z
 schema = await loadFile(schema)
 
 const siteData = await loadFile(resolve(import.meta.dirname,"../../site/site.yaml"))
-console.log(schema)
+//console.log(schema)
 const valid = validate(schema)(siteData)
 //console.log(JSON.stringify(valid))
-export const fullSchema = schema
+export { schema }
 //console.log(JSON.stringify(schema))
