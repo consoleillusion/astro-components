@@ -1,12 +1,16 @@
 {
-  "name": "astro-components",
+  "name": "@consoleillusion/astro-components",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+
+    "prep": "sh -c 'git add . && git commit -m \"$*\"' --",
+    "postpublish": "bunx npm version patch --no-git-tag-version && git add . && git commit -m \"Auto version bump\"",
+    "pub": "bunx npm publish"
   },
   "dependencies": {
     "@apidevtools/json-schema-ref-parser": "^14.2.1",

@@ -1,0 +1,12 @@
+title: "Link"
+type: object
+required: ["text","href"]
+additionalProperties: false
+properties:
+  text:
+    type: string
+    description: The visible text of the link.
+  href:
+    type: string
+    format: uri
+    description: The destination URL of the link.

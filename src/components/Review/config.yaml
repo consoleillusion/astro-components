@@ -1,0 +1,21 @@
+type: object
+description: Review component displays a user review with a title, reviewer name, date, rating (within minimum and maximum bounds), and the review body text.
+required: ["name", "date", "title", "body", "rating"]
+additionalProperties: false
+properties:
+  name:
+    type: string
+    description: Name of the reviewer.
+  date:
+    type: string
+    format: date
+    description: Date of the review in ISO format.
+  title:
+    type: string
+    description: Title of the review.
+  body:
+    type: string
+    description: Text content of the review.
+  rating:
+    type: number
+    description: Numeric rating given by the reviewer

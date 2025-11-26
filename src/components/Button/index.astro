@@ -1,9 +1,14 @@
 ---
-import {loadPropDefaults} from "../../loadPropDefaults.js"
 import "./style.scss"
-const props = Astro.props // await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
-const actionType = "ahref"
+import path from 'path'
+import $RefParser from '@apidevtools/json-schema-ref-parser'
+
+const configPath = path.resolve(import.meta.dir, 'config.yaml')
+const schema = await $RefParser.dereference(configPath)
+
+const props = Astro.props
 ---
+
 
 { (actionType === "ahref")
 ? (<a href={props.action} role="button" class={props.class}>{props.text}</a>)
