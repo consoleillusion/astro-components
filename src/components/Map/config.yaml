@@ -1,7 +1,13 @@
 title: Map
 type: object
 description: A Svelte Map component made with Leaflet
+additionalProperties: false
+required: ["component","block"]
 properties:
+  component:
+    type: string
+    default: Map
+    description: This specifies which component and schema is being used. It's mostly for internal purposes.
   block:
     type: boolean
     description: Whether this is a block component or not

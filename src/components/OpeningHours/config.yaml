@@ -1,8 +1,18 @@
+title: OpeningHours
 type: object
 description: OpeningHours component accepts an object containing an array of daily opening-hour entries, each specifying the day of the week and optional opening and closing times.
-required: ["hours"]
+required: ["hours","component","block"]
 additionalProperties: false
 properties:
+  block:
+    type: boolean
+    description: Whether this is a block component or not
+    default: true
+  component:
+    type: string
+    default: OpeningHours
+    description: This specifies which component and schema is being used. It's mostly for internal purposes.
+    required: true
   hours:
     type: array
     description: A list of opening-hour entries for each day of the week.

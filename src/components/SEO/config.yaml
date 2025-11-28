@@ -1,7 +1,14 @@
 title: SEO
 type: object
 description: "A head management component that dynamically injects SEO meta tags, Open Graph, and Twitter card data based on the provided `meta` properties."
+additionalProperties: false
+required: ["component","block"]
 properties:
+  component:
+    type: string
+    default: SEO
+    description: This specifies which component and schema is being used. It's mostly for internal purposes.
+    required: true
   block:
     type: boolean
     description: Whether this is a block component or not

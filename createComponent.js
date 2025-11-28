@@ -16,6 +16,7 @@ const configTemplate = (name,props) => stringify(
   { name: name
   , type: "object"
   , description: ""
+  , additionalProperties: false
   , properties:
     { id: {type: "string", description: "Specify an id attribute for the component", default: null}
     , block: { type: "boolean", description: "Whether this is a block component or not", default: props.block=== true ? true : false} 

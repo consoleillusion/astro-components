@@ -1,0 +1,278 @@
+[
+  {
+    "name": "Roboto",
+    "description": "Roboto was designed by Christian Robertson for Google to create a modern and highly readable sans serif for digital interfaces. It is a calm, steady font that feels reliable and grounded. Today, Roboto is widely used in apps, websites, and branding where a friendly yet professional tone is needed.",
+    "keywords": ["Modern", "Professional", "Approachable", "Sans serif"]
+  },
+  {
+    "name": "Open Sans",
+    "description": "Open Sans was developed by Steve Matteson as a humanist sans serif optimized for legibility on screens. Light, airy, and open-hearted, this font feels like a welcoming breath of fresh air. It works well in corporate communication, websites, and editorial layouts requiring warmth and neutrality.",
+    "keywords": ["Neutral", "Friendly", "Elegant", "Sans serif"]
+  },
+  {
+    "name": "Lato",
+    "description": "Lato was created by Łukasz Dziedzic as a friendly sans serif for corporate use with a warm and humanistic touch. A warm, balanced font with a quiet confidence, it feels friendly and human while staying polished enough for professional work. Lato is popular in branding, marketing materials, and websites that need approachability with professionalism.",
+    "keywords": ["Elegant", "Classic", "Harmonious", "Sans serif"]
+  },
+  {
+    "name": "Montserrat",
+    "description": "Julieta Ulanovsky designed Montserrat inspired by old signage from Buenos Aires to revive urban geometric typography. Bold and urban, this font radiates modern energy. It suits headlines, posters, and digital designs requiring a confident, stylish presence.",
+    "keywords": ["Stylish", "Trendy", "Urban", "Sans serif"]
+  },
+  {
+    "name": "Raleway",
+    "description": "Raleway was originally designed by Matt McInerney as an elegant sans serif intended for headings and display use. Graceful and stylish, Raleway has a sleek, airy quality. It is excellent for invitations, fashion branding, and editorial designs that benefit from a refined modern flair.",
+    "keywords": ["Chic", "Classy", "Airy", "Sans serif"]
+  },
+  {
+    "name": "Playfair Display",
+    "description": "Playfair Display was inspired by 18th-century European Enlightenment fonts and designed for editorial use. It carries an aristocratic, luxurious tone with high contrast strokes and refined serifs. It is ideal for luxury branding, fashion magazines, and sophisticated editorial work.",
+    "keywords": ["Elegant", "Sophisticated", "Aristocratic", "Slab serif"]
+  },
+  {
+    "name": "Noto Sans",
+    "description": "Noto Sans was created by Google to provide universal font support across all languages and scripts worldwide. It feels versatile, inclusive, and harmonious, perfectly embodying global communication. It’s widely used in multi-lingual applications, international branding, and diverse content platforms.",
+    "keywords": ["Versatile", "Comprehensive", "Universal", "Sans serif"]
+  },
+  {
+    "name": "Poppins",
+    "description": "Poppins is a geometric sans serif designed by Indian Type Foundry with a playful, rounded style. It evokes a lively and modern spirit with its smooth shapes and approachable curves. Poppins works well in tech startups, children’s products, and modern marketing campaigns.",
+    "keywords": ["Playful", "Geometric", "Rounded", "Sans serif"]
+  },
+  {
+    "name": "Oswald",
+    "description": "Oswald was redesigned by Vernon Adams to revive the classic gothic style in a modern slab serif form. It carries a bold, dynamic presence that commands attention with condensed shapes. Oswald is perfect for headlines, posters, and impactful branding materials.",
+    "keywords": ["Bold", "Dynamic", "Condensed", "Slab serif"]
+  },
+  {
+    "name": "PT Sans",
+    "description": "PT Sans was developed to support the diverse Cyrillic script with a humanist sans serif design. It offers a warm, friendly tone with clear legibility and broad language support. PT Sans is well suited for inclusive communication, educational content, and community-focused projects.",
+    "keywords": ["Humanist", "Friendly", "Cyrillic", "Sans serif"]
+  },
+  {
+    "name": "Lora",
+    "description": "Lora was designed by Cyreal to blend calligraphic roots with modern serif styles for text-rich projects. It expresses grace, elegance, and balance with its smooth curves and classic feel. Lora is ideal for books, articles, and sophisticated branding requiring a literary touch.",
+    "keywords": ["Graceful", "Elegant", "Balanced", "Serif"]
+  },
+  {
+    "name": "Roboto Slab",
+    "description": "Roboto Slab extends the popular Roboto family into a slab serif with a modern, structured design. It offers clarity, contrast, and simplicity with a geometric yet friendly personality. Roboto Slab is frequently used in tech branding, editorial layouts, and UI design that demands legibility with style.",
+    "keywords": ["Modern", "Minimalist", "Contrasted", "Slab serif"]
+  },
+  {
+    "name": "Merriweather",
+    "description": "Merriweather was designed by Eben Sorkin as a serif font optimized for screen readability with a warm, organic feel. It provides comfort and elegance with a soft, inviting texture. It works great in blogs, digital publications, and projects aiming for a welcoming tone.",
+    "keywords": ["Warm", "Readable", "Organic", "Serif"]
+  },
+  {
+    "name": "Source Sans 3",
+    "description": "Source Sans 3 is an evolution of Adobe’s Source Sans, designed for clean and simple UI use. It embodies professionalism, clarity, and versatility with a straightforward sans serif style. This font excels in interfaces, web content, and corporate design systems.",
+    "keywords": ["Clean", "Simple", "Professional", "Sans serif"]
+  },
+  {
+    "name": "Ubuntu",
+    "description": "Ubuntu was designed by Dalton Maag for the Ubuntu OS, embodying open source principles with a distinctive personality. It feels unique, futuristic, and approachable, reflecting innovation and identity. Ubuntu is often used in tech, startups, and projects emphasizing diversity and progress.",
+    "keywords": ["Unique", "Distinctive", "Futuristic", "Sans serif"]
+  },
+  {
+    "name": "Nunito",
+    "description": "Nunito was designed by Vernon Adams as a balanced, rounded sans serif with a soft, friendly look. It radiates warmth and smoothness with gentle curves and approachable shapes. Nunito suits branding, apps, and websites looking for a gentle and inviting aesthetic.",
+    "keywords": ["Soft", "Rounded", "Smooth", "Sans serif"]
+  },
+  {
+    "name": "Bitter",
+    "description": "Bitter was created by Sol Matas as a slab serif with strong serifs and high contrast for digital reading. It conveys a stylish, contemporary feel with a solid and confident voice. Bitter is perfect for editorial projects, blogs, and websites emphasizing clarity and impact.",
+    "keywords": ["Stylish", "Contemporary", "Strong", "Slab serif"]
+  },
+  {
+    "name": "Pacifico",
+    "description": "Pacifico was designed by Vernon Adams as a script inspired by 1950s American surf culture and hand lettering. It feels fun, lively, and retro with playful, flowing strokes. Pacifico works well for branding, greeting cards, and creative projects that want to evoke joy and personality.",
+    "keywords": ["Fun", "Lively", "Retro", "Script"]
+  },
+  {
+    "name": "Josefin Sans",
+    "description": "Josefin Sans was created by Santiago Orozco inspired by 1920s Scandinavian geometric styles. It carries a vintage and stylish tone with thin strokes and square shapes. Josefin Sans is ideal for retro-themed projects, headlines, and fashion branding.",
+    "keywords": ["Vintage", "Geometric", "Thin", "Sans serif"]
+  },
+  {
+    "name": "Cabin",
+    "description": "Cabin was designed by Pablo Impallari as a humanist sans serif with geometric roots and open shapes. It offers a modern, minimalist vibe with clean lines and balanced proportions. Cabin is suitable for web design, tech brands, and minimalist editorial work.",
+    "keywords": ["Modern", "Minimalist", "Geometric", "Sans serif"]
+  },
+  {
+    "name": "Barlow",
+    "description": "Barlow was designed by Jeremy Tribby inspired by Californian signage with a clean and versatile sans serif style. It reflects modernity, diversity, and dynamism with a broad style range. Barlow is perfect for branding, user interfaces, and projects seeking a trendy yet adaptable font.",
+    "keywords": ["Modern", "Versatile", "Californian", "Sans serif"]
+  },
+  {
+    "name": "Rubik",
+    "description": "Rubik was developed by Philipp Hubert and Sebastian Fischer as a geometric sans serif with rounded corners. It feels modern, geometric, and soft with a friendly personality. Rubik is widely used in tech branding, apps, and modern editorial design requiring warmth with structure.",
+    "keywords": ["Modern", "Geometric", "Soft", "Sans serif"]
+  },
+  {
+    "name": "Fira Sans",
+    "description": "Fira Sans was designed by Erik Spiekermann for Mozilla’s Firefox OS with a minimalist and modern approach. It embodies sleekness, futurism, and innovation with its clean shapes. Fira Sans is ideal for tech interfaces, apps, and futuristic branding projects.",
+    "keywords": ["Modern", "Minimalist", "Futuristic", "Sans serif"]
+  },
+  {
+    "name": "Teko",
+    "description": "Teko was designed by Indian Type Foundry as a wide, condensed sans serif for display use. It projects a cutting-edge, futuristic vibe with its bold and wide structure. Teko is perfect for headlines, posters, and projects wanting to convey strength and modernity.",
+    "keywords": ["Modern", "Futuristic", "Wide", "Sans serif"]
+  },
+  {
+    "name": "Archivo",
+    "description": "Archivo was created by Omnibus-Type inspired by 20th-century technical typography for high-performance use. It is modern, dynamic, and technical with strong, functional shapes. Archivo suits editorial, branding, and projects requiring clarity and impactful communication.",
+    "keywords": ["Modern", "Dynamic", "Technical", "Slab serif"]
+  },
+  {
+    "name": "Syne",
+    "description": "Syne was designed by Indian Type Foundry as a creative and eccentric display font with tactile characteristics. It carries a whimsical, artistic energy with varied weights and expressive styles. Syne works well in headlines, logos, and creative branding needing a unique, eye-catching look.",
+    "keywords": ["Creative", "Eccentric", "Tactile", "Display"]
+  },
+  {
+    "name": "Inter",
+    "description": "Inter was designed by Rasmus Andersson for digital interfaces prioritizing readability and performance. It is sleek, futuristic, and highly compatible with various screen sizes and uses. Inter is commonly used in UI design, websites, and apps requiring optimal legibility.",
+    "keywords": ["Sleek", "Futuristic", "Performance", "Sans serif"]
+  },
+  {
+    "name": "Quattrocento",
+    "description": "Quattrocento was designed by Pablo Impallari to revive classic serif styles with a warm and friendly tone. It conveys comfort, harmony, and nostalgia with balanced forms. Quattrocento is ideal for body text, printed books, and projects needing a traditional yet approachable feel.",
+    "keywords": ["Warm", "Friendly", "Nostalgic", "Serif"]
+  },
+  {
+    "name": "Fanwood Text",
+    "description": "Fanwood Text was created to evoke classical serif elegance with a refined and graceful style. It feels sophisticated and timeless with a delicate touch. Fanwood Text suits literary publications, academic projects, and refined editorial work.",
+    "keywords": ["Graceful", "Elegant", "Refined", "Serif"]
+  },
+  {
+    "name": "Fjalla One",
+    "description": "Fjalla One was designed by Magdalena Łazor as a narrow, condensed sans serif with a strong impact. It is dynamic, modern, and energetic with bold strokes. Fjalla One is excellent for headlines, banners, and advertising that demands attention.",
+    "keywords": ["Narrow", "Dynamic", "Modern", "Sans serif"]
+  },
+  {
+    "name": "Libre Baskerville",
+    "description": "Libre Baskerville was developed as a web-optimized revival of the classic Baskerville serif font. It feels classic, elegant, and professional with excellent readability. It is commonly used in professional documents, websites, and printed materials that require tradition and clarity.",
+    "keywords": ["Classic", "Elegant", "Professional", "Serif"]
+  },
+  {
+    "name": "Lustria",
+    "description": "Lustria was designed for web readability with a sleek, stylish serif that is minimalist and refined. It exudes sophistication and elegance with clean, modern lines. Lustria works well in editorial design, websites, and branding projects aiming for a contemporary yet elegant look.",
+    "keywords": ["Sleek", "Stylish", "Minimalist", "Serif"]
+  },
+  {
+    "name": "Quattrocento Sans",
+    "description": "Quattrocento Sans was developed as a geometric, modern sans serif companion to the Quattrocento serif family. It communicates clarity, simplicity, and elegance with balanced shapes. Quattrocento Sans is ideal for clean, professional branding and digital content.",
+    "keywords": ["Geometric", "Modern", "Elegant", "Sans serif"]
+  },
+  {
+    "name": "Cormorant Garamond",
+    "description": "Cormorant Garamond was created as an elegant and refined serif inspired by classic Garamond typefaces. It radiates beauty, warmth, and grace through delicate details. This font is perfect for fine art books, luxury branding, and sophisticated editorial work.",
+    "keywords": ["Beautiful", "Refined", "Elegant", "Serif"]
+  },
+  {
+    "name": "Proza Libre",
+    "description": "Proza Libre was designed as a humanist sans serif with a friendly and versatile personality for wide usability. It is warm, legible, and adaptable for many design contexts. Proza Libre suits editorial content, branding, and projects needing approachable clarity.",
+    "keywords": ["Humanist", "Friendly", "Versatile", "Sans serif"]
+  },
+  {
+    "name": "Pinyon Script",
+    "description": "Pinyon Script was designed by Rob Leuschke as a romantic and elegant script with flowing curls and loops. It feels expressive, whimsical, and artistic. Pinyon Script is excellent for wedding invitations, greeting cards, and creative branding needing a personal touch.",
+    "keywords": ["Romantic", "Elegant", "Curly", "Script"]
+  },
+  {
+    "name": "Caveat",
+    "description": "Caveat was created by Pablo Impallari as a casual, handwritten script with natural spontaneity. It evokes friendliness, playfulness, and personal connection. Caveat is ideal for informal notes, personal branding, and creative projects looking for a human touch.",
+    "keywords": ["Casual", "Handwritten", "Friendly", "Script"]
+  },
+  {
+    "name": "Amatic SC",
+    "description": "Amatic SC was designed by Vernon Adams as a quirky, hand-drawn display font with sketchy, irregular strokes. It carries a creative, eccentric, and artistic personality. Amatic SC is perfect for headlines, posters, and projects seeking a whimsical vibe.",
+    "keywords": ["Creative", "Eccentric", "Sketchy", "Display"]
+  },
+  {
+    "name": "Abril Fatface",
+    "description": "Abril Fatface was created by Veronika Burian and José Scaglione inspired by heavy Didone styles for dramatic effect. It is elegant, sophisticated, and luxurious with bold contrasts. Abril Fatface works well in fashion magazines, luxury branding, and high-impact headlines.",
+    "keywords": ["Elegant", "Sophisticated", "Luxurious", "Display"]
+  },
+  {
+    "name": "Average",
+    "description": "Average was designed as a warm and readable serif with balanced forms for comfortable reading. It conveys harmony, balance, and simplicity. Average is suited for body text, books, and projects requiring legibility and warmth.",
+    "keywords": ["Warm", "Readable", "Balanced", "Serif"]
+  },
+  {
+    "name": "Cinzel",
+    "description": "Cinzel was inspired by classical Roman inscriptions and designed for elegant display use. It offers a refined, stylish, and sophisticated tone with strong serifs. Cinzel is ideal for logos, invitations, and projects seeking a timeless, classical feel.",
+    "keywords": ["Elegant", "Stylish", "Refined", "Display"]
+  },
+  {
+    "name": "EB Garamond",
+    "description": "EB Garamond revives the classic Garamond typeface with timeless elegance and grace. It communicates contrast, drama, and refined beauty. EB Garamond is excellent for books, editorial design, and formal branding.",
+    "keywords": ["Classic", "Graceful", "Contrasted", "Serif"]
+  },
+  {
+    "name": "Praise",
+    "description": "Praise was designed as a flowing and charming script with romantic and graceful curves. It exudes warmth, elegance, and expressiveness. Praise is perfect for invitations, personal projects, and branding with a romantic flair.",
+    "keywords": ["Romantic", "Charming", "Flowing", "Script"]
+  },
+  {
+    "name": "Arvo",
+    "description": "Arvo was created as a geometric slab serif with modern minimalist influences and balanced shapes. It feels elegant, clear, and structured. Arvo suits editorial projects, websites, and branding requiring contrast and clarity.",
+    "keywords": ["Elegant", "Modern", "Minimalist", "Slab serif"]
+  },
+  {
+    "name": "Bree Serif",
+    "description": "Bree Serif was designed by TypeTogether with friendly curves and contemporary warmth in a slab serif form. It offers personality, energy, and an approachable elegance. Bree Serif is suitable for advertising, editorial work, and branding with a friendly touch.",
+    "keywords": ["Stylish", "Contemporary", "Friendly", "Slab serif"]
+  },
+  {
+    "name": "Josefin Slab",
+    "description": "Josefin Slab was inspired by 1920s geometric typefaces and designed as a vintage slab serif with thin strokes. It conveys a retro, stylish, and elegant vibe. Josefin Slab is great for headlines, branding, and creative editorial use.",
+    "keywords": ["Vintage", "Geometric", "Thin", "Slab serif"]
+  },
+  {
+    "name": "Old Standard TT",
+    "description": "Old Standard TT is a classic serif font inspired by traditional typesetting and designed for legibility and elegance. It embodies a timeless, graceful, and contrasted personality. Old Standard TT is ideal for book typography, academic publications, and projects seeking a historic or refined tone.",
+    "keywords": ["Classic", "Graceful", "Contrasted", "Serif"]
+  },
+  {
+    "name": "Crimson Text",
+    "description": "Crimson Text is a serif font designed with inspiration from old-style typefaces, emphasizing readability and warmth. It conveys comfort, harmony, and a traditional character. Crimson Text is well suited for body text in books, websites, and any project aiming for a classic literary feel.",
+    "keywords": ["Warm", "Readable", "Traditional", "Serif"]
+  },
+  {
+    "name": "Ooh Baby",
+    "description": "Ooh Baby is a playful and casual script font with a handwritten, charming style. It expresses fun, cuteness, and a friendly, informal vibe. Ooh Baby works well in invitations, children’s content, and projects requiring a personal and lighthearted touch.",
+    "keywords": ["Fun", "Cute", "Handwritten", "Script"]
+  },
+  {
+    "name": "Cardo",
+    "description": "Cardo is a classic serif font designed for scholarly texts with high legibility and an elegant structure. It conveys professionalism, readability, and a sense of tradition. Cardo is perfect for academic publications, long-form reading, and historical or formal design contexts.",
+    "keywords": ["Classic", "Elegant", "Professional", "Serif"]
+  },
+  {
+    "name": "DM Sans",
+    "description": "DM Sans is a clean and simple sans serif font designed for modern clarity and readability. It offers a minimal, contemporary, and approachable personality. DM Sans is suited for web interfaces, branding, and any project that values straightforward, legible typography.",
+    "keywords": ["Clean", "Simple", "Modern", "Sans serif"]
+  },
+  {
+    "name": "Karla",
+    "description": "Karla is a quirky, humanist sans serif font designed for warmth and personality. It exudes friendliness, uniqueness, and approachable diversity. Karla is excellent for branding, editorial work, and projects that seek to communicate a casual yet distinctive voice.",
+    "keywords": ["Quirky", "Friendly", "Humanist", "Sans serif"]
+  },
+  {
+    "name": "Arimo",
+    "description": "Arimo is a neutral and legible sans serif font created as a versatile alternative to Arial with strong clarity. It carries professionalism, simplicity, and straightforwardness. Arimo is ideal for user interfaces, corporate materials, and general-purpose communication.",
+    "keywords": ["Neutral", "Legible", "Professional", "Sans serif"]
+  },
+  {
+    "name": "Birthstone",
+    "description": "Birthstone is an elegant and stylish script font featuring curly strokes and delicate loops. It evokes refinement, grace, and artistic flair. Birthstone is perfect for invitations, branding, and projects seeking a sophisticated, handwritten feel.",
+    "keywords": ["Elegant", "Stylish", "Curly", "Script"]
+  },
+  {
+    "name": "Bebas Neue",
+    "description": "Bebas Neue is a bold and impactful display font known for its clean lines and strong presence. It conveys energy, modernity, and confidence. Bebas Neue is commonly used in headlines, posters, and advertising where a striking and memorable statement is required.",
+    "keywords": ["Bold", "Impactful", "Modern", "Display"]
+  }
+]
+

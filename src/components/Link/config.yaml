@@ -1,8 +1,16 @@
 title: "Link"
 type: object
-required: ["text","href"]
+required: ["text","href","component","block"]
 additionalProperties: false
 properties:
+  block:
+    type: boolean
+    description: Whether this is a block component or not
+    default: true
+  component:
+    type: string
+    default: Link
+    description: This specifies which component and schema is being used. It's mostly for internal purposes.
   text:
     type: string
     description: The visible text of the link.

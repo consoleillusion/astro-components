@@ -1,9 +1,17 @@
 title: "Field"
 type: object
 description: The **Field** component dynamically renders any HTML `<input>` or `<select>` element based on a simple schema, allowing you to build flexible, data-driven form fields without manually writing individual controls.
-required: ["type"]
+required: ["type","component","block"]
 additionalProperties: false
 properties:
+  component:
+    type: string
+    default: Field
+    description: This specifies which component and schema is being used. It's mostly for internal purposes.
+  block:
+    type: boolean
+    description: Whether this is a block component or not
+    default: true
   type:
     type: string
     description: "Base field type (e.g., text, number, date)"

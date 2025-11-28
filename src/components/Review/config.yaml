@@ -1,8 +1,18 @@
+title: Review
 type: object
 description: Review component displays a user review with a title, reviewer name, date, rating (within minimum and maximum bounds), and the review body text.
-required: ["name", "date", "title", "body", "rating"]
+required: ["component","block","name", "date", "title", "body", "rating"]
 additionalProperties: false
 properties:
+  block:
+    type: boolean
+    description: Whether this is a block component or not
+    default: false
+  component:
+    type: string
+    default: Review
+    description: This specifies which component and schema is being used. It's mostly for internal purposes.
+    required: true
   name:
     type: string
     description: Name of the reviewer.

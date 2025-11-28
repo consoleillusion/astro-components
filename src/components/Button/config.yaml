@@ -1,8 +1,13 @@
 title: Button
 type: object
 description: ""
-required: ["text"]
+required: ["text","component","block"]
+additionalProperties: false
 properties:
+  component:
+    type: string
+    default: Button
+    description: This specifies which component and schema is being used. It's mostly for internal purposes.
   block:
     type: boolean
     description: Whether this is a block component or not

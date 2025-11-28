@@ -1,7 +1,14 @@
 title: Theme
 type: object
 description: ""
+additionalProperties: false
+required: ["component","block"]
 properties:
+  component:
+    type: string
+    default: Theme
+    description: This specifies which component and schema is being used. It's mostly for internal purposes.
+    required: true
   id:
     type: string
     description: Specify an id attribute for the component
