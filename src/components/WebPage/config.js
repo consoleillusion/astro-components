@@ -45,8 +45,8 @@ schema1["properties"]["global"]["items"] = ComponentList.items //{ anyOf: {$ref:
 schema1["properties"]["pages"]["patternProperties"]["^/(?:[a-z0-9\\-_.~]+(?:/[a-z0-9\\-_.~]+)*)?$"]["properties"]["blocks"]["items"] = BlockComponentList.items
 schema1 = await loadFile(schema1)
 export const schema = schema1
-Z.log(JSON.stringify(schema))
 /*
+Z.log(JSON.stringify(schema))
 Z.log(schema["$defs"]["ComponentList"]["items"]["anyOf"])
     ["properties"]["global"]["items"] = componentList.items //{ anyOf: {$ref: "#/$defs/" + componentName })) }
   { ...
