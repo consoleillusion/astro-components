@@ -43,7 +43,7 @@ properties:
     description: "A string containing a comma-separated list of relevant keywords and key phrases that accurately represent the main topics, themes, and content of the website. These keywords help search engines categorize and rank the site, improving its visibility and discoverability in search results. Properly curated keywords contribute to effective SEO by targeting the terms potential visitors are likely to use when searching."
     type: "string"
     default: null
-    x-generator: "default"
+    x-generator: "llm"
   card:
     description: "A string specifying the type of Twitter Card to be used when sharing the website’s link on Twitter. Valid options include 'summary' for a small preview card, 'summary_large_image' for a larger image-focused card, 'app' for showcasing a mobile application, and 'player' for embedding video or audio media. The default is 'summary_large_image', which provides an engaging large image preview to enhance link visibility and click-through rates."
     type: "string"

@@ -22,12 +22,12 @@ properties:
   author:
     type: string
     description: The author name for meta tags.
-    default: ""
+    default: null
 
   keywords:
     type: string
     description: Meta keywords
-    default: ""
+    default: null
     x-generator: llm
 
   description:
