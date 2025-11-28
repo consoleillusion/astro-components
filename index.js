@@ -1,6 +1,3 @@
-import path from 'path'
-import $RefParser from '@apidevtools/json-schema-ref-parser'
-
 export { default as Accordion } from './src/components/Accordion/index.astro'
 export { default as Button } from './src/components/Button/index.astro'
 export { default as Card } from './src/components/Card/index.astro'
@@ -22,16 +19,9 @@ export { default as SEO } from './src/components/SEO/index.astro'
 export { default as Theme } from './src/components/Theme/index.astro'
 export { default as WebPage } from './src/components/WebPage/index.astro'
 
-import {schema as WebPageSchema} from  './src/components/WebPage/config.js'
-const loadSchema = async p => await $RefParser.dereference(path.resolve(import.meta.dir, 'src/components',p, 'config.yaml'))
 /*
 console.log(await configPath('Quote'))
 const loadSchema = 
 const schema = await $RefParser.dereference(configPath)
 console.log(schema)
 */
-const componentList = ["Accordion","Button","Card","CardGrid","Column","Field","Figure","Footer","Hero","Link","Markdown","Map","Navbar","OpeningHours","PullQuote","Quote","Review","SEO","Theme"]
-export const schema =
-  { ...(await componentList.reduce(async (acc,name)=>Object.assign(await acc,{[name]: await loadSchema(name)}),{}))
-  , WebPage: WebPageSchema 
-  }
