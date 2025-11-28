@@ -5,5 +5,5 @@ const loadSchema = async p => await $RefParser.dereference(path.resolve(import.m
 const componentList = ["Accordion","Button","Card","CardGrid","Column","Field","Figure","Footer","Hero","Link","Markdown","Map","Navbar","OpeningHours","PullQuote","Quote","Review","SEO","Theme"]
 export const schema =
   { ...(await componentList.reduce(async (acc,name)=>Object.assign(await acc,{[name]: await loadSchema(name)}),{}))
-  , WebPage: WebPageSchema 
+  , WebPage: await loadSchema(WebPageSchema )
   }
