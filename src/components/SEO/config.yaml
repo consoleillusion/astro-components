@@ -17,6 +17,7 @@ properties:
     type: string
     description: The page or site title.
     default: ""
+    x-generator: llm
 
   author:
     type: string
@@ -27,6 +28,7 @@ properties:
     type: string
     description: Meta keywords
     default: ""
+    x-generator: llm
 
   description:
     type: string
@@ -39,14 +41,17 @@ properties:
     type: string
     format: uri
     description: URL of the preview image used in Open Graph and Twitter cards.
+    x-generator: vector
     default:  ""
 
   iso_language:
     type: string
     default: "en"
+    x-generator: default
   iso_country:
     type: string
     default: "US"
+    x-generator: default
 
   card:
     type: string
