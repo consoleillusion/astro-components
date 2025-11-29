@@ -5,9 +5,9 @@ import $RefParser from "@apidevtools/json-schema-ref-parser"
 import Z from '@consoleillusion/zamda'
 
 const blockComponents = await Z.pipeSync(
-  [ path => glob(path)
-  , map(file => $RefParser.dereference(file))
-  , x => Promise.all(x)
+  [ glob 
+  , map($RefParser.dereference)
+  , Z.promiseAll
   , filter(x=>x.properties.block.default)
   ]) (resolve(import.meta.dirname , '../*/config.yaml'))
 
@@ -33,6 +33,7 @@ export const Webpage =
     }
   , title:
     { type: "string"
+    , "x-generator": "default"
     }
   , blocks:
     { type: "array"

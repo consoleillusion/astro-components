@@ -6,7 +6,7 @@ properties:
   block:
     type: boolean
     description: Whether this is a block component or not
-    default: true
+    default: false
   component:
     type: string
     default: Link

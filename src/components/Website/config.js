@@ -4,23 +4,23 @@ import {resolve} from 'path'
 import Z from '@consoleillusion/zamda'
 import {base} from './base.js'
 
-const components = await Z.pipeSync(
-  [ path => glob(path)
-  , Z.map(x => $RefParser.dereference(x))
-  , x => Promise.all(x)
+const componentSchemas = await Z.pipeSync(
+  [ glob 
+  , Z.map($RefParser.dereference)
+  , Z.promiseAll
   ]) (resolve(import.meta.dirname , '../*/config.yaml'))
 
 const ComponentList =
   { type: 'array'
-  , items: { anyOf: components }
+  , items: { anyOf: componentSchemas }
   }
 
 export const schema = await $RefParser.dereference(
   { ...base
   , global: {items: ComponentList}
   , "$defs":
-    { ...Z.indexBy(Z.prop('title'))(components)
+    { ...Z.indexBy(Z.prop('title'))(componentSchemas)
     , ComponentList
     }
   })
-Z.log(schema)
+Z.log(JSON.stringify(schema))
