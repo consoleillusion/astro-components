@@ -1,0 +1,34 @@
+name: MediaText
+type: object
+description: ""
+additionalProperties: false
+properties:
+  id:
+    type: string
+    description: Specify an id attribute for the component
+    default: null
+  block:
+    type: boolean
+    description: Whether this is a block component or not
+    default: true
+  img:
+    type: string
+    default: ""
+  text:
+    type: string
+    default: ""
+  headline:
+    type: string
+    description: A header for this component
+  subheadline:
+    type: string
+    description: A subheadline for this component
+  action:
+    type: string
+    default: ""
+  actionText:
+    type: string
+    default: ""
+  actionIcon:
+    type: string
+    default: ""

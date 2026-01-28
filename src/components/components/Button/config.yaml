@@ -1,0 +1,27 @@
+title: Button
+$id: "./config.yaml"
+type: object
+description: ""
+required: ["text","component","block"]
+additionalProperties: false
+properties:
+  component:
+    type: string
+    default: Button
+    description: This specifies which component and schema is being used. It's mostly for internal purposes.
+  block:
+    type: boolean
+    description: Whether this is a block component or not
+    default: false
+  text:
+    type: string
+    default: null
+  action:
+    type: string
+    default: null
+  actionType:
+    type: string
+    default: 'ahref'
+  class:
+    type: string
+    default: null

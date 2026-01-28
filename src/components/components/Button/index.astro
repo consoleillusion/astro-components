@@ -1,0 +1,26 @@
+---
+import "./style.scss"
+import path from 'path'
+import $RefParser from '@apidevtools/json-schema-ref-parser'
+import jsf from 'json-schema-faker'
+import Link from '@components/Link/index.astro'
+
+//const configPath = path.resolve(import.meta.dir, './config.yaml')
+const schema = await $RefParser.dereference(path.resolve(import.meta.dirname, './config.yaml'))
+global.location = new URL(import.meta.url)
+
+jsf.option({useDefaultValue:true})
+//const props = { ...(await jsf.resolve(schema)), ...Astro.props}
+//const props = { ...(await jsf.resolve(path.resolve(import.meta.dirname, './config.yaml'))), ...Astro.props}
+const props = { ...(jsf.generate(schema,{default:true})), ...Astro.props}
+//const props = Astro.props
+//{JSON.stringify(props)}
+const action = props.action
+---
+
+{JSON.stringify(props)}
+
+{ (props.actionType === "ahref")
+? (<a href={action} role="button" class={props.class}>{props.text}</a>)
+: (<button {action} class={props.class} >{props.text}</button>)
+}
