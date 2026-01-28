@@ -1,7 +1,6 @@
 description: "Astro components desigend for static sites using modern styles, css variables, minimal html, accessibility."
 keywords: "Astro, components, static site generator, ssg, accessibility, semantic html"
 title: "Astro Components"
-base: ""
 
 social:
   facebook:
@@ -16,6 +15,17 @@ theme:
     accent-1: "#4f46e5"
     accent-2: "#22d3ee"
     accent-3: "#e5e7eb"
+  palette-purple:
+    base: "#ececec"
+    surface: "#abaab8"
+    accent-1: "#474787"
+    accent-2: "#2d2c54"
+  palette-matcha:
+    base: "fcfcfc"
+    surface: "#f1ebe1"
+    accent-1: "#c0cfb2"
+    accent-2: "#44624a"
+    accent-3: "#8ba888"
   font:
     heading:
       family: "Inter"

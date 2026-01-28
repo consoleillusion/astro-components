@@ -61,4 +61,4 @@ export const createComponent =
   }
 
 //createComponent('Hero',["headline","subheadline","ctaPrimaryText","ctaPrimaryAction","ctaSecondaryText","ctaSecondaryAction","googleReviewLink","imageSrc","style","imageOpacity","backgroundColor","height"],'block')
-createComponent('Theme',["color","font"])
+createComponent('FullPageTitle',["background","color","font"])
