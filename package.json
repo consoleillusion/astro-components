@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@apidevtools/json-schema-ref-parser": "^14.2.1",
-    "@astrojs/svelte": "^7.2.1",
+    "@astrojs/svelte": "^7.2.5",
     "@consoleillusion/what-revenge": "^0.0.3",
     "@consoleillusion/zamda": "^0.0.972",
     "@iconify-json/line-md": "^1.2.11",
@@ -22,7 +22,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
-    "astro": "^5.15.3",
+    "astro": "^5.16.15",
     "astro-icon": "^1.1.5",
     "change-case": "^5.4.4",
     "chart.js": "^4.5.1",
@@ -37,7 +37,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.73",
-    "@iconify-json/bxs": "^1.2.2"
+    "@iconify-json/bxs": "^1.2.2",
+    "@iconify-json/lucide": "^1.2.73"
   }
 }

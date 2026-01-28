@@ -1,0 +1,48 @@
+---
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import Button from "@components/Button/index.astro"
+//const {headline,subheadline,ctaPrimaryText,ctaPrimaryAction,ctaSecondaryText,ctaSecondaryAction,googleReviewLink,imgSrc,imgAlt,style,imageOpacity,backgroundColor,height} = Astro.props // await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const props = Astro.props // await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+
+const baseUrl = props.meta.url
+
+const actionPrimary = typeof props.ctaPrimaryAction === 'string'
+                    ? props.ctaPrimaryAction.replace(new RegExp('^/'),baseUrl+'/')
+                    : props.ctaPrimaryAction
+
+const actionSecondary = typeof props.ctaSecondaryAction === 'string'
+                      ? props.ctaSecondaryAction.replace(new RegExp('^/'),baseUrl+'/')
+                      : props.ctaSecondaryAction
+---
+
+{JSON.stringify(props.meta.url)}
+
+<section class="block hero" style={"--height: " + props.height + "; --color-background: " + props.backgroundColor + "; --image-opacity: " + props.imgOpacity + ';'}>
+
+  <div class="hero-content">
+    <h1>{props.headline}</h1>
+    <p>{props.subheadline}</p>
+    <div class="action-row">
+      <Button actionType="ahref" action={actionPrimary} text={props.ctaPrimaryText} class="primary"/>
+      <Button actionType="ahref" action={actionSecondary} text={props.ctaSecondaryText} class="secondary"/>
+    </div>
+  </div>
+
+  <img src={props.imgSrc}/>
+
+</section>
+
+<!--
+<section class="block hero" style={"--height: " + height + "; --color-background: " + backgroundColor + "; --image-opacity: " + imageOpacity + ';'}>
+
+  <div class="hero-content">
+    <h1>{headline}</h1>
+    <p>{subheadline}</p>
+    <ButtonLink text={ctaPrimaryText}/>
+    <ButtonLink text={ctaSecondaryText}/>
+  </div>
+
+  <img src={imgSrc}/>
+
+</section>
+-->

@@ -1,0 +1,72 @@
+---
+/*
+import { loadPropDefaults } from '../../loadPropDefaults.js';
+// Recommended to at least set, title, description, image, icon, author, url
+*/
+const {
+  title,
+  author,
+  description,
+  keywords,
+  image,
+  iso_language,
+  iso_country,
+  fonts,
+  color,
+  icon = {},
+  card,
+  url,
+  type,
+  twitterHandle,
+  robots,
+  fbAppId,
+  latitude,
+  longitude,
+  social,
+  revenge
+} = Astro.props // await loadPropDefaults(import.meta.dirname + '/config.yaml', Astro.props);
+
+const base = import.meta.env.BASE_URL
+---
+
+<!-- General -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords"    content={keywords} />
+<meta name="robots" content={robots}>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+{ fbAppId && 
+  <meta property="fb:app_id" content={fbAppId} />
+}
+{ author && 
+  <meta name="author" content={author} />
+}
+
+<!-- Facebook -->
+<meta property="og:title"             content={title} />
+<meta property="og:description"       content={description} />
+<meta property="og:type"              content={type} />
+<meta property="og:image"             content={image} />
+<meta property="og:url"               content={url}>
+<meta property="og:locale"            content={iso_language + '_' + iso_country} />
+
+<!-- Twitter -->
+<meta property="twitter:title"        content={title} / >
+<meta property="twitter:description"  content={description} />
+<meta property="twitter:image"        content={image} />
+<meta name="twitter:card"             content={card} />
+<meta name="twitter:url"              content={url}>
+
+{ (social && social.twitter)
+? (<meta name="twitter:site"           content={social.twitter} />)
+: ("")
+}
+{ author && 
+  <meta name="twitter:creator"        content={author} />
+}
+
+<!-- Icons --> 
+<link href={base + (icon.small || icon.main)}     rel="shortcut icon" type="image/svg+xml">
+{icon.legacy ? <link href={base + icon.legacy}    rel="icon"          sizes="32x32"> : ""}
+<link href={base + (icon.large || icon.main)}     rel="apple-touch-icon">

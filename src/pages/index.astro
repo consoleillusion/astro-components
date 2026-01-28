@@ -1,11 +1,11 @@
 ---
 import $RefParser from "@apidevtools/json-schema-ref-parser"
 import path from 'node:path'
-import WebPage from "@components/WepPage.astro"
+//import WebPage from "@components/Webpage.astro"
 import { glob } from 'astro/loaders';
-//import site from "@base/site/site.yaml" //glob({ pattern: "**/*.yaml", base: "./site/" })
+import siteyaml from "@base/site.yaml" //glob({ pattern: "**/*.yaml", base: "./site/" })
 
-const site = await $RefParser.dereference('./site/site.yaml')
+const site = await $RefParser.dereference(siteyaml)
 const components = Object.entries(import.meta.glob('@components/**/*.astro', { eager: true }))
                    .reduce
                    ( (acc,cur) => {
@@ -16,16 +16,19 @@ const components = Object.entries(import.meta.glob('@components/**/*.astro', { e
                    , {}
                    )
 
-const page = site.pages['/']
+                   //const page = site.pages['/']
 ---
 
-<Layout meta={site.meta}>
+{JSON.stringify(site)}
+<components.Webpage meta={site}>
   <main>
+    <components.Button />
+  </main>
+</components.Webpage>
+
+    <!--
     { page.blocks.filter(x=>x.include !== false).map( block => {
       const Component = components[block.component]
       return <Component {page} {...block} />
     })}
-    <!--
     -->
-  </main>
-</Layout>

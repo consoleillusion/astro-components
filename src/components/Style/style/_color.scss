@@ -1,0 +1,32 @@
+body {
+  --color-background: var(--color-base);
+}
+
+*:not(svg, svg *) {
+  --color-text: oklch(from var(--color-background) calc((l - .6) * -9999) c h / .85);
+  background-color: var(--color-background); //, rgba(255,255,255,0));
+  color: var(--color-text);
+}
+
+
+
+
+/*
+*/
+
+
+
+
+
+/*
+@property --color-background-parent {
+  syntax: "<color>";
+  inherits: true;
+//  initial-value: rgba(255,255,255,0);
+}
+@property --color-background {
+  syntax: "<color>";
+  inherits: true;
+  //initial-value: var(--color-background-parent);//rgba(255,255,255,0);
+}
+*/

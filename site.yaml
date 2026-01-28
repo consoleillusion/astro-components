@@ -1,0 +1,25 @@
+description: "Astro components desigend for static sites using modern styles, css variables, minimal html, accessibility."
+keywords: "Astro, components, static site generator, ssg, accessibility, semantic html"
+title: "Astro Components"
+base: ""
+
+social:
+  facebook:
+    handle: "oeu"
+  instagram:
+    handle: "oeu"
+
+theme:
+  palette: 
+    base:     "#0f1117"
+    surface:  "#161a23"
+    accent-1: "#4f46e5"
+    accent-2: "#22d3ee"
+    accent-3: "#e5e7eb"
+  font:
+    heading:
+      family: "Inter"
+    body:
+      family: 'ClassicalHumanist'
+  typography:
+    line-height: '1.5rem'

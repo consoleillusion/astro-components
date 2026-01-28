@@ -1,4 +1,3 @@
-// @ts-check
 import { defineConfig, fontProviders } from 'astro/config'
 import { kebabCase } from 'change-case'
 import svelte from '@astrojs/svelte'
@@ -6,20 +5,26 @@ import icon from 'astro-icon'
 import yaml from '@rollup/plugin-yaml'
 //import adapter from '@astrojs/adapter-static'
   
-const fontsourceFonts = ["Mulish", "Fraunces", "Manrope", "Playfair Display", "Source Sans Pro", "Alice", "Quattrocento", "Quattrocento Sans", "Fanwood Text", "Oswald", "Fjalla One", "Libre Baskerville", "Lustria", "Lato", "Cormorant", "Cormorant Garamond", "Proza Libre", "EB Garamond", "Cinzel", "Fauna One", "Sacramento", "Yeseva One", "Josefin Sans", "Montserrat", "Cardo", "Lora", "Roboto", "Spectral", "Karla", "Halant", "Nunito Sans", "Merriweather", "Nunito", "Quicksand", "Ubuntu", "Open Sans", "Hind", "PT Sans", "Crimson Text", "Open Sans", "Arvo", "Abril Fatface", "Poppins", "Playfair Display", "Inconsolata", "Ultra", "Slabo 27px", "Nixie One", "Ledger", "Stint Ultra Expanded", "Pontano Sans", "Amatic SC", "Andika", "Unica One", "Philosopher", "Source Serif Pro", "Cantarell", "Work Sans", "Oxygen", "PT Sans", "Cabin", "Roboto Condensed", "Raleway", "Inter"]
+const fontsourceFonts = ["Mulish", "Fraunces", "Manrope", "Playfair Display", "Source Sans Pro", "Alice", "Quattrocento", "Quattrocento Sans", "Fanwood Text", "Oswald", "Fjalla One", "Libre Baskerville", "Lustria", "Lato", "Cormorant", "Cormorant Garamond", "Proza Libre", "EB Garamond", "Cinzel", "Fauna One", "Sacramento", "Yeseva One", "Josefin Sans", "Montserrat", "Cardo", "Lora", "Roboto", "Spectral", "Karla", "Halant", "Nunito Sans", "Merriweather", "Nunito", "Quicksand", "Ubuntu", "Open Sans", "Hind", "PT Sans", "Crimson Text", "Open Sans", "Arvo", "Abril Fatface", "Poppins", "Playfair Display", "Inconsolata", "Ultra", "Slabo 27px", "Nixie One", "Ledger", "Stint Ultra Expanded", "Pontano Sans", "Amatic SC", "Andika", "Unica One", "Philosopher", "Source Serif Pro", "Cantarell", "Work Sans", "Oxygen", "PT Sans", "Cabin", "Roboto Condensed", "Raleway", "Inter", "Style Script", "Engagement", "Niconne","Shadows Into Light","Amatic SC","Birthstone","Italiana","Rokkitt", " Source Sans 3", "IBM Plex Sans"]
 const adobeFonts = []
+const iconsets = ["mdi","lucide"]
 
 
 // https://astro.build/config
 export default defineConfig(
-  { integrations: [svelte(), icon()]
+  { integrations:
+    [ svelte()
+    , icon({ include: iconsets.reduce( (acc,cur) => Object.assign(acc,{[cur]:'*'}),{})
+           })
+    ]
   , vite: {
         plugins: [yaml()]
     }
   , site: "https://consoleillusion.github.io"
-  , base: "/astro-components"
+  //, base: "/astro-components"
   , experimental:
-    { fonts:
+    { svgo: true
+    , fonts:
       [ ...fontsourceFonts.map( f => (
         { provider: fontProviders.fontsource()
         , name: f

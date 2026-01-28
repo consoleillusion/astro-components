@@ -1,8 +1,9 @@
 import {mergeDeepRight} from 'ramda'
 import $RefParser from "@apidevtools/json-schema-ref-parser"
 
-import {validate} from './schema/validate.js'
 /*
+import {validate} from './schema/validate.js'
+
 import Ajv from 'ajv'
 import addFormats from "ajv-formats"
 const ajv = new Ajv()

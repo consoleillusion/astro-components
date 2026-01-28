@@ -1,0 +1,11 @@
+---
+const {name, date, title, body, rating, maximum = 5, minimum = 0} = Astro.props
+---
+<article>
+  <header>
+    <h3>{title}</h3>
+    <p>Reviewed by <cite>{name}</cite> on <time datetime={date}>{date}</time></p>
+    <p>Rating: <meter min={minimum} max={maximum} value={rating}>{rating} stars</meter></p>
+  </header>
+  <p>{body}</p>
+</article>

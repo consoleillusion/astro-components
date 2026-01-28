@@ -1,0 +1,49 @@
+---
+import Z from "@consoleillusion/zamda"
+import { capitalCase, paramCase, camelCase } from 'change-case'
+
+interface SchemaField {
+  type: string;
+  format?: string;
+  name?: string;
+  placeholder?: string;
+  label?: string;
+  min?: number;
+  max?: number;
+}
+
+const {schemaUserSupplied}: {schemaUserSupplied: SchemaField} = Astro.props;
+
+const schema =
+  { type: "string"
+  , step: .1
+  , min: 1
+  , maxLength: 56
+  , ...schemaUserSupplied
+  }
+/*
+const Field = Z.cond(
+  [ [ Z.propEq("string","type"), x => '<input type="text"/>' ]
+  ]) (field)
+  */
+
+const field = Z.cond(
+    [ [ Z.propEq("number","type",), x => ({element: "input", type:"number", min: x.minimum || x.min, max: x.maximum || x.max}) ]
+    , [ Z.propEq("integer","type"), x => ({element: "input", type:"number", min: x.minimum || x.min, max: x.maximum || x.max, step: x.step || "1"})]
+    , [ x => Z.propEq("string","type",x) && (x.maxLength > 39), x => ({element: "textarea"})]
+    , [ Z.propEq("string","type"), x => ({element: "input", type:"text",})]
+    , [ Z.T, x => ({element: "input", type:"text"})]
+    ])(schema)
+
+---
+
+<field.element {...(Z.omit(["element"],field))} class="field">
+
+<style>
+  .field {
+    --border-width: var(--s-12);
+    border-width: var(--border-width);
+    border-color: var(--border-color);
+    border-style: solid;
+  }
+</style>

@@ -1,0 +1,32 @@
+@use "./normalize";
+@use"./color";
+
+/*
+@use "../../../../node_modules/@consoleillusion/what-revenge/src/html_element_categories.scss";
+//@import "./patterns";
+@use "./layout";
+@use "./typography";
+
+button {
+  --color-background: var(--color-accent-1);
+  padding: 1rem 2rem;
+}
+@import "./scale";
+@use '../../styles/color';
+a[role="button"], button {
+  --color-background: var(--color-accent-1);
+  padding: var(--s1) var(--s2);
+  border-radius: var(--border-radius);
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.01);
+  }
+  &.primary {
+    --color-background: var(--color-accent-2);
+  }
+  &.secondary {
+    --color-background: var(--color-accent-1);
+  }
+}
+*/
