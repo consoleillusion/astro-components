@@ -16,8 +16,9 @@ export { default as PullQuote } from './src/components/PullQuote/index.astro'
 export { default as Quote } from './src/components/Quote/index.astro'
 export { default as Review } from './src/components/Review/index.astro'
 export { default as SEO } from './src/components/SEO/index.astro'
-export { default as Theme } from './src/components/Theme/index.astro'
-export { default as WebPage } from './src/components/WebPage/index.astro'
+export { default as Style } from './src/components/Style/index.astro'
+export { default as Webpage } from './src/components/Webpage/index.astro'
+export { default as FullPageTitle } from './src/components/FullPageTitle/index.astro'
 
 /*
 console.log(await configPath('Quote'))
