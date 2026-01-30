@@ -1,21 +1,9 @@
 ---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
 import Button from "../Button/index.astro"
-//const {headline,subheadline,ctaPrimaryText,ctaPrimaryAction,ctaSecondaryText,ctaSecondaryAction,googleReviewLink,imgSrc,imgAlt,style,imageOpacity,backgroundColor,height} = Astro.props // await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 const props = Astro.props // await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
-
-const baseUrl = props.meta.url
-
-const actionPrimary = typeof props.ctaPrimaryAction === 'string'
-                    ? props.ctaPrimaryAction.replace(new RegExp('^/'),baseUrl+'/')
-                    : props.ctaPrimaryAction
-
-const actionSecondary = typeof props.ctaSecondaryAction === 'string'
-                      ? props.ctaSecondaryAction.replace(new RegExp('^/'),baseUrl+'/')
-                      : props.ctaSecondaryAction
 ---
 
-{JSON.stringify(props.meta.url)}
 
 <section class="block hero" style={"--height: " + props.height + "; --color-background: " + props.backgroundColor + "; --image-opacity: " + props.imgOpacity + ';'}>
 
@@ -23,8 +11,9 @@ const actionSecondary = typeof props.ctaSecondaryAction === 'string'
     <h1>{props.headline}</h1>
     <p>{props.subheadline}</p>
     <div class="action-row">
-      <Button actionType="ahref" action={actionPrimary} text={props.ctaPrimaryText} class="primary"/>
-      <Button actionType="ahref" action={actionSecondary} text={props.ctaSecondaryText} class="secondary"/>
+      <Button actionType="ahref" action={props.actionPrimary} text={props.ctaPrimaryText} class="primary"/>
+      <Button actionType="ahref" action={props.actionSecondary} text={props.ctaSecondaryText} class="secondary"/>
+{JSON.stringify(props.meta.url)}
     </div>
   </div>
 

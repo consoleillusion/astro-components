@@ -12,7 +12,7 @@
     "astro": "astro",
     "prep": "sh -c 'git add . && git commit -m \"$*\"' --",
     "postpublish": "bunx npm version patch --no-git-tag-version && git add . && git commit -m \"Auto version bump\"",
-    "pub": "bunx npm version patch --no-git-tag-version; bunx npm publish"
+    "pub": "bunx npm version patch --no-git-tag-version; git push"
   },
   "dependencies": {
     "@apidevtools/json-schema-ref-parser": "^14.2.1",
