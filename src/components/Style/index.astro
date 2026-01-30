@@ -36,7 +36,7 @@ const fontVars = toFontVars(props.theme.font)
 
 const [usedSystemFonts,usedAstroFonts] = Z.partition
   ( x => Object.keys(systemFonts).includes(kebabCase(x.family))
-  , Object.values(props.theme.font)
+  , Object.values(props.theme.typography.font)
   )
 const usedSystemFontVars = usedSystemFonts.map(f => '--font-'+kebabCase(f.family)+': "'+systemFonts[kebabCase(f.family)]+'"')
 
