@@ -3,7 +3,9 @@ import { Font } from 'astro:assets'
 import {kebabCase} from 'change-case'
 import "./style/index.scss"
 import Z from "@consoleillusion/zamda"
+import { loadPropDefaults } from '../../loadPropDefaults.js';
 
+const props = await loadPropDefaults(import.meta.dirname + '/config.yaml', Astro.props);
 //const systemFonts = ["system-ui", "transitional", "old-style", "humanist", "geometric-humanist", "classical-humanist", "neo-grotesque", "monospace-slab-serif", "monospace-code", "industrial", "rounded-sans", "slab-serif", "antique", "didone", "handwritten"]
 const systemFonts =
 { "system-ui": "system-ui, sans-serif;"
@@ -23,22 +25,20 @@ const systemFonts =
 , "handwritten": "'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;"
 }
 
-const props = Astro.props 
-const toFontVars =
-fonts => Object.entries(fonts).map( f => "--font-"+kebabCase(f[0]) + ": var(--font-" + kebabCase(f[1].family) + ");").join('')
-
-const toColorVars =
-colors => Object.entries(colors).map( f => "--color-"+kebabCase(f[0]) + ": " + f[1] + ";").join('')
-
-const colorVars = toColorVars(props.theme.palette)
-const fontVars = toFontVars(props.theme.font)
-
-
+//const props = Astro.props 
+const fontVars = (props.font).map( f => "--font-"+kebabCase(f['function']) + ": var(--font-" + kebabCase(f['family']) + ");").join('')
+const colorVars = Object.entries(props.palette).map( f => "--color-"+kebabCase(f[0]) + ": " + f[1] + ";").join('')
 const [usedSystemFonts,usedAstroFonts] = Z.partition
   ( x => Object.keys(systemFonts).includes(kebabCase(x.family))
-  , Object.values(props.theme.typography.font)
+  , Object.values(props.font)
   )
 const usedSystemFontVars = usedSystemFonts.map(f => '--font-'+kebabCase(f.family)+': "'+systemFonts[kebabCase(f.family)]+'"')
+/*
+
+const colorVars = toColorVars(props.theme.palette)
+const fontVars = toFontVars(props.theme.typography.font)
+
+
 
 const unicodeRange =
   text => ([...new Set(
@@ -46,14 +46,20 @@ const unicodeRange =
       `U+${ch.codePointAt(0).toString(16).toUpperCase().padStart(4, "0")}`
       )
    )].sort().join(','))
+   */
 ---
-
-<!--
-  Alias eg:
-  --font-body: var(--font-roboto);
-  --color-base: #fafafa;
--->
 <style set:html={":root{"+colorVars+fontVars+"}"}></style>
+{ usedAstroFonts.map( font =>
+  <Font cssVariable={'--font-' + kebabCase(font.family)}  />
+  )
+}
+<!--
+<pre><code>
+  {JSON.stringify(Astro.props.theme,null,2)}
+</code></pre>
+
+-->
+  
 
 
 
@@ -75,21 +81,13 @@ const unicodeRange =
   :root {
     --font-niconne: "Niconne"
   }
--->
 
 </style>
+-->
 
 <!--
   Astro Fonts eg:
   --font-roboto: "Roboto.12334585947... sans-serif;"
--->
-{ usedAstroFonts.map( font =>
-  <Font cssVariable={'--font-' + kebabCase(font.family)} preload={[{"unicodeRange":["U+26"]}]} />
-  )
-}
-  
-
-<!--
         //, unicodeRange: ["U+26"]
 <meta name="theme-color" content={props.color.theme} >
 <meta name="theme-color" content={props.color.themeLight} media="(prefers-color-scheme: light)" >

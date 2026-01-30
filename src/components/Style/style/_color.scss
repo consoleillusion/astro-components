@@ -1,7 +1,9 @@
 body {
   --color-background: var(--color-base);
+  /*
   background-color: var(--color-background);
   --color-text: oklch(from var(--color-background) calc((l - .6) * -9999) c h / .85);
+  */
 }
 
 //*:not(svg, svg *) {
@@ -33,3 +35,19 @@ body {
   //initial-value: var(--color-background-parent);//rgba(255,255,255,0);
 }
 */
+@property --color-background {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgba(255,255,255,0);
+}
+@property --color-text {
+  syntax: "<color>";
+  inherits: false;
+//  initial-value: transparent;
+  initial-value: rgba(0,0,0,0);
+}
+* {
+  --color-text: oklch(from var(--color-background) calc((l - .6) * -9999) c h / .85);
+  background-color: var(--color-background); //, rgba(255,255,255,0));
+  color: var(--color-text);
+}

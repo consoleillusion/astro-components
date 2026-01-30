@@ -3,11 +3,10 @@ import Map from "./Map.svelte"
 import {loadPropDefaults} from "../../loadPropDefaults.js"
 const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
-<p>{props.latitude}</p>
-
-<p>{props.longitude}</p>
-<p>{JSON.stringify(props)}</p>
 <Map client:only="svelte" {...props} />
 <!--
+<p>{props.latitude}</p>
+<p>{props.longitude}</p>
+<p>{JSON.stringify(props)}</p>
 <Map client:only="svelte" {...loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)} />
 -->

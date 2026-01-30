@@ -1,6 +1,8 @@
 import {mergeDeepRight} from 'ramda'
 import $RefParser from "@apidevtools/json-schema-ref-parser"
+import jsf from 'json-schema-faker'
 
+jsf.option({useDefaultValue: true, alwaysFakeOptionals: true})
 /*
 import {validate} from './schema/validate.js'
 
@@ -14,6 +16,11 @@ export const loadPropDefaults =
   async (configPath,passedProps) => {
     console.log(configPath)
     const openui = await $RefParser.dereference(configPath)
+    const defaults = jsf.generate(openui)
+    const res = mergeDeepRight(defaults,passedProps)
+    console.log(JSON.stringify(res))
+    return res
+  /*
     //const validate = ajv.compile(openui)
     const propDefaults = Object.entries(openui.properties).reduce( (acc,prop) => {
       const propName = prop[0]
@@ -26,6 +33,7 @@ export const loadPropDefaults =
                   ? passedProps.block
                   : (openui.block || false)
            }
+           */
   }
 
 //loadPropDefaults('./site/site.yaml',{})

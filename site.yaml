@@ -27,9 +27,10 @@ theme:
     accent-2: "#44624a"
     accent-3: "#8ba888"
   font:
-    heading:
-      family: "Inter"
-    body:
-      family: 'ClassicalHumanist'
-  typography:
+  - function: "heading"
+    family: "Inter"
     line-height: '1.5rem'
+  - function: "body"
+    family: 'ClassicalHumanist'
+    line-height: '1.5rem'
+
