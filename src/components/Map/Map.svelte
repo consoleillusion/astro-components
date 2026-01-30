@@ -8,7 +8,9 @@
     , longitude: "-1.48693"
     }
 
-  let { center
+  let { latitude
+      , longitude
+      , center
       , zoom = 12
       , height = "40rem"
       , width = "100%"
@@ -17,7 +19,7 @@
       } = $props()
 
   onMount(() => {
-    const map = L.map('map',{wheelPxPerZoomLevel: sensitivity}).setView([center.latitude,center.longitude], zoom)
+    const map = L.map('map',{wheelPxPerZoomLevel: sensitivity}).setView([latitude,longitude], zoom)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map)
 
     const line = L.polyline(markers.map(m=>[m.latitude,m.longitude]), {

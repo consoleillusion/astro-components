@@ -1,10 +1,12 @@
 @use "./normalize";
-@use"./color";
+@use "./color";
+@use "./global";
+@use "./accordion";
+@use "./layout";
 
 /*
 @use "../../../../node_modules/@consoleillusion/what-revenge/src/html_element_categories.scss";
 //@import "./patterns";
-@use "./layout";
 @use "./typography";
 
 button {
@@ -13,14 +15,19 @@ button {
 }
 @import "./scale";
 @use '../../styles/color';
-a[role="button"], button {
+
+button {--color-background: #111; padding: 1rem 2rem; margin: 1rem; border-radius: var(--border-radius-xs);}
+*/
+
+a.button, button {
   --color-background: var(--color-accent-1);
-  padding: var(--s1) var(--s2);
-  border-radius: var(--border-radius);
+  background: var(--color-background);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius-xs);
   display: inline-block;
   cursor: pointer;
   &:hover {
-    transform: scale(1.01);
+    background: oklch(from var(--color-background) calc(l * 1.1) c h)
   }
   &.primary {
     --color-background: var(--color-accent-2);
@@ -29,4 +36,3 @@ a[role="button"], button {
     --color-background: var(--color-accent-1);
   }
 }
-*/

@@ -6,7 +6,6 @@ import {kebabCase} from 'change-case'
 const astroTemplate = (name,props) =>
 `---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
-import "./style.scss"
 const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
@@ -49,6 +48,7 @@ export const createComponent =
       writeFileSync(componentPath + "/index.astro", astroTemplate(name,props))
     }
 
+    /*
     const scssPath = componentPath + '/style.scss'
     try {
       await access(cssPath)
@@ -56,9 +56,10 @@ export const createComponent =
       console.log("Writing " + scssPath)
       writeFileSync(componentPath + "/style.scss", scssTemplate(name,props))
     }
+    */
 
     return ''
   }
 
 //createComponent('Hero',["headline","subheadline","ctaPrimaryText","ctaPrimaryAction","ctaSecondaryText","ctaSecondaryAction","googleReviewLink","imageSrc","style","imageOpacity","backgroundColor","height"],'block')
-createComponent('FullPageTitle',["background","color","font"])
+createComponent('Meter',[])

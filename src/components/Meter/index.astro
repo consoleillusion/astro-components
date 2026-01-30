@@ -3,6 +3,4 @@ import {loadPropDefaults} from "../../loadPropDefaults.js"
 const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
 ---
 
-<section>
-  <slot/>
-</section>
+<meter {...props}></meter>

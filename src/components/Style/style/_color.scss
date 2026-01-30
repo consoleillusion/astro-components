@@ -1,8 +1,11 @@
 body {
   --color-background: var(--color-base);
+  background-color: var(--color-background);
+  --color-text: oklch(from var(--color-background) calc((l - .6) * -9999) c h / .85);
 }
 
-*:not(svg, svg *) {
+//*:not(svg, svg *) {
+.auto-contrast {
   --color-text: oklch(from var(--color-background) calc((l - .6) * -9999) c h / .85);
   background-color: var(--color-background); //, rgba(255,255,255,0));
   color: var(--color-text);

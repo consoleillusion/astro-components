@@ -9,13 +9,13 @@ social:
     handle: "oeu"
 
 theme:
-  palette: 
+  palette-dark: 
     base:     "#0f1117"
     surface:  "#161a23"
     accent-1: "#4f46e5"
     accent-2: "#22d3ee"
     accent-3: "#e5e7eb"
-  palette-purple:
+  palette:
     base: "#ececec"
     surface: "#abaab8"
     accent-1: "#474787"

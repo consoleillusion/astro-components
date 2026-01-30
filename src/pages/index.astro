@@ -19,10 +19,14 @@ const components = Object.entries(import.meta.glob('@components/**/*.astro', { e
                    //const page = site.pages['/']
 ---
 
-{JSON.stringify(site)}
 <components.Webpage meta={site}>
   <main>
-    <components.Button />
+{JSON.stringify(site)}
+    <components.Accordion summary="this is the summary" details="this is the details" />
+    <components.Accordion summary="this is the summary" details="this is the details" />
+    <components.Button class="primary"/>
+    <components.Button class="secondary"/>
+    <components.Map />
   </main>
 </components.Webpage>
 

@@ -24,9 +24,15 @@ properties:
         longitude:
           type: number
           default: -73.935242
+  latitude:
+    type: number
+    default: 40.730610
+  longitude:
+    type: number
+    default: -73.935242
   center:
     type: object
-    default: {latitude:40.730610,longitude:-73.935242}
+    default: { latitude: 40.730610, longitude: -73.935242}
     properties:
       latitude:
         type: number

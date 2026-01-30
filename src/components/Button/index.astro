@@ -2,7 +2,7 @@
 import path from 'path'
 import $RefParser from '@apidevtools/json-schema-ref-parser'
 import jsf from 'json-schema-faker'
-import Link from '@components/Link/index.astro'
+import Link from '../Link/index.astro'
 
 //const configPath = path.resolve(import.meta.dir, './config.yaml')
 const schema = await $RefParser.dereference(path.resolve(import.meta.dirname, './config.yaml'))
