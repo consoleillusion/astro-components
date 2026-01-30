@@ -1,9 +1,9 @@
 {
   "name": "@consoleillusion/astro-components",
   "type": "module",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "exports": {
-    ".":"./index.js"
+    ".": "./index.js"
   },
   "scripts": {
     "dev": "astro dev",
