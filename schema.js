@@ -562,6 +562,7 @@ export const Schema = {
       "style": {
         "title": "Custom CSS",
         "type": "string",
+        "format": "code",
         "default": "",
         "description": "Additional styles",
         "x-group": "style"
