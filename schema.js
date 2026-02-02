@@ -463,91 +463,106 @@ export const Schema = {
         "title": "Headline",
         "type": "string",
         "default": "<What do you do?>",
-        "description": "Primary headline text"
+        "description": "Primary headline text",
+        "x-group": "headline"
       },
       "subheadline": {
         "title": "Subheadline",
         "type": "string",
         "default": "<Why Does that matter?>",
-        "description": "Secondary headline text"
+        "description": "Secondary headline text",
+        "x-group": "headline"
       },
       "ctaPrimaryText": {
         "title": "CTA Primary Text",
         "type": "string",
         "default": "<Get Now>",
-        "description": "Primary call to action text"
+        "description": "Primary call to action text",
+        "x-group": "cta"
       },
       "ctaPrimaryAction": {
         "title": "CTA Primary Action",
         "type": "string",
         "default": "tel:123",
-        "description": "Primary call to action"
+        "description": "Primary call to action",
+        "x-group": "cta"
       },
       "ctaPrimaryIcon": {
         "title": "CTA Primary Icon",
         "type": "string",
         "default": "",
-        "description": "Iconify icon identifier"
+        "description": "Iconify icon identifier",
+        "x-group": "cta"
       },
       "ctaSecondaryText": {
         "title": "CTA Secondary Text",
         "type": "string",
         "default": "<Convince me first>",
-        "description": "Secondary call to action text. \"Convince Me First\""
+        "description": "Secondary call to action text. \"Convince Me First\"",
+        "x-group": "cta"
       },
       "ctaSecondaryAction": {
         "title": "CTA Secondary Action",
         "type": "string",
         "default": "#about",
-        "description": "Secondary call to action"
+        "description": "Secondary call to action",
+        "x-group": "cta"
       },
       "ctaSecondaryIcon": {
         "title": "CTA Secondary Icon",
         "type": "string",
         "default": "",
-        "description": "Iconify icon identifier"
+        "description": "Iconify icon identifier",
+        "x-group": "cta"
       },
       "googleReviewLink": {
         "title": "Google Review Link",
         "type": "string",
         "default": "",
-        "description": "Link to Google review"
+        "description": "Link to Google review",
+        "x-group": "review"
       },
       "imgSrc": {
         "title": "Image Url",
         "type": "string",
         "default": "",
-        "description": "Image source URL"
+        "description": "Image source URL",
+        "x-group": "image"
       },
       "imgAlt": {
         "title": "Image Description",
         "type": "string",
         "default": "",
-        "description": "Image alt text for screenreaders."
-      },
-      "style": {
-        "title": "Custom CSS",
-        "type": "string",
-        "default": "",
-        "description": "Additional styles"
+        "description": "Image alt text for screenreaders.",
+        "x-group": "image"
       },
       "imgOpacity": {
         "title": "Image Opacity",
         "type": "string",
         "default": ".4",
-        "description": "Opacity for the image"
+        "description": "Opacity for the image",
+        "x-group": "image"
       },
       "backgroundColor": {
         "title": "Image Overlay Color",
         "type": "string",
         "default": "black",
-        "description": "Background color"
+        "description": "Background color",
+        "x-group": "image"
+      },
+      "style": {
+        "title": "Custom CSS",
+        "type": "string",
+        "default": "",
+        "description": "Additional styles",
+        "x-group": "style"
       },
       "height": {
         "title": "Hero Height",
         "type": "string",
         "default": "70vh",
-        "description": "Height of the component"
+        "description": "Height of the component",
+        "x-group": "style"
       }
     }
   },
