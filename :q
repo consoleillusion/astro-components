@@ -1,0 +1,103 @@
+title: Hero
+type: object
+description: >
+  Hero component with headline, subheadline, call-to-actions, image, and styling options.
+additionalProperties: false
+required: ["component","block"]
+properties:
+  component:
+    title: "Component Identifier"
+    type: string
+    default: Hero
+    description: This specifies which component and schema is being used. It's mostly for internal purposes.
+    "x-ui:hidden": true
+  block:
+    title: "Is a Block"
+    type: boolean
+    description: Whether this is a block component or not
+    default: true
+    "x-ui:hidden": true
+  headline:
+    title: "Headline"
+    type: string
+    default: "<What do you do?>"
+    description: "Primary headline text"
+  subheadline:
+    title: "Subheadline"
+    type: string
+    default: "<Why Does that matter?>"
+    description: "Secondary headline text"
+
+  ctaPrimaryText:
+    title: "CTA Primary Text"
+    type: string
+    default: "<Get Now>"
+    description: "Primary call to action text"
+  ctaPrimaryAction:
+    title: "CTA Primary Action"
+    type: string
+    default: "tel:123"
+    description: "Primary call to action"
+  ctaPrimaryIcon:
+    title: "CTA Primary Icon"
+    type: string
+    default: ""
+    description: "Iconify icon identifier"
+
+  ctaSecondaryText:
+    title: "CTA Secondary Text"
+    type: string
+    default: "<Convince me first>"
+    description: "Secondary call to action text. \"Convince Me First\""
+  ctaSecondaryAction:
+    title: "CTA Secondary Action"
+    type: string
+    default: "#about"
+    description: "Secondary call to action"
+  ctaSecondaryIcon:
+    title: "CTA Secondary Icon"
+    type: string
+    default: ""
+    description: "Iconify icon identifier"
+
+
+  googleReviewLink:
+    title: "Google Review Link"
+    type: string
+    default: ""
+    description: "Link to Google review"
+
+  imgSrc:
+    title: "Image Url"
+    type: string
+    default: ""
+    description: "Image source URL"
+  imgAlt:
+    title: "Image Description"
+    type: string
+    default: ""
+    description: "Image alt text for screenreaders."
+
+  style:
+    title: "Custom CSS"
+    type: string
+    default: ""
+    description: "Additional styles"
+
+  imgOpacity:
+    title: "Image Opacity"
+    type: string
+    default: ".4"
+    description: "Opacity for the image"
+
+  backgroundColor:
+    title: "Image Overlay Color"
+    type: string
+    default: "black"
+    description: "Background color"
+
+  height:
+    title: "Hero Height"
+    type: string
+    default: "70vh"
+    description: "Height of the component"
