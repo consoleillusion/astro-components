@@ -8,10 +8,16 @@ properties:
     type: string
     default: Navbar
     description: This specifies which component and schema is being used. It's mostly for internal purposes.
+    x-group: Navbar
+    "x-ui:hidden": true
   block:
     type: boolean
     description: Whether this is a block component or not
     default: true
+    x-group: Navbar
+    "x-ui:hidden": true
   links:
     type: array
+    items: {type: 'string'}
     default: []
+    x-group: Navbar

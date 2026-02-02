@@ -82,6 +82,7 @@ properties:
     default: ""
     description: "Image source URL"
     "x-group": 'image'
+    "relationTo": "media"
   imgAlt:
     title: "Image Description"
     type: string

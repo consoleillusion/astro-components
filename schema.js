@@ -12,16 +12,24 @@ export const Schema = {
       "component": {
         "type": "string",
         "default": "Navbar",
-        "description": "This specifies which component and schema is being used. It's mostly for internal purposes."
+        "description": "This specifies which component and schema is being used. It's mostly for internal purposes.",
+        "x-group": "Navbar",
+        "x-ui:hidden": true
       },
       "block": {
         "type": "boolean",
         "description": "Whether this is a block component or not",
-        "default": true
+        "default": true,
+        "x-group": "Navbar",
+        "x-ui:hidden": true
       },
       "links": {
         "type": "array",
-        "default": []
+        "items": {
+          "type": "string"
+        },
+        "default": [],
+        "x-group": "Navbar"
       }
     }
   },
@@ -527,7 +535,8 @@ export const Schema = {
         "type": "string",
         "default": "",
         "description": "Image source URL",
-        "x-group": "image"
+        "x-group": "image",
+        "relationTo": "media"
       },
       "imgAlt": {
         "title": "Image Description",
