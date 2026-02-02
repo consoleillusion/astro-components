@@ -1,4 +1,4 @@
-name: FullPageTitle
+title: FullPageTitle
 type: object
 description: ""
 additionalProperties: false

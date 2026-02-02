@@ -1,4 +1,5 @@
 name: SocialButton
+title: Social Button
 type: object
 description: ""
 additionalProperties: false
