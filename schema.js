@@ -449,13 +449,15 @@ export const Schema = {
         "title": "Component Identifier",
         "type": "string",
         "default": "Hero",
-        "description": "This specifies which component and schema is being used. It's mostly for internal purposes."
+        "description": "This specifies which component and schema is being used. It's mostly for internal purposes.",
+        "x-ui:hidden": true
       },
       "block": {
         "title": "Is a Block",
         "type": "boolean",
         "description": "Whether this is a block component or not",
-        "default": true
+        "default": true,
+        "x-ui:hidden": true
       },
       "headline": {
         "title": "Headline",
@@ -1262,4 +1264,3 @@ export const Schema = {
     }
   }
 };
-export default Schema
