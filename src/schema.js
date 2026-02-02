@@ -38,7 +38,7 @@ for await (const file of glob.scan({ cwd: componentsDir, absolute: true })) {
 }
 
 await writeFile(
-  path.resolve(__dirname, "../schema.generated.js"),
+  path.resolve(__dirname, "../schema.js"),
   `export const Schema = ${JSON.stringify(Schema, null, 2)};\n`
 );
 
