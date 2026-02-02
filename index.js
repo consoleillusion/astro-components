@@ -20,12 +20,11 @@ export { default as Style } from './src/components/Style/index.astro'
 export { default as Webpage } from './src/components/Webpage/index.astro'
 export { default as FullPageTitle } from './src/components/FullPageTitle/index.astro'
 
-export { Schema } from './src/schema.js'
-import {Schema} from './src/schema.js'
 /*
+import {Schema} from './src/schema.js'
 console.log(await configPath('Quote'))
 const loadSchema = 
 const schema = await $RefParser.dereference(configPath)
 console.log(schema)
-*/
 console.log(Schema)
+*/
