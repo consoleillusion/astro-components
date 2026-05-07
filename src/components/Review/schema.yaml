@@ -1,4 +1,5 @@
 title: Review
+$id: "./schema.yaml"
 type: object
 description: Review component displays a user review with a title, reviewer name, date, rating (within minimum and maximum bounds), and the review body text.
 required: ["component","block","name", "date", "title", "body", "rating"]

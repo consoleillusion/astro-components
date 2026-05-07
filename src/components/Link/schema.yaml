@@ -1,4 +1,5 @@
 title: "Link"
+$id: "./schema.yaml"
 type: object
 required: ["text","href","component","block"]
 additionalProperties: false

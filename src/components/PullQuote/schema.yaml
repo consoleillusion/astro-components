@@ -1,4 +1,5 @@
 title: PullQuote
+$id: "./schema.yaml"
 type: object
 description: "A Pullquote is for an internal source, a blockquote for external, see https://heydonworks.com/article/the-blockquote-element"
 additionalProperties: false

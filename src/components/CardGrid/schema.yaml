@@ -1,4 +1,5 @@
-title: Footer
+title: CardGrid
+$id: "./schema.yaml"
 type: object
 description: ""
 additionalProperties: false
@@ -6,7 +7,7 @@ required: ["component","block"]
 properties:
   component:
     type: string
-    default: Footer
+    default: CardGrid
     description: This specifies which component and schema is being used. It's mostly for internal purposes.
   block:
     type: boolean
@@ -15,5 +16,18 @@ properties:
   headline:
     type: string
     default: ""
-#children:
-#  type: array
+  cards:
+    type: array
+    default: '[]'
+    items:
+      type: object
+      properties: 
+        headline:
+          type: string
+        subheadline:
+          type: string
+        text:
+          type: string
+        icon:
+          type: string
+

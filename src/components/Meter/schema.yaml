@@ -1,4 +1,5 @@
 title: Meter
+$id: "./schema.yaml"
 type: object
 description: ""
 additionalProperties: false

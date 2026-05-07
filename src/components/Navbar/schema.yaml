@@ -1,32 +1,24 @@
-title: CardGrid
+title: Navbar
+$id: "./schema.yaml"
 type: object
-description: ""
+description: A Navigation Bar for a website
 additionalProperties: false
 required: ["component","block"]
 properties:
   component:
     type: string
-    default: CardGrid
+    default: Navbar
     description: This specifies which component and schema is being used. It's mostly for internal purposes.
+    x-group: Navbar
+    "x-ui:hidden": true
   block:
     type: boolean
     description: Whether this is a block component or not
     default: true
-  headline:
-    type: string
-    default: ""
-  cards:
+    x-group: Navbar
+    "x-ui:hidden": true
+  links:
     type: array
-    default: '[]'
-    items:
-      type: object
-      properties: 
-        headline:
-          type: string
-        subheadline:
-          type: string
-        text:
-          type: string
-        icon:
-          type: string
-
+    items: {type: 'string'}
+    default: []
+    x-group: Navbar

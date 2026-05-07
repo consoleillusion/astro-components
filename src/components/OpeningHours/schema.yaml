@@ -1,4 +1,5 @@
 title: OpeningHours
+$id: "./schema.yaml"
 type: object
 description: OpeningHours component accepts an object containing an array of daily opening-hour entries, each specifying the day of the week and optional opening and closing times.
 required: ["hours","component","block"]

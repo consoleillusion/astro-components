@@ -1,11 +1,14 @@
 ---
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import schema from "./schema.yaml"
+
 import { Font } from 'astro:assets'
 import {kebabCase} from 'change-case'
 import "./style/index.scss"
 import Z from "@consoleillusion/zamda"
-import { loadPropDefaults } from '../../loadPropDefaults.js';
 
-const props = await loadPropDefaults(import.meta.dirname + '/config.yaml', Astro.props);
+const props = await loadPropDefaults(schema,Astro.props)
+
 //const systemFonts = ["system-ui", "transitional", "old-style", "humanist", "geometric-humanist", "classical-humanist", "neo-grotesque", "monospace-slab-serif", "monospace-code", "industrial", "rounded-sans", "slab-serif", "antique", "didone", "handwritten"]
 const systemFonts =
 { "system-ui": "system-ui, sans-serif;"

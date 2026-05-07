@@ -1,4 +1,5 @@
 title: Markdown
+$id: "./schema.yaml"
 type: object
 description: ""
 additionalProperties: false

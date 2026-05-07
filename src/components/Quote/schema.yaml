@@ -1,4 +1,5 @@
 title: Quote
+$id: "./schema.yaml"
 type: object
 description: A <blockquote>, using text and cite, with large quote icons
 additionalProperties: false

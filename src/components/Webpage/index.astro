@@ -1,26 +1,29 @@
 ---
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import schema from "./schema.yaml"
+const props = await loadPropDefaults(schema,Astro.props)
+
 import SpeedInsights  from "@vercel/speed-insights/astro"
 import SEO from "../SEO/index.astro"
 import Style from "../Style/index.astro"
 import { kebabCase } from 'change-case'
-const meta = {...Astro.props.meta}
 const toVars =
   fonts => Object.entries(fonts).map( f => "--font-"+kebabCase(f[0]) + ": var(--font-" + kebabCase(f[1]) + ");").join('')
 ---
 
 <!doctype html>
-<html lang={(meta.iso_language || 'EN') + '-' + (meta.iso_country || 'US')}>
+<html lang={(props.meta.iso_language || 'EN') + '-' + (props.meta.iso_country || 'US')}>
 
   <head>
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content="Astro">
+    <Style  />
+    <SEO {...props.meta} />
     <!--
       <Style {...meta} />
-        -->
-      <Style  />
-    <SEO {...meta} />
-    <!-- { meta.vercelSpeedInsights && <SpeedInsights/> }    -->
+      { meta.vercelSpeedInsights && <SpeedInsights/> }   
+    -->
   </head>
   
   <body>

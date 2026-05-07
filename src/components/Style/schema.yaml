@@ -1,4 +1,5 @@
 title: Style
+$id: "./schema.yaml"
 type: object
 description: ""
 additionalProperties: false

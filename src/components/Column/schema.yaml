@@ -1,28 +1,26 @@
-title: Button
-$id: "./config.yaml"
+title: Column
+$id: "./schema.yaml"
 type: object
 description: ""
-required: ["text","component","block"]
 additionalProperties: false
+required: ["component","block"]
 properties:
   component:
     type: string
-    default: Button
+    default: Column
     description: This specifies which component and schema is being used. It's mostly for internal purposes.
   block:
     type: boolean
     description: Whether this is a block component or not
-    default: false
+    default: true
+  background:
+    type: string
+    default: ""
   text:
     type: string
-    default: null
-  action:
+    default: ""
+  heading:
     type: string
-    default: null
-  actionType:
-    type: string
-    default: 'button'
-    enum: ["button","ahref"]
-  class:
-    type: string
-    default: null
+    default: ""
+#  children:
+#    description: Child components for the slot

@@ -6,7 +6,8 @@ import {kebabCase} from 'change-case'
 const astroTemplate = (name,props) =>
 `---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
-const props = await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+import schema from "./schema.yaml"
+const props = await loadPropDefaults(schema,Astro.props)
 ---
 
 ${props.includes('block') ? '<section class="block ' + kebabCase(name) + '">\n\t<slot/>\n</section>' : ''}

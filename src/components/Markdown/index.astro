@@ -1,7 +1,8 @@
 ---
 import {loadPropDefaults} from "../../loadPropDefaults.js"
+import schema from "./schema.yaml"
 import {render} from '@astro:content'
-const props = Astro.props // await loadPropDefaults(import.meta.dirname + '/config.yaml',Astro.props)
+const props = await loadPropDefaults(schema,Astro.props)
 ---
 
 <!--

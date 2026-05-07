@@ -1,4 +1,5 @@
-title: Figure
+title: Card
+$id: "./schema.yaml"
 type: object
 description: ""
 additionalProperties: false
@@ -6,7 +7,7 @@ required: ["component","block"]
 properties:
   component:
     type: string
-    default: Figure
+    default: Card
     description: This specifies which component and schema is being used. It's mostly for internal purposes.
   block:
     type: boolean
@@ -15,15 +16,24 @@ properties:
   id:
     type: string
     default: null
-  code:
+  headline:
+    type: string
+    default: null
+  text:
     type: string
     default: null
   imgSrc:
     type: string
     default: null
+  imgAlt:
+    type: string
+    default: null
   icon:
     type: string
     default: null
-  figcaption:
+  chart:
     type: string
-    default: ""
+    default: null
+  code:
+    type: string
+    default: null

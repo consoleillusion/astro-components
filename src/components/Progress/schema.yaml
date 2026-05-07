@@ -1,4 +1,5 @@
-title: MediaText
+title: Progress
+$id: "./schema.yaml"
 type: object
 description: ""
 additionalProperties: false
@@ -10,25 +11,10 @@ properties:
   block:
     type: boolean
     description: Whether this is a block component or not
-    default: true
-  img:
-    type: string
-    default: ""
-  text:
-    type: string
-    default: ""
+    default: false
   headline:
     type: string
     description: A header for this component
   subheadline:
     type: string
     description: A subheadline for this component
-  action:
-    type: string
-    default: ""
-  actionText:
-    type: string
-    default: ""
-  actionIcon:
-    type: string
-    default: ""

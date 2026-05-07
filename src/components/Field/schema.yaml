@@ -1,4 +1,5 @@
 title: "Field"
+$id: "./schema.yaml"
 type: object
 description: The **Field** component dynamically renders any HTML `<input>` or `<select>` element based on a simple schema, allowing you to build flexible, data-driven form fields without manually writing individual controls.
 required: ["type","component","block"]

@@ -1,4 +1,5 @@
 title: Map
+$id: "./schema.yaml"
 type: object
 description: A Svelte Map component made with Leaflet
 additionalProperties: false

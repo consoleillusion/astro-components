@@ -1,11 +1,13 @@
 ---
-const {base="", text="", href="#", meta = {}} = Astro.props
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import schema from "./schema.yaml"
+const props = await loadPropDefaults(schema,Astro.props)
 ---
 
 <!--
 <a href={href.replace(new RegExp('^./'),meta.url)}>{text}</a>
 -->
-<a href={(base+'/').replace(/\/\/$/,'/')+href}>{text}</a>
+<a href={(props.base+'/').replace(/\/\/$/,'/')+props.href}>{props.text}</a>
 
 <style>
   nav a {

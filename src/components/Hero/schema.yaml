@@ -1,4 +1,5 @@
 title: Hero
+$id: "./schema.yaml"
 type: object
 description: >
   Hero component with headline, subheadline, call-to-actions, image, and styling options.

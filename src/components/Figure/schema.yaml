@@ -1,23 +1,30 @@
-title: Navbar
+title: Figure
+$id: "./schema.yaml"
 type: object
-description: A Navigation Bar for a website
+description: ""
 additionalProperties: false
 required: ["component","block"]
 properties:
   component:
     type: string
-    default: Navbar
+    default: Figure
     description: This specifies which component and schema is being used. It's mostly for internal purposes.
-    x-group: Navbar
-    "x-ui:hidden": true
   block:
     type: boolean
     description: Whether this is a block component or not
-    default: true
-    x-group: Navbar
-    "x-ui:hidden": true
-  links:
-    type: array
-    items: {type: 'string'}
-    default: []
-    x-group: Navbar
+    default: false
+  id:
+    type: string
+    default: null
+  code:
+    type: string
+    default: null
+  imgSrc:
+    type: string
+    default: null
+  icon:
+    type: string
+    default: null
+  figcaption:
+    type: string
+    default: ""

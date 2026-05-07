@@ -1,5 +1,7 @@
 ---
-  const {openingHours} = Astro.props
+import {loadPropDefaults} from "../../loadPropDefaults.js"
+import schema from "./schema.yaml"
+const props = await loadPropDefaults(schema,Astro.props)
   /*
   { {dayOfWeek: "Monday", opens: "07:00", closes "17:00"}
   , {dayOfWeek: "Tuesday", }
@@ -10,7 +12,7 @@
 <div vocab="https://schema.org/" typeof="LocalBusiness" aria-labelledby="opening-hours-title">
   <h2>Opening Hours</h2>
   <ul typeof="OpeningHoursSpecification" property="openingHoursSpecification">
-    { openingHours.map( day => 
+    { props.openingHours.map( day => 
       <li>
         <link property="dayOfWeek" href={"https://schema.org/" + day.dayOfWeek}>{day.dayOfWeek}: 
         <time property="opens" datetime={day.opens}>{day.opens}</time> - <time property="closes" datetime={day.closes}>{day.closes}</time>

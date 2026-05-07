@@ -1,5 +1,5 @@
-name: SocialButton
-title: Social Button
+title: FullPageTitle
+$id: "./schema.yaml"
 type: object
 description: ""
 additionalProperties: false
@@ -12,13 +12,13 @@ properties:
     type: boolean
     description: Whether this is a block component or not
     default: false
-  network:
+  background:
     type: string
     default: ""
-  handle:
+  color:
     type: string
     default: ""
-  icon:
+  font:
     type: string
     default: ""
   headline:
