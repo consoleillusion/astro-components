@@ -14,11 +14,11 @@ addFormats(ajv)
 
 export const loadPropDefaults = 
   async (configPath,passedProps) => {
-    console.log(configPath)
+    //console.log(configPath)
     const openui = await $RefParser.dereference(configPath)
     const defaults = jsf.generate(openui)
     const res = mergeDeepRight(defaults,passedProps)
-    console.log(JSON.stringify(res))
+    //console.log(JSON.stringify(res))
     return res
   /*
     //const validate = ajv.compile(openui)

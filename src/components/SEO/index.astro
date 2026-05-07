@@ -41,10 +41,10 @@ const base = import.meta.env.BASE_URL
 <meta name="robots" content={props.robots}>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-{ fbAppId && 
+{ props.fbAppId && 
   <meta property="fb:app_id" content={props.fbAppId} />
 }
-{ author && 
+{ props.author && 
   <meta name="author" content={props.author} />
 }
 

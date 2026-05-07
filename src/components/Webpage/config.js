@@ -8,7 +8,6 @@ import isoCountry from './isoCountry.json' with {type: 'json'}
 import {colors} from './colors.js'
 import Z from '@consoleillusion/zamda'
 
-
 const loadFile = async file => await $RefParser.dereference(file)
 
 const components = await pipe

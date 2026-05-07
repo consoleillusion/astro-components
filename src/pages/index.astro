@@ -21,7 +21,6 @@ const components = Object.entries(import.meta.glob('@components/**/*.astro', { e
 
 <components.Webpage meta={site}>
   <main>
-{JSON.stringify(site)}
     <components.Accordion summary="this is the summary" details="this is the details" />
     <components.Accordion summary="this is the summary" details="this is the details" />
     <components.Button class="primary"/>
@@ -31,6 +30,7 @@ const components = Object.entries(import.meta.glob('@components/**/*.astro', { e
 </components.Webpage>
 
     <!--
+{JSON.stringify(site)}
     { page.blocks.filter(x=>x.include !== false).map( block => {
       const Component = components[block.component]
       return <Component {page} {...block} />

@@ -29,7 +29,7 @@
 
     map.fitBounds(line.getBounds(), { animate: false });
 map.setZoom(map.getZoom() - 1);
-  console.log(markers.categories)
+  //console.log(markers.categories)
 
 
     markers[0].name = 'home'
