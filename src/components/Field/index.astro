@@ -7,7 +7,7 @@ import { capitalCase, paramCase, camelCase } from 'change-case'
 const props = await loadPropDefaults(schema,Astro.props)
 
 interface SchemaField {
-  type: string;
+  fieldType: string;
   format?: string;
   name?: string;
   placeholder?: string;
@@ -19,7 +19,7 @@ interface SchemaField {
 const {schemaUserSupplied}: {schemaUserSupplied: SchemaField} = Astro.props;
 
 const schema =
-  { type: "string"
+  { fieldType: "string"
   , step: .1
   , min: 1
   , maxLength: 56
@@ -32,10 +32,10 @@ const Field = Z.cond(
   */
 
 const field = Z.cond(
-    [ [ Z.propEq("number","type",), x => ({element: "input", type:"number", min: x.minimum || x.min, max: x.maximum || x.max}) ]
-    , [ Z.propEq("integer","type"), x => ({element: "input", type:"number", min: x.minimum || x.min, max: x.maximum || x.max, step: x.step || "1"})]
-    , [ x => Z.propEq("string","type",x) && (x.maxLength > 39), x => ({element: "textarea"})]
-    , [ Z.propEq("string","type"), x => ({element: "input", type:"text",})]
+    [ [ Z.propEq("number","fieldType",), x => ({element: "input", type:"number", min: x.minimum || x.min, max: x.maximum || x.max}) ]
+    , [ Z.propEq("integer","fieldType"), x => ({element: "input", type:"number", min: x.minimum || x.min, max: x.maximum || x.max, step: x.step || "1"})]
+    , [ x => Z.propEq("string","fieldType",x) && (x.maxLength > 39), x => ({element: "textarea"})]
+    , [ Z.propEq("string","fieldType"), x => ({element: "input", type:"text",})]
     , [ Z.T, x => ({element: "input", type:"text"})]
     ])(schema)
 

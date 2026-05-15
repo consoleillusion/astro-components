@@ -1,4 +1,4 @@
-export const Schema = {
+export const Components = {
   "navbar": {
     "title": "Navbar",
     "$id": "./schema.yaml",
@@ -167,7 +167,7 @@ export const Schema = {
         "description": "The canonical URL of the page.",
         "default": ""
       },
-      "type": {
+      "ogType": {
         "type": "string",
         "description": "Open Graph type (e.g., website, article, profile).",
         "default": "website"
@@ -405,7 +405,7 @@ export const Schema = {
     "type": "object",
     "description": "The **Field** component dynamically renders any HTML `<input>` or `<select>` element based on a simple schema, allowing you to build flexible, data-driven form fields without manually writing individual controls.",
     "required": [
-      "type",
+      "fieldType",
       "component",
       "block"
     ],
@@ -421,7 +421,7 @@ export const Schema = {
         "description": "Whether this is a block component or not",
         "default": true
       },
-      "type": {
+      "fieldType": {
         "type": "string",
         "description": "Base field type (e.g., text, number, date)"
       },
@@ -1313,5 +1313,5 @@ export const Schema = {
   }
 };
 
-export default Schema
+export default Components
   

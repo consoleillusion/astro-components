@@ -1,4 +1,4 @@
-export const Schema = {
+{
   "navbar": {
     "title": "Navbar",
     "$id": "./schema.yaml",
@@ -1311,7 +1311,4 @@ export const Schema = {
       }
     }
   }
-};
-
-export default Schema
-  
+}

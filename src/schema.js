@@ -29,18 +29,22 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const componentsDir = path.resolve(__dirname, "../src/components");
 
-const glob = new Glob("**/config.yaml");
-const Schema = {};
+const glob = new Glob("**/schema.yaml");
+const Components = {};
 
 for await (const file of glob.scan({ cwd: componentsDir, absolute: true })) {
   const s = await $RefParser.dereference(file);
-  Schema[Z.camelCase(s.title)] = s;
+  Components[Z.camelCase(s.title)] = s;
 }
 
 await writeFile(
-  path.resolve(__dirname, "../schema.js"),
-  `export const Schema = ${JSON.stringify(Schema, null, 2)};\n
-export default Schema
+  path.resolve(__dirname, "../components.js"),
+  `export const Components = ${JSON.stringify(Components, null, 2)};\n
+export default Components
   `
 );
 
+
+await writeFile( path.resolve(__dirname, "../library.json")
+               , JSON.stringify({root: 'Website', components: Components, componentGroups: {}})
+               )
