@@ -2,9 +2,16 @@
   "name": "@consoleillusion/astro-components",
   "type": "module",
   "version": "0.0.39",
+  "astro": "./index.js",
+  "main": "./index.js",
   "exports": {
-    ".": "./index.js",
+    ".": { 
+      "astro": "./index.js",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
     "./schema":"./schema.js"
+
   },
   "scripts": {
     "dev": "astro dev",
@@ -41,6 +48,3 @@
   },
   "devDependencies": {
     "@iconify-json/bxs": "^1.2.2",
-    "@iconify-json/lucide": "^1.2.73"
-  }
-}
