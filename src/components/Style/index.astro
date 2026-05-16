@@ -3,6 +3,7 @@ import {loadPropDefaults} from "../../loadPropDefaults.js"
 import schema from "./schema.yaml"
 import {kebabCase} from 'change-case'
 import "./style/index.scss"
+import Z from "@consoleillusion/zamda"
 
 const props = await loadPropDefaults(schema,Astro.props)
 
@@ -23,6 +24,11 @@ const systemFonts =
 , "didone": "Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;"
 , "handwritten": "'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;"
 }
+
+const [usedSystemFonts,usedAstroFonts] = Z.partition
+  ( x => Object.keys(systemFonts).includes(kebabCase(x.family))
+  , Object.values(props.font)
+  )
 
 const fontVars = (props.font).map( f => "--font-"+kebabCase(f['function']) + ": var(--font-" + kebabCase(f['family']) + ");").join('')
 const colorVars = Object.entries(props.palette).map( f => "--color-"+kebabCase(f[0]) + ": " + f[1] + ";").join('')
