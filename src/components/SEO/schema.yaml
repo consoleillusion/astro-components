@@ -34,7 +34,9 @@ properties:
   description:
     type: string
     description: Short description for SEO and social previews.
-    default: >
+    default: ""
+    examples:
+    - >
       A backpacker’s journal of slow travel, mountain trails, and offbeat adventures around the world.
       Tips, stories, and inspiration for life on the move.
 
