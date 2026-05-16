@@ -48,3 +48,6 @@
   },
   "devDependencies": {
     "@iconify-json/bxs": "^1.2.2",
+    "@iconify-json/lucide": "^1.2.73"
+  }
+}
