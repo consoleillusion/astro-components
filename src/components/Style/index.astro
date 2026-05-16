@@ -52,10 +52,20 @@ const unicodeRange =
    */
 ---
 <style set:html={":root{"+colorVars+fontVars+"}"}></style>
+
+
+  <!-- 
+    <Font> component doesnt work in an astro *library* as it triggers Astro/Vite internal build tool? It's not a true component
+
 { usedAstroFonts.map( font =>
   <Font cssVariable={'--font-' + kebabCase(font.family)}  />
   )
 }
+  -->
+
+
+
+
 <!--
 <pre><code>
   {JSON.stringify(Astro.props.theme,null,2)}
