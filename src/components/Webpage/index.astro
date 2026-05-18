@@ -11,8 +11,6 @@ import { kebabCase } from 'change-case'
 const toVars =
   fonts => Object.entries(fonts).map( f => "--font-"+kebabCase(f[0]) + ": var(--font-" + kebabCase(f[1]) + ");").join('')
 
-console.log(page)
-
 ---
 
 <!doctype html>
