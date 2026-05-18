@@ -9,22 +9,18 @@ const fontsourceFonts = ["Mulish", "Fraunces", "Manrope", "Playfair Display", "S
 const adobeFonts = []
 const iconsets = ["mdi","lucide"]
 
-
 // https://astro.build/config
 export default defineConfig(
   { integrations:
     [ svelte()
-    , icon({ include: iconsets.reduce( (acc,cur) => Object.assign(acc,{[cur]:'*'}),{})
-           })
+    , icon({ include: iconsets.reduce( (acc,cur) => Object.assign(acc,{[cur]:'*'}),{})})
     ]
-  , vite: {
-        plugins: [yaml()]
+  , vite:
+    { css: { transformer: "lightningcss" }
+    , plugins: [yaml()]
     }
   , site: "https://consoleillusion.github.io"
-  //, base: "/astro-components"
-  , experimental:
-    { svgo: true
-    , fonts:
+  , fonts:
       [ ...fontsourceFonts.map( f => (
         { provider: fontProviders.fontsource()
         , name: f
@@ -36,5 +32,11 @@ export default defineConfig(
         , cssVariable: "--font-" + kebabCase(f)
         }))
       ]
+
+  //, base: "/astro-components"
+    /*
+  , experimental:
+    { svgo: true
     }
+    */
   })
