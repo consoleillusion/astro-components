@@ -7,6 +7,6 @@ const props = await loadPropDefaults(schema,Astro.props)
 
 <figure class="quote">
   <Icon name="bxs:quote-alt-left" />
-  <blockquote {props.cite}><p>{props.text}</p></blockquote> 
+  <blockquote cite={props.cite}><p>{props.text}</p></blockquote> 
   <figcaption><cite>{props.cite}</cite></figcaption>
 </figure>

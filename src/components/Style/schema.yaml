@@ -44,11 +44,12 @@ properties:
     type: object
     description: Core color system for the site's theme.
     default:
-      base: "fcfcfc"
+      base: "#fcfcfc"
       surface: "#f1ebe1"
       accent-1: "#111"
       accent-2: "#222"
       accent-3: "#333"
+      muted: "#6a6a6a"
     properties:
       base:
         type: string
