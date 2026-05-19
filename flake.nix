@@ -20,15 +20,27 @@
           ];
         };
 
-        apps.default = {
-          type = "app";
+apps.default = {
+  type = "app";
 
-/*            cd ${self}
-*/
-          program = toString (pkgs.writeShellScript "run-dev" ''
+  program = toString (pkgs.writeShellScript "run-dev" ''
+    export PATH=${pkgs.lib.makeBinPath [
+      bun
+      pkgs.nodejs_22
+    ]}:$PATH
 
-            exec ${bun}/bin/bun run dev
-          '');
-        };
+    export BUN_INSTALL_CACHE_DIR="$TMPDIR/bun-cache"
+
+    cd $(mktemp -d)
+
+    cp -r ${self}/* .
+
+    chmod -R +w .
+
+    bun install
+    exec bun run dev
+  '');
+};
+
       });
 }
