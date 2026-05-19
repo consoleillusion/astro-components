@@ -15,6 +15,7 @@ export default defineConfig(
     [ svelte()
     , icon({ include: iconsets.reduce( (acc,cur) => Object.assign(acc,{[cur]:'*'}),{})})
     ]
+  , experimental: { rustCompiler: true }
   , vite:
     { css: { transformer: "lightningcss" }
     , plugins: [yaml()]
