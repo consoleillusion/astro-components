@@ -31,13 +31,25 @@ apps.default = {
 
     export BUN_INSTALL_CACHE_DIR="$TMPDIR/bun-cache"
 
-    cd $(mktemp -d)
+    CONFIG_FILE="$1"
 
-    cp -r ${self}/* .
+    if [ -z "$CONFIG_FILE" ]; then
+      echo "usage: nix run . -- <config-file>"
+      exit 1
+    fi
 
-    chmod -R +w .
+    WORKDIR=$(mktemp -d)
+
+    cp -r ${self}/* "$WORKDIR"
+
+    chmod -R +w "$WORKDIR"
+
+    cp "$CONFIG_FILE" "$WORKDIR/config.json"
+
+    cd "$WORKDIR"
 
     bun install
+
     exec bun run dev
   '');
 };
