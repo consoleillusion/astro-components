@@ -1,4 +1,4 @@
-{
+
   description = "Bun dev environment";
 
   inputs = {
@@ -17,7 +17,6 @@
         devShells.default = pkgs.mkShell {
           buildInputs = [
             bun
-            pkgs.nodejs_22
           ];
         };
 
