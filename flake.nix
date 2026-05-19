@@ -1,4 +1,4 @@
-
+{
   description = "Bun dev environment";
 
   inputs = {
